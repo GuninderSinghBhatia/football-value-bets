@@ -1,0 +1,2773 @@
+{
+  "pd-2026-md9-cel-osa": {
+    "expectedGoals": {
+      "home": 1.47,
+      "away": 1.06
+    },
+    "radar": {
+      "home": {
+        "attack": 61,
+        "defence": 65,
+        "form": 53,
+        "homeAway": 54,
+        "h2h": 53
+      },
+      "away": {
+        "attack": 56,
+        "defence": 51,
+        "form": 48,
+        "homeAway": 61,
+        "h2h": 53
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Form: weak",
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Defence: weak",
+          "Form: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-11",
+        "homeId": "cel",
+        "awayId": "osa",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-10",
+        "homeId": "osa",
+        "awayId": "cel",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-03",
+        "homeId": "cel",
+        "awayId": "osa",
+        "homeGoals": 4,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-10-17",
+        "homeId": "osa",
+        "awayId": "cel",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-02",
+        "homeId": "cel",
+        "awayId": "osa",
+        "homeGoals": 0,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "pd-2026-md9-rma-vil": {
+    "expectedGoals": {
+      "home": 1.79,
+      "away": 0.94
+    },
+    "radar": {
+      "home": {
+        "attack": 79,
+        "defence": 87,
+        "form": 95,
+        "homeAway": 88,
+        "h2h": 86
+      },
+      "away": {
+        "attack": 74,
+        "defence": 72,
+        "form": 72,
+        "homeAway": 65,
+        "h2h": 30
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Home/away record: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Attack: strong",
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-03",
+        "homeId": "rma",
+        "awayId": "vil",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-07",
+        "homeId": "vil",
+        "awayId": "rma",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-04-20",
+        "homeId": "rma",
+        "awayId": "vil",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-10",
+        "homeId": "vil",
+        "awayId": "rma",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-09",
+        "homeId": "rma",
+        "awayId": "vil",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "pd-2026-md9-bar-gir": {
+    "expectedGoals": {
+      "home": 1.94,
+      "away": 0.86
+    },
+    "radar": {
+      "home": {
+        "attack": 86,
+        "defence": 82,
+        "form": 76,
+        "homeAway": 87,
+        "h2h": 95
+      },
+      "away": {
+        "attack": 64,
+        "defence": 61,
+        "form": 62,
+        "homeAway": 40,
+        "h2h": 25
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Head-to-head: very strong",
+          "Home/away record: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Home/away record: very weak",
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-01",
+        "homeId": "bar",
+        "awayId": "gir",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-05",
+        "homeId": "gir",
+        "awayId": "bar",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-04-15",
+        "homeId": "bar",
+        "awayId": "gir",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-09",
+        "homeId": "gir",
+        "awayId": "bar",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-12",
+        "homeId": "bar",
+        "awayId": "gir",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "pd-2026-md9-atm-bet": {
+    "expectedGoals": {
+      "home": 1.65,
+      "away": 1
+    },
+    "radar": {
+      "home": {
+        "attack": 68,
+        "defence": 79,
+        "form": 86,
+        "homeAway": 61,
+        "h2h": 67
+      },
+      "away": {
+        "attack": 73,
+        "defence": 57,
+        "form": 58,
+        "homeAway": 51,
+        "h2h": 39
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Attack: strong"
+        ],
+        "weaknesses": [
+          "Home/away record: weak",
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-09",
+        "homeId": "atm",
+        "awayId": "bet",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-11",
+        "homeId": "bet",
+        "awayId": "atm",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-03",
+        "homeId": "atm",
+        "awayId": "bet",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-15",
+        "homeId": "bet",
+        "awayId": "atm",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-04",
+        "homeId": "atm",
+        "awayId": "bet",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "pd-2026-md9-ath-rso": {
+    "expectedGoals": {
+      "home": 1.5,
+      "away": 1.08
+    },
+    "radar": {
+      "home": {
+        "attack": 67,
+        "defence": 76,
+        "form": 86,
+        "homeAway": 58,
+        "h2h": 58
+      },
+      "away": {
+        "attack": 66,
+        "defence": 79,
+        "form": 58,
+        "homeAway": 57,
+        "h2h": 58
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Defence: strong",
+          "Attack: strong"
+        ],
+        "weaknesses": []
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-04",
+        "homeId": "ath",
+        "awayId": "rso",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-01",
+        "homeId": "rso",
+        "awayId": "ath",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-03",
+        "homeId": "ath",
+        "awayId": "rso",
+        "homeGoals": 3,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-18",
+        "homeId": "rso",
+        "awayId": "ath",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-02",
+        "homeId": "ath",
+        "awayId": "rso",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "pd-2026-md9-sev-val": {
+    "expectedGoals": {
+      "home": 1.47,
+      "away": 1.06
+    },
+    "radar": {
+      "home": {
+        "attack": 54,
+        "defence": 48,
+        "form": 67,
+        "homeAway": 71,
+        "h2h": 72
+      },
+      "away": {
+        "attack": 56,
+        "defence": 55,
+        "form": 62,
+        "homeAway": 47,
+        "h2h": 44
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Head-to-head: strong",
+          "Home/away record: strong"
+        ],
+        "weaknesses": [
+          "Attack: weak",
+          "Defence: weak"
+        ]
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Home/away record: weak",
+          "Head-to-head: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-01",
+        "homeId": "sev",
+        "awayId": "val",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-07",
+        "homeId": "val",
+        "awayId": "sev",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-17",
+        "homeId": "sev",
+        "awayId": "val",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-11",
+        "homeId": "val",
+        "awayId": "sev",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-05",
+        "homeId": "sev",
+        "awayId": "val",
+        "homeGoals": 3,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "pd-2026-md9-get-mll": {
+    "expectedGoals": {
+      "home": 1.35,
+      "away": 1.12
+    },
+    "radar": {
+      "home": {
+        "attack": 39,
+        "defence": 32,
+        "form": 39,
+        "homeAway": 41,
+        "h2h": 76
+      },
+      "away": {
+        "attack": 43,
+        "defence": 57,
+        "form": 44,
+        "homeAway": 48,
+        "h2h": 34
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Head-to-head: strong"
+        ],
+        "weaknesses": [
+          "Form: very weak",
+          "Defence: very weak"
+        ]
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Attack: weak",
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-08",
+        "homeId": "get",
+        "awayId": "mll",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-03",
+        "homeId": "mll",
+        "awayId": "get",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-04-12",
+        "homeId": "get",
+        "awayId": "mll",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-18",
+        "homeId": "mll",
+        "awayId": "get",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-07",
+        "homeId": "get",
+        "awayId": "mll",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "pd-2026-md9-ray-esp": {
+    "expectedGoals": {
+      "home": 1.53,
+      "away": 0.99
+    },
+    "radar": {
+      "home": {
+        "attack": 59,
+        "defence": 57,
+        "form": 67,
+        "homeAway": 63,
+        "h2h": 53
+      },
+      "away": {
+        "attack": 46,
+        "defence": 45,
+        "form": 76,
+        "homeAway": 39,
+        "h2h": 67
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Form: strong",
+          "Head-to-head: strong"
+        ],
+        "weaknesses": [
+          "Defence: weak",
+          "Home/away record: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-14",
+        "homeId": "ray",
+        "awayId": "esp",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-02",
+        "homeId": "esp",
+        "awayId": "ray",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-05",
+        "homeId": "ray",
+        "awayId": "esp",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-04",
+        "homeId": "esp",
+        "awayId": "ray",
+        "homeGoals": 3,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-18",
+        "homeId": "ray",
+        "awayId": "esp",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "pd-2026-md9-ala-elc": {
+    "expectedGoals": {
+      "home": 1.46,
+      "away": 1.02
+    },
+    "radar": {
+      "home": {
+        "attack": 52,
+        "defence": 41,
+        "form": 44,
+        "homeAway": 52,
+        "h2h": 58
+      },
+      "away": {
+        "attack": 31,
+        "defence": 27,
+        "form": 39,
+        "homeAway": 34,
+        "h2h": 58
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [],
+        "weaknesses": [
+          "Form: weak",
+          "Defence: weak"
+        ]
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Attack: very weak",
+          "Defence: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-08",
+        "homeId": "ala",
+        "awayId": "elc",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-02",
+        "homeId": "elc",
+        "awayId": "ala",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-17",
+        "homeId": "ala",
+        "awayId": "elc",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-10-18",
+        "homeId": "elc",
+        "awayId": "ala",
+        "homeGoals": 2,
+        "awayGoals": 3
+      },
+      {
+        "date": "2024-04-16",
+        "homeId": "ala",
+        "awayId": "elc",
+        "homeGoals": 4,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "pd-2026-md9-lev-ovi": {
+    "expectedGoals": {
+      "home": 1.45,
+      "away": 1.01
+    },
+    "radar": {
+      "home": {
+        "attack": 38,
+        "defence": 39,
+        "form": 48,
+        "homeAway": 44,
+        "h2h": 58
+      },
+      "away": {
+        "attack": 36,
+        "defence": 22,
+        "form": 58,
+        "homeAway": 36,
+        "h2h": 58
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [],
+        "weaknesses": [
+          "Defence: very weak",
+          "Attack: very weak"
+        ]
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Home/away record: very weak",
+          "Defence: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-08",
+        "homeId": "lev",
+        "awayId": "ovi",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-13",
+        "homeId": "ovi",
+        "awayId": "lev",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-14",
+        "homeId": "lev",
+        "awayId": "ovi",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-14",
+        "homeId": "ovi",
+        "awayId": "lev",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-10",
+        "homeId": "lev",
+        "awayId": "ovi",
+        "homeGoals": 1,
+        "awayGoals": 3
+      }
+    ]
+  },
+  "pl-2026-md8-ars-new": {
+    "expectedGoals": {
+      "home": 1.89,
+      "away": 1.11
+    },
+    "radar": {
+      "home": {
+        "attack": 79,
+        "defence": 76,
+        "form": 76,
+        "homeAway": 85,
+        "h2h": 58
+      },
+      "away": {
+        "attack": 80,
+        "defence": 63,
+        "form": 81,
+        "homeAway": 48,
+        "h2h": 58
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Home/away record: very strong",
+          "Attack: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Attack: very strong"
+        ],
+        "weaknesses": [
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-07",
+        "homeId": "ars",
+        "awayId": "new",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-02",
+        "homeId": "new",
+        "awayId": "ars",
+        "homeGoals": 4,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-16",
+        "homeId": "ars",
+        "awayId": "new",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-06",
+        "homeId": "new",
+        "awayId": "ars",
+        "homeGoals": 4,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-18",
+        "homeId": "ars",
+        "awayId": "new",
+        "homeGoals": 3,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "pl-2026-md8-mci-avl": {
+    "expectedGoals": {
+      "home": 1.88,
+      "away": 1.11
+    },
+    "radar": {
+      "home": {
+        "attack": 78,
+        "defence": 96,
+        "form": 81,
+        "homeAway": 83,
+        "h2h": 86
+      },
+      "away": {
+        "attack": 75,
+        "defence": 71,
+        "form": 48,
+        "homeAway": 51,
+        "h2h": 30
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Defence: very strong",
+          "Head-to-head: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Attack: strong",
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Form: weak",
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-03-31",
+        "homeId": "mci",
+        "awayId": "avl",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-16",
+        "homeId": "avl",
+        "awayId": "mci",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-13",
+        "homeId": "mci",
+        "awayId": "avl",
+        "homeGoals": 4,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-10-13",
+        "homeId": "avl",
+        "awayId": "mci",
+        "homeGoals": 0,
+        "awayGoals": 4
+      },
+      {
+        "date": "2024-04-02",
+        "homeId": "mci",
+        "awayId": "avl",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "pl-2026-md8-liv-mun": {
+    "expectedGoals": {
+      "home": 2.01,
+      "away": 1.03
+    },
+    "radar": {
+      "home": {
+        "attack": 89,
+        "defence": 92,
+        "form": 72,
+        "homeAway": 72,
+        "h2h": 62
+      },
+      "away": {
+        "attack": 58,
+        "defence": 64,
+        "form": 53,
+        "homeAway": 47,
+        "h2h": 48
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Defence: very strong",
+          "Attack: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Head-to-head: weak",
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-08",
+        "homeId": "liv",
+        "awayId": "mun",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-12",
+        "homeId": "mun",
+        "awayId": "liv",
+        "homeGoals": 1,
+        "awayGoals": 3
+      },
+      {
+        "date": "2025-04-09",
+        "homeId": "liv",
+        "awayId": "mun",
+        "homeGoals": 3,
+        "awayGoals": 3
+      },
+      {
+        "date": "2024-10-03",
+        "homeId": "mun",
+        "awayId": "liv",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-16",
+        "homeId": "liv",
+        "awayId": "mun",
+        "homeGoals": 0,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "pl-2026-md8-che-bha": {
+    "expectedGoals": {
+      "home": 1.83,
+      "away": 1.11
+    },
+    "radar": {
+      "home": {
+        "attack": 71,
+        "defence": 83,
+        "form": 86,
+        "homeAway": 77,
+        "h2h": 67
+      },
+      "away": {
+        "attack": 56,
+        "defence": 73,
+        "form": 81,
+        "homeAway": 50,
+        "h2h": 53
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak",
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-08",
+        "homeId": "che",
+        "awayId": "bha",
+        "homeGoals": 4,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-03",
+        "homeId": "bha",
+        "awayId": "che",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-02",
+        "homeId": "che",
+        "awayId": "bha",
+        "homeGoals": 2,
+        "awayGoals": 3
+      },
+      {
+        "date": "2024-10-06",
+        "homeId": "bha",
+        "awayId": "che",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-06",
+        "homeId": "che",
+        "awayId": "bha",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "pl-2026-md8-tot-whu": {
+    "expectedGoals": {
+      "home": 1.83,
+      "away": 1.08
+    },
+    "radar": {
+      "home": {
+        "attack": 68,
+        "defence": 74,
+        "form": 95,
+        "homeAway": 68,
+        "h2h": 62
+      },
+      "away": {
+        "attack": 50,
+        "defence": 46,
+        "form": 62,
+        "homeAway": 44,
+        "h2h": 48
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Defence: weak",
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-06",
+        "homeId": "tot",
+        "awayId": "whu",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-16",
+        "homeId": "whu",
+        "awayId": "tot",
+        "homeGoals": 0,
+        "awayGoals": 5
+      },
+      {
+        "date": "2025-04-06",
+        "homeId": "tot",
+        "awayId": "whu",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-15",
+        "homeId": "whu",
+        "awayId": "tot",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-21",
+        "homeId": "tot",
+        "awayId": "whu",
+        "homeGoals": 3,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "sa-2026-md7-int-rom": {
+    "expectedGoals": {
+      "home": 1.7,
+      "away": 0.99
+    },
+    "radar": {
+      "home": {
+        "attack": 74,
+        "defence": 70,
+        "form": 76,
+        "homeAway": 79,
+        "h2h": 48
+      },
+      "away": {
+        "attack": 74,
+        "defence": 64,
+        "form": 53,
+        "homeAway": 56,
+        "h2h": 62
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Home/away record: strong",
+          "Form: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Attack: strong"
+        ],
+        "weaknesses": [
+          "Form: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-02",
+        "homeId": "int",
+        "awayId": "rom",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-03",
+        "homeId": "rom",
+        "awayId": "int",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-13",
+        "homeId": "int",
+        "awayId": "rom",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-11",
+        "homeId": "rom",
+        "awayId": "int",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-08",
+        "homeId": "int",
+        "awayId": "rom",
+        "homeGoals": 0,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "sa-2026-md7-nap-juv": {
+    "expectedGoals": {
+      "home": 1.54,
+      "away": 1.11
+    },
+    "radar": {
+      "home": {
+        "attack": 73,
+        "defence": 80,
+        "form": 76,
+        "homeAway": 82,
+        "h2h": 62
+      },
+      "away": {
+        "attack": 63,
+        "defence": 83,
+        "form": 95,
+        "homeAway": 53,
+        "h2h": 48
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Home/away record: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": [
+          "Home/away record: weak",
+          "Head-to-head: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-11",
+        "homeId": "nap",
+        "awayId": "juv",
+        "homeGoals": 3,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-19",
+        "homeId": "juv",
+        "awayId": "nap",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-13",
+        "homeId": "nap",
+        "awayId": "juv",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-07",
+        "homeId": "juv",
+        "awayId": "nap",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-04",
+        "homeId": "nap",
+        "awayId": "juv",
+        "homeGoals": 0,
+        "awayGoals": 4
+      }
+    ]
+  },
+  "sa-2026-md7-mil-ata": {
+    "expectedGoals": {
+      "home": 1.45,
+      "away": 1.16
+    },
+    "radar": {
+      "home": {
+        "attack": 77,
+        "defence": 59,
+        "form": 95,
+        "homeAway": 79,
+        "h2h": 44
+      },
+      "away": {
+        "attack": 73,
+        "defence": 69,
+        "form": 76,
+        "homeAway": 68,
+        "h2h": 72
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Home/away record: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Form: strong",
+          "Attack: strong"
+        ],
+        "weaknesses": []
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-03",
+        "homeId": "mil",
+        "awayId": "ata",
+        "homeGoals": 1,
+        "awayGoals": 3
+      },
+      {
+        "date": "2025-10-10",
+        "homeId": "ata",
+        "awayId": "mil",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-04-17",
+        "homeId": "mil",
+        "awayId": "ata",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-06",
+        "homeId": "ata",
+        "awayId": "mil",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-05",
+        "homeId": "mil",
+        "awayId": "ata",
+        "homeGoals": 0,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "sa-2026-md7-laz-bol": {
+    "expectedGoals": {
+      "home": 1.45,
+      "away": 1.12
+    },
+    "radar": {
+      "home": {
+        "attack": 65,
+        "defence": 51,
+        "form": 72,
+        "homeAway": 63,
+        "h2h": 25
+      },
+      "away": {
+        "attack": 71,
+        "defence": 65,
+        "form": 72,
+        "homeAway": 45,
+        "h2h": 95
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: strong",
+          "Attack: strong"
+        ],
+        "weaknesses": [
+          "Defence: weak",
+          "Head-to-head: very weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Head-to-head: very strong",
+          "Form: strong"
+        ],
+        "weaknesses": [
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-04",
+        "homeId": "laz",
+        "awayId": "bol",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-05",
+        "homeId": "bol",
+        "awayId": "laz",
+        "homeGoals": 5,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-04-06",
+        "homeId": "laz",
+        "awayId": "bol",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-10-09",
+        "homeId": "bol",
+        "awayId": "laz",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-05",
+        "homeId": "laz",
+        "awayId": "bol",
+        "homeGoals": 1,
+        "awayGoals": 2
+      }
+    ]
+  },
+  "sa-2026-md7-fio-tor": {
+    "expectedGoals": {
+      "home": 1.54,
+      "away": 1.03
+    },
+    "radar": {
+      "home": {
+        "attack": 56,
+        "defence": 55,
+        "form": 48,
+        "homeAway": 62,
+        "h2h": 58
+      },
+      "away": {
+        "attack": 54,
+        "defence": 59,
+        "form": 95,
+        "homeAway": 54,
+        "h2h": 58
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [],
+        "weaknesses": [
+          "Form: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong"
+        ],
+        "weaknesses": [
+          "Attack: weak",
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-13",
+        "homeId": "fio",
+        "awayId": "tor",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-08",
+        "homeId": "tor",
+        "awayId": "fio",
+        "homeGoals": 3,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-06",
+        "homeId": "fio",
+        "awayId": "tor",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-14",
+        "homeId": "tor",
+        "awayId": "fio",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-07",
+        "homeId": "fio",
+        "awayId": "tor",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "bl1-2026-md6-fcb-bvb": {
+    "expectedGoals": {
+      "home": 2.05,
+      "away": 1.26
+    },
+    "radar": {
+      "home": {
+        "attack": 90,
+        "defence": 93,
+        "form": 95,
+        "homeAway": 75,
+        "h2h": 76
+      },
+      "away": {
+        "attack": 75,
+        "defence": 80,
+        "form": 95,
+        "homeAway": 58,
+        "h2h": 34
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-01",
+        "homeId": "fcb",
+        "awayId": "bvb",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-10",
+        "homeId": "bvb",
+        "awayId": "fcb",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-06",
+        "homeId": "fcb",
+        "awayId": "bvb",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-08",
+        "homeId": "bvb",
+        "awayId": "fcb",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-03",
+        "homeId": "fcb",
+        "awayId": "bvb",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "bl1-2026-md6-b04-rbl": {
+    "expectedGoals": {
+      "home": 1.86,
+      "away": 1.36
+    },
+    "radar": {
+      "home": {
+        "attack": 69,
+        "defence": 84,
+        "form": 95,
+        "homeAway": 73,
+        "h2h": 67
+      },
+      "away": {
+        "attack": 75,
+        "defence": 77,
+        "form": 72,
+        "homeAway": 55,
+        "h2h": 53
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Defence: strong",
+          "Attack: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-17",
+        "homeId": "b04",
+        "awayId": "rbl",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-01",
+        "homeId": "rbl",
+        "awayId": "b04",
+        "homeGoals": 0,
+        "awayGoals": 3
+      },
+      {
+        "date": "2025-04-14",
+        "homeId": "b04",
+        "awayId": "rbl",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-05",
+        "homeId": "rbl",
+        "awayId": "b04",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-06",
+        "homeId": "b04",
+        "awayId": "rbl",
+        "homeGoals": 0,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "bl1-2026-md6-vfb-sge": {
+    "expectedGoals": {
+      "home": 1.77,
+      "away": 1.39
+    },
+    "radar": {
+      "home": {
+        "attack": 68,
+        "defence": 75,
+        "form": 58,
+        "homeAway": 63,
+        "h2h": 58
+      },
+      "away": {
+        "attack": 65,
+        "defence": 74,
+        "form": 67,
+        "homeAway": 44,
+        "h2h": 58
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Defence: strong",
+          "Attack: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Defence: strong",
+          "Form: strong"
+        ],
+        "weaknesses": [
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-04",
+        "homeId": "vfb",
+        "awayId": "sge",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-03",
+        "homeId": "sge",
+        "awayId": "vfb",
+        "homeGoals": 3,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-02",
+        "homeId": "vfb",
+        "awayId": "sge",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-16",
+        "homeId": "sge",
+        "awayId": "vfb",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-02",
+        "homeId": "vfb",
+        "awayId": "sge",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "bl1-2026-md6-scf-wob": {
+    "expectedGoals": {
+      "home": 1.81,
+      "away": 1.32
+    },
+    "radar": {
+      "home": {
+        "attack": 71,
+        "defence": 70,
+        "form": 53,
+        "homeAway": 78,
+        "h2h": 67
+      },
+      "away": {
+        "attack": 62,
+        "defence": 51,
+        "form": 62,
+        "homeAway": 54,
+        "h2h": 39
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Home/away record: strong",
+          "Attack: strong"
+        ],
+        "weaknesses": [
+          "Form: weak"
+        ]
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Defence: weak",
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-11",
+        "homeId": "scf",
+        "awayId": "wob",
+        "homeGoals": 3,
+        "awayGoals": 3
+      },
+      {
+        "date": "2025-10-19",
+        "homeId": "wob",
+        "awayId": "scf",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-15",
+        "homeId": "scf",
+        "awayId": "wob",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-02",
+        "homeId": "wob",
+        "awayId": "scf",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-20",
+        "homeId": "scf",
+        "awayId": "wob",
+        "homeGoals": 3,
+        "awayGoals": 3
+      }
+    ]
+  },
+  "bl1-2026-md6-bmg-tsg": {
+    "expectedGoals": {
+      "home": 1.7,
+      "away": 1.38
+    },
+    "radar": {
+      "home": {
+        "attack": 52,
+        "defence": 71,
+        "form": 44,
+        "homeAway": 54,
+        "h2h": 62
+      },
+      "away": {
+        "attack": 43,
+        "defence": 38,
+        "form": 58,
+        "homeAway": 40,
+        "h2h": 48
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Attack: weak",
+          "Form: weak"
+        ]
+      },
+      "away": {
+        "strengths": [],
+        "weaknesses": [
+          "Home/away record: very weak",
+          "Defence: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-13",
+        "homeId": "bmg",
+        "awayId": "tsg",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-19",
+        "homeId": "tsg",
+        "awayId": "bmg",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-07",
+        "homeId": "bmg",
+        "awayId": "tsg",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-01",
+        "homeId": "tsg",
+        "awayId": "bmg",
+        "homeGoals": 3,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-21",
+        "homeId": "bmg",
+        "awayId": "tsg",
+        "homeGoals": 3,
+        "awayGoals": 2
+      }
+    ]
+  },
+  "fl1-2026-md8-psg-om": {
+    "expectedGoals": {
+      "home": 1.78,
+      "away": 1.03
+    },
+    "radar": {
+      "home": {
+        "attack": 82,
+        "defence": 98,
+        "form": 67,
+        "homeAway": 87,
+        "h2h": 72
+      },
+      "away": {
+        "attack": 78,
+        "defence": 71,
+        "form": 76,
+        "homeAway": 53,
+        "h2h": 44
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Defence: very strong",
+          "Home/away record: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Attack: strong",
+          "Form: strong"
+        ],
+        "weaknesses": [
+          "Home/away record: weak",
+          "Head-to-head: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-01",
+        "homeId": "psg",
+        "awayId": "om",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-08",
+        "homeId": "om",
+        "awayId": "psg",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-10",
+        "homeId": "psg",
+        "awayId": "om",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-13",
+        "homeId": "om",
+        "awayId": "psg",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-07",
+        "homeId": "psg",
+        "awayId": "om",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "fl1-2026-md8-asm-losc": {
+    "expectedGoals": {
+      "home": 1.52,
+      "away": 1.16
+    },
+    "radar": {
+      "home": {
+        "attack": 67,
+        "defence": 64,
+        "form": 58,
+        "homeAway": 74,
+        "h2h": 67
+      },
+      "away": {
+        "attack": 64,
+        "defence": 69,
+        "form": 86,
+        "homeAway": 60,
+        "h2h": 39
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Home/away record: strong",
+          "Attack: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-07",
+        "homeId": "asm",
+        "awayId": "losc",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-18",
+        "homeId": "losc",
+        "awayId": "asm",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-09",
+        "homeId": "asm",
+        "awayId": "losc",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-02",
+        "homeId": "losc",
+        "awayId": "asm",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2024-04-18",
+        "homeId": "asm",
+        "awayId": "losc",
+        "homeGoals": 5,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "fl1-2026-md8-ol-ogcn": {
+    "expectedGoals": {
+      "home": 1.53,
+      "away": 1.13
+    },
+    "radar": {
+      "home": {
+        "attack": 65,
+        "defence": 69,
+        "form": 62,
+        "homeAway": 75,
+        "h2h": 72
+      },
+      "away": {
+        "attack": 68,
+        "defence": 66,
+        "form": 53,
+        "homeAway": 54,
+        "h2h": 44
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Home/away record: strong",
+          "Head-to-head: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Attack: strong",
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Form: weak",
+          "Head-to-head: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-09",
+        "homeId": "ol",
+        "awayId": "ogcn",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-19",
+        "homeId": "ogcn",
+        "awayId": "ol",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-10",
+        "homeId": "ol",
+        "awayId": "ogcn",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-08",
+        "homeId": "ogcn",
+        "awayId": "ol",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-19",
+        "homeId": "ol",
+        "awayId": "ogcn",
+        "homeGoals": 3,
+        "awayGoals": 2
+      }
+    ]
+  },
+  "fl1-2026-md8-rcl-srfc": {
+    "expectedGoals": {
+      "home": 1.52,
+      "away": 1.13
+    },
+    "radar": {
+      "home": {
+        "attack": 56,
+        "defence": 49,
+        "form": 39,
+        "homeAway": 62,
+        "h2h": 53
+      },
+      "away": {
+        "attack": 57,
+        "defence": 61,
+        "form": 86,
+        "homeAway": 55,
+        "h2h": 67
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [],
+        "weaknesses": [
+          "Defence: weak",
+          "Form: very weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Head-to-head: strong"
+        ],
+        "weaknesses": []
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-03",
+        "homeId": "rcl",
+        "awayId": "srfc",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-08",
+        "homeId": "srfc",
+        "awayId": "rcl",
+        "homeGoals": 0,
+        "awayGoals": 3
+      },
+      {
+        "date": "2025-04-01",
+        "homeId": "rcl",
+        "awayId": "srfc",
+        "homeGoals": 0,
+        "awayGoals": 3
+      },
+      {
+        "date": "2024-10-07",
+        "homeId": "srfc",
+        "awayId": "rcl",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-03",
+        "homeId": "rcl",
+        "awayId": "srfc",
+        "homeGoals": 1,
+        "awayGoals": 3
+      }
+    ]
+  },
+  "fl1-2026-md8-rcsa-fcn": {
+    "expectedGoals": {
+      "home": 1.64,
+      "away": 1.02
+    },
+    "radar": {
+      "home": {
+        "attack": 57,
+        "defence": 70,
+        "form": 72,
+        "homeAway": 59,
+        "h2h": 53
+      },
+      "away": {
+        "attack": 51,
+        "defence": 51,
+        "form": 76,
+        "homeAway": 50,
+        "h2h": 53
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: strong",
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Form: strong"
+        ],
+        "weaknesses": [
+          "Defence: weak",
+          "Home/away record: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-19",
+        "homeId": "rcsa",
+        "awayId": "fcn",
+        "homeGoals": 2,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-03",
+        "homeId": "fcn",
+        "awayId": "rcsa",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-16",
+        "homeId": "rcsa",
+        "awayId": "fcn",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-10-12",
+        "homeId": "fcn",
+        "awayId": "rcsa",
+        "homeGoals": 4,
+        "awayGoals": 3
+      },
+      {
+        "date": "2024-04-20",
+        "homeId": "rcsa",
+        "awayId": "fcn",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "cl-2026-md3-bvb-nap": {
+    "expectedGoals": {
+      "home": 1.48,
+      "away": 1.32
+    },
+    "radar": {
+      "home": {
+        "attack": 74,
+        "defence": 62,
+        "form": 95,
+        "homeAway": 68,
+        "h2h": 62
+      },
+      "away": {
+        "attack": 69,
+        "defence": 70,
+        "form": 76,
+        "homeAway": 63,
+        "h2h": 48
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Attack: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Form: strong",
+          "Defence: strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-17",
+        "homeId": "bvb",
+        "awayId": "nap",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-04",
+        "homeId": "nap",
+        "awayId": "bvb",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-04-10",
+        "homeId": "bvb",
+        "awayId": "nap",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-15",
+        "homeId": "nap",
+        "awayId": "bvb",
+        "homeGoals": 1,
+        "awayGoals": 3
+      },
+      {
+        "date": "2024-04-02",
+        "homeId": "bvb",
+        "awayId": "nap",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "cl-2026-md3-rma-liv": {
+    "expectedGoals": {
+      "home": 1.61,
+      "away": 1.25
+    },
+    "radar": {
+      "home": {
+        "attack": 85,
+        "defence": 81,
+        "form": 95,
+        "homeAway": 87,
+        "h2h": 48
+      },
+      "away": {
+        "attack": 79,
+        "defence": 77,
+        "form": 72,
+        "homeAway": 76,
+        "h2h": 62
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Form: very strong",
+          "Home/away record: very strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Attack: strong",
+          "Defence: strong"
+        ],
+        "weaknesses": []
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-11",
+        "homeId": "rma",
+        "awayId": "liv",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-04",
+        "homeId": "liv",
+        "awayId": "rma",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-02",
+        "homeId": "rma",
+        "awayId": "liv",
+        "homeGoals": 1,
+        "awayGoals": 3
+      },
+      {
+        "date": "2024-10-09",
+        "homeId": "liv",
+        "awayId": "rma",
+        "homeGoals": 3,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-08",
+        "homeId": "rma",
+        "awayId": "liv",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "cl-2026-md3-bar-psg": {
+    "expectedGoals": {
+      "home": 1.53,
+      "away": 1.32
+    },
+    "radar": {
+      "home": {
+        "attack": 96,
+        "defence": 98,
+        "form": 76,
+        "homeAway": 84,
+        "h2h": 44
+      },
+      "away": {
+        "attack": 84,
+        "defence": 81,
+        "form": 67,
+        "homeAway": 76,
+        "h2h": 72
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Defence: very strong",
+          "Attack: very strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Attack: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": []
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-03",
+        "homeId": "bar",
+        "awayId": "psg",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-10-16",
+        "homeId": "psg",
+        "awayId": "bar",
+        "homeGoals": 0,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-11",
+        "homeId": "bar",
+        "awayId": "psg",
+        "homeGoals": 0,
+        "awayGoals": 4
+      },
+      {
+        "date": "2024-10-09",
+        "homeId": "psg",
+        "awayId": "bar",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-04-02",
+        "homeId": "bar",
+        "awayId": "psg",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
+    ]
+  },
+  "cl-2026-md3-mci-b04": {
+    "expectedGoals": {
+      "home": 1.66,
+      "away": 1.19
+    },
+    "radar": {
+      "home": {
+        "attack": 84,
+        "defence": 84,
+        "form": 81,
+        "homeAway": 77,
+        "h2h": 44
+      },
+      "away": {
+        "attack": 85,
+        "defence": 69,
+        "form": 95,
+        "homeAway": 56,
+        "h2h": 72
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Attack: very strong",
+          "Defence: very strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Attack: very strong"
+        ],
+        "weaknesses": []
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-03-31",
+        "homeId": "mci",
+        "awayId": "b04",
+        "homeGoals": 0,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-02",
+        "homeId": "b04",
+        "awayId": "mci",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-04-04",
+        "homeId": "mci",
+        "awayId": "b04",
+        "homeGoals": 2,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-14",
+        "homeId": "b04",
+        "awayId": "mci",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-20",
+        "homeId": "mci",
+        "awayId": "b04",
+        "homeGoals": 0,
+        "awayGoals": 2
+      }
+    ]
+  },
+  "cl-2026-md3-int-fcb": {
+    "expectedGoals": {
+      "home": 1.5,
+      "away": 1.34
+    },
+    "radar": {
+      "home": {
+        "attack": 94,
+        "defence": 76,
+        "form": 76,
+        "homeAway": 73,
+        "h2h": 62
+      },
+      "away": {
+        "attack": 88,
+        "defence": 73,
+        "form": 95,
+        "homeAway": 71,
+        "h2h": 48
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Attack: very strong",
+          "Defence: strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Form: very strong",
+          "Attack: very strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-18",
+        "homeId": "int",
+        "awayId": "fcb",
+        "homeGoals": 2,
+        "awayGoals": 0
+      },
+      {
+        "date": "2025-10-04",
+        "homeId": "fcb",
+        "awayId": "int",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-04-18",
+        "homeId": "int",
+        "awayId": "fcb",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-14",
+        "homeId": "fcb",
+        "awayId": "int",
+        "homeGoals": 1,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-07",
+        "homeId": "int",
+        "awayId": "fcb",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
+    ]
+  },
+  "cl-2026-md3-ars-atm": {
+    "expectedGoals": {
+      "home": 1.72,
+      "away": 1.15
+    },
+    "radar": {
+      "home": {
+        "attack": 91,
+        "defence": 75,
+        "form": 76,
+        "homeAway": 83,
+        "h2h": 67
+      },
+      "away": {
+        "attack": 88,
+        "defence": 82,
+        "form": 86,
+        "homeAway": 55,
+        "h2h": 39
+      }
+    },
+    "characteristics": {
+      "home": {
+        "strengths": [
+          "Attack: very strong",
+          "Home/away record: very strong"
+        ],
+        "weaknesses": []
+      },
+      "away": {
+        "strengths": [
+          "Attack: very strong",
+          "Form: very strong"
+        ],
+        "weaknesses": [
+          "Head-to-head: very weak"
+        ]
+      }
+    },
+    "h2h": [
+      {
+        "date": "2026-04-13",
+        "homeId": "ars",
+        "awayId": "atm",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2025-10-03",
+        "homeId": "atm",
+        "awayId": "ars",
+        "homeGoals": 1,
+        "awayGoals": 2
+      },
+      {
+        "date": "2025-04-06",
+        "homeId": "ars",
+        "awayId": "atm",
+        "homeGoals": 1,
+        "awayGoals": 1
+      },
+      {
+        "date": "2024-10-03",
+        "homeId": "atm",
+        "awayId": "ars",
+        "homeGoals": 0,
+        "awayGoals": 0
+      },
+      {
+        "date": "2024-04-18",
+        "homeId": "ars",
+        "awayId": "atm",
+        "homeGoals": 5,
+        "awayGoals": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "bet365",
+    "name": "Bet365",
+    "short": "B3"
+  },
+  {
+    "id": "pinnacle",
+    "name": "Pinnacle",
+    "short": "PN"
+  },
+  {
+    "id": "betfair",
+    "name": "Betfair",
+    "short": "BF"
+  },
+  {
+    "id": "1xbet",
+    "name": "1xBet",
+    "short": "1X"
+  },
+  {
+    "id": "williamhill",
+    "name": "William Hill",
+    "short": "WH"
+  },
+  {
+    "id": "stake",
+    "name": "Stake",
+    "short": "ST"
+  },
+  {
+    "id": "bcgame",
+    "name": "BC.Game",
+    "short": "BC"
+  }
+]
