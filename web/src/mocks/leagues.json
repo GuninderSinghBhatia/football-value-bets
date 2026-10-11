@@ -1,0 +1,38 @@
+[
+  {
+    "id": "PD",
+    "name": "LaLiga",
+    "country": "Spain",
+    "logoUrl": "https://crests.football-data.org/PD.png"
+  },
+  {
+    "id": "PL",
+    "name": "Premier League",
+    "country": "England",
+    "logoUrl": "https://crests.football-data.org/PL.png"
+  },
+  {
+    "id": "SA",
+    "name": "Serie A",
+    "country": "Italy",
+    "logoUrl": "https://crests.football-data.org/SA.png"
+  },
+  {
+    "id": "BL1",
+    "name": "Bundesliga",
+    "country": "Germany",
+    "logoUrl": "https://crests.football-data.org/BL1.png"
+  },
+  {
+    "id": "FL1",
+    "name": "Ligue 1",
+    "country": "France",
+    "logoUrl": "https://crests.football-data.org/FL1.png"
+  },
+  {
+    "id": "CL",
+    "name": "Champions League",
+    "country": "Europe",
+    "logoUrl": "https://crests.football-data.org/CL.png"
+  }
+]

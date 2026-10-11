@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+/* Dark analytics theme from ui-style-guide.md: near-black surfaces, lime as the single strong highlight,
+   violet as the secondary/second-series accent. The guide's names are the source of truth; the short aliases
+   below keep existing utility classes (bg-surface, text-muted, bg-accent-fill...) working. */
+:root {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --bg-app: #0b0b0d;
+  --bg-sidebar: #0f0f12;
+  --bg-card: #141417;
+  --bg-card-hover: #1a1a1f;
+  --bg-input: #1c1c21;
+
+  /* Borders */
+  --border: #232328;
+  --border-strong: #2e2e35;
+
+  /* Text */
+  --text-primary: #f5f5f7;
+  --text-secondary: #9a9aa3;
+  --text-muted: #5f5f68; /* 3:1 on cards: table headers, axis labels and meta only, never body text */
+
+  /* Accents */
+  --accent-lime: #d4f84a;
+  --accent-lime-dim: #a8c93a;
+  --accent-violet: #8b5cf6;
+  --accent-violet-soft: rgba(139, 92, 246, 0.25);
+  --gradient-cta: linear-gradient(90deg, #d4f84a 0%, #c084fc 100%);
+  --on-accent: #0b0b0d; /* text on lime / gradient fills */
+
+  /* Status */
+  --success: #22c55e;
+  --success-bg: rgba(34, 197, 94, 0.12);
+  --danger: #ef4444;
+  --danger-bg: rgba(239, 68, 68, 0.12);
+  --danger-text: #f87171; /* #EF4444 text is under 4.5:1 on cards */
+  --warning: #f5c542;
+}
+
+@theme inline {
+  --color-bg: var(--bg-app);
+  --color-sidebar: var(--bg-sidebar);
+  --color-surface: var(--bg-card);
+  --color-surface-hover: var(--bg-card-hover);
+  --color-surface-2: var(--bg-input);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-text: var(--text-primary);
+  --color-muted: var(--text-secondary);
+  --color-faint: var(--text-muted);
+  --color-accent: var(--accent-lime);
+  --color-accent-fill: var(--accent-lime);
+  --color-accent-dim: var(--accent-lime-dim);
+  --color-accent-text: var(--accent-lime);
+  --color-on-accent: var(--on-accent);
+  --color-violet: var(--accent-violet);
+  --color-violet-soft: var(--accent-violet-soft);
+  --color-positive: var(--success);
+  --color-positive-bg: var(--success-bg);
+  --color-negative: var(--danger);
+  --color-negative-bg: var(--danger-bg);
+  --color-negative-text: var(--danger-text);
+  --color-warning: var(--warning);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --radius-card: 14px;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background: var(--bg-app);
+    color: var(--text-primary);
+  }
+  :focus-visible {
+    outline: 1px solid var(--accent-lime);
+    outline-offset: 2px;
+  }
+}
+
+/* Was a coloured drop shadow; the guide wants flat surfaces, so it is now a hairline lime ring. */
+@utility glow {
+  box-shadow: 0 0 0 1px rgb(212 248 74 / 0.18);
+}
+
+@utility bg-gradient-cta {
+  background-image: var(--gradient-cta);
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- Motion */
+
+@theme {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-fade-up: fade-up 0.55s var(--ease-out-expo) both;
+  --animate-fade-in: fade-in 0.35s ease-out both;
+  --animate-scale-in: scale-in 0.6s var(--ease-out-expo) both;
+  --animate-slide-in-left: slide-in-left 0.35s var(--ease-out-expo) both;
+  --animate-grow-x: grow-x 0.9s var(--ease-out-expo) both;
+  --animate-drift: drift 14s ease-in-out infinite alternate;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.97) translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes slide-in-left {
+    from { transform: translateX(-100%); }
+    to { transform: none; }
+  }
+  @keyframes grow-x {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  @keyframes drift {
+    from { transform: translateX(0); }
+    to { transform: translateX(-140px); }
+  }
+}
+
+/* Referenced directly (not through an animate-* token), so declared outside @theme to always be emitted. */
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+/* Children enter one after another. Put it on a list or column container. */
+@utility stagger {
+  & > * {
+    animation: fade-up 0.55s var(--ease-out-expo) both;
+  }
+  & > *:nth-child(2) { animation-delay: 50ms; }
+  & > *:nth-child(3) { animation-delay: 100ms; }
+  & > *:nth-child(4) { animation-delay: 150ms; }
+  & > *:nth-child(5) { animation-delay: 200ms; }
+  & > *:nth-child(6) { animation-delay: 250ms; }
+  & > *:nth-child(7) { animation-delay: 300ms; }
+  & > *:nth-child(8) { animation-delay: 350ms; }
+  & > *:nth-child(n + 9) { animation-delay: 400ms; }
+}
+
+/* Same, but opacity only: for table rows, where transforms misbehave. */
+@utility stagger-fade {
+  & > * {
+    animation: fade-in 0.4s ease-out both;
+  }
+  & > *:nth-child(2) { animation-delay: 30ms; }
+  & > *:nth-child(3) { animation-delay: 60ms; }
+  & > *:nth-child(4) { animation-delay: 90ms; }
+  & > *:nth-child(5) { animation-delay: 120ms; }
+  & > *:nth-child(n + 6) { animation-delay: 150ms; }
+}
+
+/* Hover feedback for clickable rows and cards: background shift only, no movement. */
+@utility pressable {
+  transition: background-color 0.2s ease;
+  &:hover { background-color: var(--bg-card-hover); }
+}
+
+@utility shimmer {
+  background: linear-gradient(90deg, var(--bg-input) 30%, var(--border-strong) 50%, var(--bg-input) 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

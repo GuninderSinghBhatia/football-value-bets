@@ -1,0 +1,4862 @@
+[
+  {
+    "matchId": "pl-past-0",
+    "match": {
+      "home": {
+        "id": "tot",
+        "name": "Tottenham Hotspur",
+        "crestUrl": "https://crests.football-data.org/73.png"
+      },
+      "away": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.02,
+    "impliedProb": 0.331,
+    "modelProb": 0.352,
+    "ev": 0.062,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-12T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-1",
+    "match": {
+      "home": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "away": {
+        "id": "sge",
+        "name": "Eintracht Frankfurt",
+        "crestUrl": "https://crests.football-data.org/19.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.08,
+    "impliedProb": 0.481,
+    "modelProb": 0.505,
+    "ev": 0.051,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-13T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-2",
+    "match": {
+      "home": {
+        "id": "ray",
+        "name": "Rayo Vallecano",
+        "crestUrl": "https://crests.football-data.org/87.png"
+      },
+      "away": {
+        "id": "ala",
+        "name": "Alavés",
+        "crestUrl": "https://crests.football-data.org/263.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.51,
+    "impliedProb": 0.398,
+    "modelProb": 0.427,
+    "ev": 0.072,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-14T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-3",
+    "match": {
+      "home": {
+        "id": "mun",
+        "name": "Manchester United",
+        "crestUrl": "https://crests.football-data.org/66.png"
+      },
+      "away": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.82,
+    "impliedProb": 0.549,
+    "modelProb": 0.575,
+    "ev": 0.047,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.82,
+    "settledAt": "2026-06-14T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-4",
+    "match": {
+      "home": {
+        "id": "elc",
+        "name": "Elche",
+        "crestUrl": "https://crests.football-data.org/285.png"
+      },
+      "away": {
+        "id": "bar",
+        "name": "Barcelona",
+        "crestUrl": "https://crests.football-data.org/81.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.91,
+    "impliedProb": 0.344,
+    "modelProb": 0.366,
+    "ev": 0.065,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-15T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-5",
+    "match": {
+      "home": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "away": {
+        "id": "bet",
+        "name": "Real Betis",
+        "crestUrl": "https://crests.football-data.org/90.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 1.76,
+    "impliedProb": 0.568,
+    "modelProb": 0.586,
+    "ev": 0.032,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-16T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-6",
+    "match": {
+      "home": {
+        "id": "cel",
+        "name": "Celta Vigo",
+        "crestUrl": "https://crests.football-data.org/558.png"
+      },
+      "away": {
+        "id": "val",
+        "name": "Valencia",
+        "crestUrl": "https://crests.football-data.org/95.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.63,
+    "impliedProb": 0.38,
+    "modelProb": 0.395,
+    "ev": 0.039,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-16T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-7",
+    "match": {
+      "home": {
+        "id": "ala",
+        "name": "Alavés",
+        "crestUrl": "https://crests.football-data.org/263.png"
+      },
+      "away": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.15,
+    "impliedProb": 0.465,
+    "modelProb": 0.503,
+    "ev": 0.081,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.15,
+    "settledAt": "2026-06-17T21:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-8",
+    "match": {
+      "home": {
+        "id": "asm",
+        "name": "Monaco",
+        "crestUrl": "https://crests.football-data.org/548.png"
+      },
+      "away": {
+        "id": "ogcn",
+        "name": "Nice",
+        "crestUrl": "https://crests.football-data.org/522.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.21,
+    "impliedProb": 0.452,
+    "modelProb": 0.49,
+    "ev": 0.082,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-18T18:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-9",
+    "match": {
+      "home": {
+        "id": "rcsa",
+        "name": "Strasbourg",
+        "crestUrl": "https://crests.football-data.org/576.png"
+      },
+      "away": {
+        "id": "asm",
+        "name": "Monaco",
+        "crestUrl": "https://crests.football-data.org/548.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.59,
+    "impliedProb": 0.279,
+    "modelProb": 0.309,
+    "ev": 0.108,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-18T18:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-10",
+    "match": {
+      "home": {
+        "id": "rcl",
+        "name": "Lens",
+        "crestUrl": "https://crests.football-data.org/546.png"
+      },
+      "away": {
+        "id": "ol",
+        "name": "Lyon",
+        "crestUrl": "https://crests.football-data.org/523.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 1.91,
+    "impliedProb": 0.524,
+    "modelProb": 0.554,
+    "ev": 0.058,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.91,
+    "settledAt": "2026-06-19T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-11",
+    "match": {
+      "home": {
+        "id": "fio",
+        "name": "Fiorentina",
+        "crestUrl": "https://crests.football-data.org/99.png"
+      },
+      "away": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.7,
+    "impliedProb": 0.37,
+    "modelProb": 0.389,
+    "ev": 0.052,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-20T21:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-12",
+    "match": {
+      "home": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.45,
+    "impliedProb": 0.69,
+    "modelProb": 0.718,
+    "ev": 0.042,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.45,
+    "settledAt": "2026-06-20T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-13",
+    "match": {
+      "home": {
+        "id": "ovi",
+        "name": "Real Oviedo",
+        "crestUrl": ""
+      },
+      "away": {
+        "id": "sev",
+        "name": "Sevilla",
+        "crestUrl": "https://crests.football-data.org/559.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.65,
+    "impliedProb": 0.377,
+    "modelProb": 0.41,
+    "ev": 0.086,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-21T18:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-14",
+    "match": {
+      "home": {
+        "id": "osa",
+        "name": "Osasuna",
+        "crestUrl": "https://crests.football-data.org/79.png"
+      },
+      "away": {
+        "id": "bet",
+        "name": "Real Betis",
+        "crestUrl": "https://crests.football-data.org/90.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 1.79,
+    "impliedProb": 0.559,
+    "modelProb": 0.602,
+    "ev": 0.077,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.79,
+    "settledAt": "2026-06-22T21:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-15",
+    "match": {
+      "home": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "away": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.79,
+    "impliedProb": 0.358,
+    "modelProb": 0.37,
+    "ev": 0.033,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.79,
+    "settledAt": "2026-06-22T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-16",
+    "match": {
+      "home": {
+        "id": "ogcn",
+        "name": "Nice",
+        "crestUrl": "https://crests.football-data.org/522.png"
+      },
+      "away": {
+        "id": "rcl",
+        "name": "Lens",
+        "crestUrl": "https://crests.football-data.org/546.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.26,
+    "impliedProb": 0.442,
+    "modelProb": 0.475,
+    "ev": 0.074,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-23T21:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-17",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "mci",
+        "name": "Manchester City",
+        "crestUrl": "https://crests.football-data.org/65.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.15,
+    "impliedProb": 0.465,
+    "modelProb": 0.492,
+    "ev": 0.058,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-24T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-18",
+    "match": {
+      "home": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "away": {
+        "id": "nap",
+        "name": "Napoli",
+        "crestUrl": "https://crests.football-data.org/113.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 1.72,
+    "impliedProb": 0.581,
+    "modelProb": 0.609,
+    "ev": 0.048,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.72,
+    "settledAt": "2026-06-24T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-19",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "mun",
+        "name": "Manchester United",
+        "crestUrl": "https://crests.football-data.org/66.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.91,
+    "impliedProb": 0.344,
+    "modelProb": 0.38,
+    "ev": 0.107,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-25T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-20",
+    "match": {
+      "home": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "away": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 1.71,
+    "impliedProb": 0.585,
+    "modelProb": 0.625,
+    "ev": 0.068,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.71,
+    "settledAt": "2026-06-26T18:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-21",
+    "match": {
+      "home": {
+        "id": "ata",
+        "name": "Atalanta",
+        "crestUrl": "https://crests.football-data.org/102.png"
+      },
+      "away": {
+        "id": "rom",
+        "name": "Roma",
+        "crestUrl": "https://crests.football-data.org/100.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.57,
+    "impliedProb": 0.389,
+    "modelProb": 0.426,
+    "ev": 0.094,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-26T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-22",
+    "match": {
+      "home": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "away": {
+        "id": "ath",
+        "name": "Athletic Club",
+        "crestUrl": "https://crests.football-data.org/77.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.83,
+    "impliedProb": 0.353,
+    "modelProb": 0.368,
+    "ev": 0.042,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-27T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-23",
+    "match": {
+      "home": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "away": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.67,
+    "impliedProb": 0.375,
+    "modelProb": 0.394,
+    "ev": 0.053,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.67,
+    "settledAt": "2026-06-28T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-24",
+    "match": {
+      "home": {
+        "id": "vfb",
+        "name": "VfB Stuttgart",
+        "crestUrl": "https://crests.football-data.org/10.png"
+      },
+      "away": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.74,
+    "impliedProb": 0.365,
+    "modelProb": 0.392,
+    "ev": 0.075,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.74,
+    "settledAt": "2026-06-28T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-25",
+    "match": {
+      "home": {
+        "id": "get",
+        "name": "Getafe",
+        "crestUrl": "https://crests.football-data.org/82.png"
+      },
+      "away": {
+        "id": "sev",
+        "name": "Sevilla",
+        "crestUrl": "https://crests.football-data.org/559.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.09,
+    "impliedProb": 0.478,
+    "modelProb": 0.497,
+    "ev": 0.038,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.09,
+    "settledAt": "2026-06-29T21:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-26",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 1.91,
+    "impliedProb": 0.524,
+    "modelProb": 0.54,
+    "ev": 0.032,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 0.91,
+    "settledAt": "2026-06-30T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-27",
+    "match": {
+      "home": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "away": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 1.74,
+    "impliedProb": 0.575,
+    "modelProb": 0.636,
+    "ev": 0.107,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-06-30T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-28",
+    "match": {
+      "home": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 1.6,
+    "impliedProb": 0.625,
+    "modelProb": 0.686,
+    "ev": 0.097,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.6,
+    "settledAt": "2026-07-01T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-29",
+    "match": {
+      "home": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "away": {
+        "id": "tsg",
+        "name": "Hoffenheim",
+        "crestUrl": "https://crests.football-data.org/2.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.54,
+    "impliedProb": 0.649,
+    "modelProb": 0.72,
+    "ev": 0.108,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.54,
+    "settledAt": "2026-07-02T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-30",
+    "match": {
+      "home": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "away": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.2,
+    "impliedProb": 0.455,
+    "modelProb": 0.5,
+    "ev": 0.1,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.2,
+    "settledAt": "2026-07-02T21:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-31",
+    "match": {
+      "home": {
+        "id": "srfc",
+        "name": "Rennes",
+        "crestUrl": "https://crests.football-data.org/529.png"
+      },
+      "away": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.76,
+    "impliedProb": 0.362,
+    "modelProb": 0.398,
+    "ev": 0.098,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-03T18:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-32",
+    "match": {
+      "home": {
+        "id": "sev",
+        "name": "Sevilla",
+        "crestUrl": "https://crests.football-data.org/559.png"
+      },
+      "away": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.7,
+    "impliedProb": 0.37,
+    "modelProb": 0.39,
+    "ev": 0.053,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.7,
+    "settledAt": "2026-07-04T21:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-33",
+    "match": {
+      "home": {
+        "id": "sge",
+        "name": "Eintracht Frankfurt",
+        "crestUrl": "https://crests.football-data.org/19.png"
+      },
+      "away": {
+        "id": "vfb",
+        "name": "VfB Stuttgart",
+        "crestUrl": "https://crests.football-data.org/10.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.86,
+    "impliedProb": 0.35,
+    "modelProb": 0.381,
+    "ev": 0.09,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-04T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-34",
+    "match": {
+      "home": {
+        "id": "rso",
+        "name": "Real Sociedad",
+        "crestUrl": "https://crests.football-data.org/92.png"
+      },
+      "away": {
+        "id": "ray",
+        "name": "Rayo Vallecano",
+        "crestUrl": "https://crests.football-data.org/87.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.41,
+    "impliedProb": 0.293,
+    "modelProb": 0.306,
+    "ev": 0.042,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-05T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-35",
+    "match": {
+      "home": {
+        "id": "ata",
+        "name": "Atalanta",
+        "crestUrl": "https://crests.football-data.org/102.png"
+      },
+      "away": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.41,
+    "impliedProb": 0.415,
+    "modelProb": 0.445,
+    "ev": 0.074,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.41,
+    "settledAt": "2026-07-06T21:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-36",
+    "match": {
+      "home": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": "mun",
+        "name": "Manchester United",
+        "crestUrl": "https://crests.football-data.org/66.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.84,
+    "impliedProb": 0.352,
+    "modelProb": 0.372,
+    "ev": 0.056,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.84,
+    "settledAt": "2026-07-06T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-37",
+    "match": {
+      "home": {
+        "id": "ars",
+        "name": "Arsenal",
+        "crestUrl": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": "tot",
+        "name": "Tottenham Hotspur",
+        "crestUrl": "https://crests.football-data.org/73.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.14,
+    "impliedProb": 0.318,
+    "modelProb": 0.339,
+    "ev": 0.065,
+    "confidence": "low",
+    "result": "won",
+    "profit": 2.14,
+    "settledAt": "2026-07-07T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-38",
+    "match": {
+      "home": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "away": {
+        "id": "ray",
+        "name": "Rayo Vallecano",
+        "crestUrl": "https://crests.football-data.org/87.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "1X2",
+    "selection": "Away",
+    "odds": 1.94,
+    "impliedProb": 0.515,
+    "modelProb": 0.535,
+    "ev": 0.038,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-08T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-39",
+    "match": {
+      "home": {
+        "id": "bvb",
+        "name": "Borussia Dortmund",
+        "crestUrl": "https://crests.football-data.org/4.png"
+      },
+      "away": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 1.57,
+    "impliedProb": 0.637,
+    "modelProb": 0.7,
+    "ev": 0.098,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-08T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-40",
+    "match": {
+      "home": {
+        "id": "tor",
+        "name": "Torino",
+        "crestUrl": "https://crests.football-data.org/586.png"
+      },
+      "away": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "1X2",
+    "selection": "Away",
+    "odds": 2.65,
+    "impliedProb": 0.377,
+    "modelProb": 0.413,
+    "ev": 0.094,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-09T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-41",
+    "match": {
+      "home": {
+        "id": "fio",
+        "name": "Fiorentina",
+        "crestUrl": "https://crests.football-data.org/99.png"
+      },
+      "away": {
+        "id": "rom",
+        "name": "Roma",
+        "crestUrl": "https://crests.football-data.org/100.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.58,
+    "impliedProb": 0.633,
+    "modelProb": 0.696,
+    "ev": 0.099,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.58,
+    "settledAt": "2026-07-10T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-42",
+    "match": {
+      "home": {
+        "id": "osa",
+        "name": "Osasuna",
+        "crestUrl": "https://crests.football-data.org/79.png"
+      },
+      "away": {
+        "id": "val",
+        "name": "Valencia",
+        "crestUrl": "https://crests.football-data.org/95.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.99,
+    "impliedProb": 0.334,
+    "modelProb": 0.364,
+    "ev": 0.089,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-10T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-43",
+    "match": {
+      "home": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": "tot",
+        "name": "Tottenham Hotspur",
+        "crestUrl": "https://crests.football-data.org/73.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 1.59,
+    "impliedProb": 0.629,
+    "modelProb": 0.652,
+    "ev": 0.036,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.59,
+    "settledAt": "2026-07-11T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-44",
+    "match": {
+      "home": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "away": {
+        "id": "elc",
+        "name": "Elche",
+        "crestUrl": "https://crests.football-data.org/285.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 1.83,
+    "impliedProb": 0.546,
+    "modelProb": 0.599,
+    "ev": 0.097,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-12T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-45",
+    "match": {
+      "home": {
+        "id": "fcn",
+        "name": "Nantes",
+        "crestUrl": "https://crests.football-data.org/543.png"
+      },
+      "away": {
+        "id": "psg",
+        "name": "Paris Saint-Germain",
+        "crestUrl": "https://crests.football-data.org/524.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.44,
+    "impliedProb": 0.694,
+    "modelProb": 0.755,
+    "ev": 0.087,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.44,
+    "settledAt": "2026-07-12T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-46",
+    "match": {
+      "home": {
+        "id": "mun",
+        "name": "Manchester United",
+        "crestUrl": "https://crests.football-data.org/66.png"
+      },
+      "away": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.29,
+    "impliedProb": 0.437,
+    "modelProb": 0.481,
+    "ev": 0.1,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.29,
+    "settledAt": "2026-07-13T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-47",
+    "match": {
+      "home": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "away": {
+        "id": "bvb",
+        "name": "Borussia Dortmund",
+        "crestUrl": "https://crests.football-data.org/4.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.39,
+    "impliedProb": 0.719,
+    "modelProb": 0.764,
+    "ev": 0.062,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.39,
+    "settledAt": "2026-07-14T18:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-48",
+    "match": {
+      "home": {
+        "id": "ars",
+        "name": "Arsenal",
+        "crestUrl": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.72,
+    "impliedProb": 0.368,
+    "modelProb": 0.394,
+    "ev": 0.072,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-14T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-49",
+    "match": {
+      "home": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "away": {
+        "id": "sge",
+        "name": "Eintracht Frankfurt",
+        "crestUrl": "https://crests.football-data.org/19.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.84,
+    "impliedProb": 0.352,
+    "modelProb": 0.38,
+    "ev": 0.079,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.84,
+    "settledAt": "2026-07-15T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-50",
+    "match": {
+      "home": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "away": {
+        "id": "bar",
+        "name": "Barcelona",
+        "crestUrl": "https://crests.football-data.org/81.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "1X2",
+    "selection": "Away",
+    "odds": 2.05,
+    "impliedProb": 0.488,
+    "modelProb": 0.531,
+    "ev": 0.088,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.05,
+    "settledAt": "2026-07-16T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-51",
+    "match": {
+      "home": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "away": {
+        "id": "tot",
+        "name": "Tottenham Hotspur",
+        "crestUrl": "https://crests.football-data.org/73.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 1.63,
+    "impliedProb": 0.613,
+    "modelProb": 0.644,
+    "ev": 0.05,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-16T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-52",
+    "match": {
+      "home": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "away": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.84,
+    "impliedProb": 0.543,
+    "modelProb": 0.563,
+    "ev": 0.035,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.84,
+    "settledAt": "2026-07-17T21:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-53",
+    "match": {
+      "home": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": "fcn",
+        "name": "Nantes",
+        "crestUrl": "https://crests.football-data.org/543.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.52,
+    "impliedProb": 0.397,
+    "modelProb": 0.423,
+    "ev": 0.066,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.52,
+    "settledAt": "2026-07-18T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-54",
+    "match": {
+      "home": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "away": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 1.68,
+    "impliedProb": 0.595,
+    "modelProb": 0.624,
+    "ev": 0.048,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-18T18:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-55",
+    "match": {
+      "home": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "away": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.14,
+    "impliedProb": 0.467,
+    "modelProb": 0.489,
+    "ev": 0.047,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-19T19:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-56",
+    "match": {
+      "home": {
+        "id": "fcn",
+        "name": "Nantes",
+        "crestUrl": "https://crests.football-data.org/543.png"
+      },
+      "away": {
+        "id": "esp",
+        "name": "Espanyol",
+        "crestUrl": "https://crests.football-data.org/80.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.44,
+    "impliedProb": 0.291,
+    "modelProb": 0.317,
+    "ev": 0.092,
+    "confidence": "low",
+    "result": "won",
+    "profit": 2.44,
+    "settledAt": "2026-07-20T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-57",
+    "match": {
+      "home": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "away": {
+        "id": "tsg",
+        "name": "Hoffenheim",
+        "crestUrl": "https://crests.football-data.org/2.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.59,
+    "impliedProb": 0.386,
+    "modelProb": 0.415,
+    "ev": 0.074,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-20T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-58",
+    "match": {
+      "home": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "away": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 1.58,
+    "impliedProb": 0.633,
+    "modelProb": 0.678,
+    "ev": 0.072,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.58,
+    "settledAt": "2026-07-21T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-59",
+    "match": {
+      "home": {
+        "id": "bvb",
+        "name": "Borussia Dortmund",
+        "crestUrl": "https://crests.football-data.org/4.png"
+      },
+      "away": {
+        "id": "scf",
+        "name": "SC Freiburg",
+        "crestUrl": "https://crests.football-data.org/17.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "1X2",
+    "selection": "Away",
+    "odds": 3.04,
+    "impliedProb": 0.329,
+    "modelProb": 0.345,
+    "ev": 0.048,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-22T18:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-60",
+    "match": {
+      "home": {
+        "id": "sev",
+        "name": "Sevilla",
+        "crestUrl": "https://crests.football-data.org/559.png"
+      },
+      "away": {
+        "id": "ala",
+        "name": "Alavés",
+        "crestUrl": "https://crests.football-data.org/263.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 1.6,
+    "impliedProb": 0.625,
+    "modelProb": 0.682,
+    "ev": 0.091,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.6,
+    "settledAt": "2026-07-22T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-61",
+    "match": {
+      "home": {
+        "id": "fcn",
+        "name": "Nantes",
+        "crestUrl": "https://crests.football-data.org/543.png"
+      },
+      "away": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.78,
+    "impliedProb": 0.562,
+    "modelProb": 0.594,
+    "ev": 0.057,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-23T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-62",
+    "match": {
+      "home": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "away": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.61,
+    "impliedProb": 0.383,
+    "modelProb": 0.413,
+    "ev": 0.077,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-24T18:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-63",
+    "match": {
+      "home": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "away": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 3,
+    "impliedProb": 0.333,
+    "modelProb": 0.363,
+    "ev": 0.089,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 2,
+    "settledAt": "2026-07-24T21:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-64",
+    "match": {
+      "home": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "away": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.12,
+    "impliedProb": 0.472,
+    "modelProb": 0.494,
+    "ev": 0.047,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-25T21:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-65",
+    "match": {
+      "home": {
+        "id": "vfb",
+        "name": "VfB Stuttgart",
+        "crestUrl": "https://crests.football-data.org/10.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.31,
+    "impliedProb": 0.763,
+    "modelProb": 0.805,
+    "ev": 0.055,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.31,
+    "settledAt": "2026-07-26T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-66",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "mun",
+        "name": "Manchester United",
+        "crestUrl": "https://crests.football-data.org/66.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.98,
+    "impliedProb": 0.336,
+    "modelProb": 0.368,
+    "ev": 0.096,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.98,
+    "settledAt": "2026-07-26T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-67",
+    "match": {
+      "home": {
+        "id": "val",
+        "name": "Valencia",
+        "crestUrl": "https://crests.football-data.org/95.png"
+      },
+      "away": {
+        "id": "bar",
+        "name": "Barcelona",
+        "crestUrl": "https://crests.football-data.org/81.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.76,
+    "impliedProb": 0.568,
+    "modelProb": 0.625,
+    "ev": 0.1,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.76,
+    "settledAt": "2026-07-27T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-68",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "mun",
+        "name": "Manchester United",
+        "crestUrl": "https://crests.football-data.org/66.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.92,
+    "impliedProb": 0.342,
+    "modelProb": 0.373,
+    "ev": 0.09,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.92,
+    "settledAt": "2026-07-28T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-69",
+    "match": {
+      "home": {
+        "id": "sge",
+        "name": "Eintracht Frankfurt",
+        "crestUrl": "https://crests.football-data.org/19.png"
+      },
+      "away": {
+        "id": "tsg",
+        "name": "Hoffenheim",
+        "crestUrl": "https://crests.football-data.org/2.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.21,
+    "impliedProb": 0.452,
+    "modelProb": 0.477,
+    "ev": 0.054,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-28T18:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-70",
+    "match": {
+      "home": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "away": {
+        "id": "bar",
+        "name": "Barcelona",
+        "crestUrl": "https://crests.football-data.org/81.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.31,
+    "impliedProb": 0.763,
+    "modelProb": 0.842,
+    "ev": 0.103,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.31,
+    "settledAt": "2026-07-29T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-71",
+    "match": {
+      "home": {
+        "id": "fcn",
+        "name": "Nantes",
+        "crestUrl": "https://crests.football-data.org/543.png"
+      },
+      "away": {
+        "id": "srfc",
+        "name": "Rennes",
+        "crestUrl": "https://crests.football-data.org/529.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "1X2",
+    "selection": "Away",
+    "odds": 1.87,
+    "impliedProb": 0.535,
+    "modelProb": 0.556,
+    "ev": 0.04,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.87,
+    "settledAt": "2026-07-30T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-72",
+    "match": {
+      "home": {
+        "id": "srfc",
+        "name": "Rennes",
+        "crestUrl": "https://crests.football-data.org/529.png"
+      },
+      "away": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 3.03,
+    "impliedProb": 0.33,
+    "modelProb": 0.352,
+    "ev": 0.065,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-07-30T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-73",
+    "match": {
+      "home": {
+        "id": "rom",
+        "name": "Roma",
+        "crestUrl": "https://crests.football-data.org/100.png"
+      },
+      "away": {
+        "id": "nap",
+        "name": "Napoli",
+        "crestUrl": "https://crests.football-data.org/113.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 3.02,
+    "impliedProb": 0.331,
+    "modelProb": 0.364,
+    "ev": 0.1,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 2.02,
+    "settledAt": "2026-07-31T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-74",
+    "match": {
+      "home": {
+        "id": "ol",
+        "name": "Lyon",
+        "crestUrl": "https://crests.football-data.org/523.png"
+      },
+      "away": {
+        "id": "psg",
+        "name": "Paris Saint-Germain",
+        "crestUrl": "https://crests.football-data.org/524.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 1.81,
+    "impliedProb": 0.552,
+    "modelProb": 0.569,
+    "ev": 0.03,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-01T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-75",
+    "match": {
+      "home": {
+        "id": "srfc",
+        "name": "Rennes",
+        "crestUrl": "https://crests.football-data.org/529.png"
+      },
+      "away": {
+        "id": "om",
+        "name": "Marseille",
+        "crestUrl": "https://crests.football-data.org/516.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.28,
+    "impliedProb": 0.439,
+    "modelProb": 0.459,
+    "ev": 0.047,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-01T21:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-76",
+    "match": {
+      "home": {
+        "id": "psg",
+        "name": "Paris Saint-Germain",
+        "crestUrl": "https://crests.football-data.org/524.png"
+      },
+      "away": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 1.69,
+    "impliedProb": 0.592,
+    "modelProb": 0.63,
+    "ev": 0.064,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-02T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-77",
+    "match": {
+      "home": {
+        "id": "mci",
+        "name": "Manchester City",
+        "crestUrl": "https://crests.football-data.org/65.png"
+      },
+      "away": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.98,
+    "impliedProb": 0.336,
+    "modelProb": 0.354,
+    "ev": 0.056,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-03T18:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-78",
+    "match": {
+      "home": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "away": {
+        "id": "nap",
+        "name": "Napoli",
+        "crestUrl": "https://crests.football-data.org/113.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.3,
+    "impliedProb": 0.435,
+    "modelProb": 0.461,
+    "ev": 0.059,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.3,
+    "settledAt": "2026-08-03T18:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-79",
+    "match": {
+      "home": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "away": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.61,
+    "impliedProb": 0.383,
+    "modelProb": 0.406,
+    "ev": 0.059,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.61,
+    "settledAt": "2026-08-04T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-80",
+    "match": {
+      "home": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "away": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.46,
+    "impliedProb": 0.407,
+    "modelProb": 0.447,
+    "ev": 0.099,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.46,
+    "settledAt": "2026-08-05T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-81",
+    "match": {
+      "home": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": "tot",
+        "name": "Tottenham Hotspur",
+        "crestUrl": "https://crests.football-data.org/73.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.62,
+    "impliedProb": 0.382,
+    "modelProb": 0.404,
+    "ev": 0.059,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.62,
+    "settledAt": "2026-08-05T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-82",
+    "match": {
+      "home": {
+        "id": "bar",
+        "name": "Barcelona",
+        "crestUrl": "https://crests.football-data.org/81.png"
+      },
+      "away": {
+        "id": "val",
+        "name": "Valencia",
+        "crestUrl": "https://crests.football-data.org/95.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.39,
+    "impliedProb": 0.418,
+    "modelProb": 0.464,
+    "ev": 0.108,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-06T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-83",
+    "match": {
+      "home": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "away": {
+        "id": "nap",
+        "name": "Napoli",
+        "crestUrl": "https://crests.football-data.org/113.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 1.89,
+    "impliedProb": 0.529,
+    "modelProb": 0.576,
+    "ev": 0.089,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-07T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-84",
+    "match": {
+      "home": {
+        "id": "get",
+        "name": "Getafe",
+        "crestUrl": "https://crests.football-data.org/82.png"
+      },
+      "away": {
+        "id": "osa",
+        "name": "Osasuna",
+        "crestUrl": "https://crests.football-data.org/79.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 1.96,
+    "impliedProb": 0.51,
+    "modelProb": 0.559,
+    "ev": 0.095,
+    "confidence": "high",
+    "result": "void",
+    "profit": 0,
+    "settledAt": "2026-08-07T18:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-85",
+    "match": {
+      "home": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "away": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.71,
+    "impliedProb": 0.369,
+    "modelProb": 0.403,
+    "ev": 0.091,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-08T21:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-86",
+    "match": {
+      "home": {
+        "id": "mci",
+        "name": "Manchester City",
+        "crestUrl": "https://crests.football-data.org/65.png"
+      },
+      "away": {
+        "id": "ars",
+        "name": "Arsenal",
+        "crestUrl": "https://crests.football-data.org/57.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.95,
+    "impliedProb": 0.339,
+    "modelProb": 0.351,
+    "ev": 0.035,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.95,
+    "settledAt": "2026-08-09T18:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-87",
+    "match": {
+      "home": {
+        "id": "ala",
+        "name": "Alavés",
+        "crestUrl": "https://crests.football-data.org/263.png"
+      },
+      "away": {
+        "id": "mll",
+        "name": "Mallorca",
+        "crestUrl": "https://crests.football-data.org/89.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.94,
+    "impliedProb": 0.34,
+    "modelProb": 0.374,
+    "ev": 0.099,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-09T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-88",
+    "match": {
+      "home": {
+        "id": "ala",
+        "name": "Alavés",
+        "crestUrl": "https://crests.football-data.org/263.png"
+      },
+      "away": {
+        "id": "bet",
+        "name": "Real Betis",
+        "crestUrl": "https://crests.football-data.org/90.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.7,
+    "impliedProb": 0.27,
+    "modelProb": 0.294,
+    "ev": 0.089,
+    "confidence": "low",
+    "result": "won",
+    "profit": 2.7,
+    "settledAt": "2026-08-10T21:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-89",
+    "match": {
+      "home": {
+        "id": "psg",
+        "name": "Paris Saint-Germain",
+        "crestUrl": "https://crests.football-data.org/524.png"
+      },
+      "away": {
+        "id": "ol",
+        "name": "Lyon",
+        "crestUrl": "https://crests.football-data.org/523.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.02,
+    "impliedProb": 0.495,
+    "modelProb": 0.546,
+    "ev": 0.102,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.02,
+    "settledAt": "2026-08-11T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-90",
+    "match": {
+      "home": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "away": {
+        "id": "vfb",
+        "name": "VfB Stuttgart",
+        "crestUrl": "https://crests.football-data.org/10.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.72,
+    "impliedProb": 0.368,
+    "modelProb": 0.404,
+    "ev": 0.098,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-11T18:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-91",
+    "match": {
+      "home": {
+        "id": "rcl",
+        "name": "Lens",
+        "crestUrl": "https://crests.football-data.org/546.png"
+      },
+      "away": {
+        "id": "srfc",
+        "name": "Rennes",
+        "crestUrl": "https://crests.football-data.org/529.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.21,
+    "impliedProb": 0.452,
+    "modelProb": 0.478,
+    "ev": 0.057,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.21,
+    "settledAt": "2026-08-12T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-92",
+    "match": {
+      "home": {
+        "id": "bmg",
+        "name": "Borussia Mönchengladbach",
+        "crestUrl": "https://crests.football-data.org/18.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.33,
+    "impliedProb": 0.752,
+    "modelProb": 0.818,
+    "ev": 0.088,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.33,
+    "settledAt": "2026-08-13T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-93",
+    "match": {
+      "home": {
+        "id": "esp",
+        "name": "Espanyol",
+        "crestUrl": "https://crests.football-data.org/80.png"
+      },
+      "away": {
+        "id": "ala",
+        "name": "Alavés",
+        "crestUrl": "https://crests.football-data.org/263.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.47,
+    "impliedProb": 0.405,
+    "modelProb": 0.428,
+    "ev": 0.056,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-13T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-94",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.34,
+    "impliedProb": 0.427,
+    "modelProb": 0.467,
+    "ev": 0.092,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-14T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-95",
+    "match": {
+      "home": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "away": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 1.71,
+    "impliedProb": 0.585,
+    "modelProb": 0.644,
+    "ev": 0.102,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.71,
+    "settledAt": "2026-08-15T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-96",
+    "match": {
+      "home": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.18,
+    "impliedProb": 0.459,
+    "modelProb": 0.495,
+    "ev": 0.079,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-15T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-97",
+    "match": {
+      "home": {
+        "id": "rom",
+        "name": "Roma",
+        "crestUrl": "https://crests.football-data.org/100.png"
+      },
+      "away": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.92,
+    "impliedProb": 0.342,
+    "modelProb": 0.363,
+    "ev": 0.061,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-16T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-98",
+    "match": {
+      "home": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "away": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.84,
+    "impliedProb": 0.352,
+    "modelProb": 0.379,
+    "ev": 0.078,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.84,
+    "settledAt": "2026-08-17T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-99",
+    "match": {
+      "home": {
+        "id": "ray",
+        "name": "Rayo Vallecano",
+        "crestUrl": "https://crests.football-data.org/87.png"
+      },
+      "away": {
+        "id": "mll",
+        "name": "Mallorca",
+        "crestUrl": "https://crests.football-data.org/89.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 1.58,
+    "impliedProb": 0.633,
+    "modelProb": 0.677,
+    "ev": 0.07,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-17T19:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-100",
+    "match": {
+      "home": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "away": {
+        "id": "atm",
+        "name": "Atlético Madrid",
+        "crestUrl": "https://crests.football-data.org/78.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 1.61,
+    "impliedProb": 0.621,
+    "modelProb": 0.644,
+    "ev": 0.037,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.61,
+    "settledAt": "2026-08-18T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-101",
+    "match": {
+      "home": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "away": {
+        "id": "rom",
+        "name": "Roma",
+        "crestUrl": "https://crests.football-data.org/100.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.8,
+    "impliedProb": 0.556,
+    "modelProb": 0.583,
+    "ev": 0.05,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-19T18:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-102",
+    "match": {
+      "home": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "away": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.42,
+    "impliedProb": 0.413,
+    "modelProb": 0.432,
+    "ev": 0.045,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.42,
+    "settledAt": "2026-08-19T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-103",
+    "match": {
+      "home": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "away": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 1.59,
+    "impliedProb": 0.629,
+    "modelProb": 0.694,
+    "ev": 0.103,
+    "confidence": "high",
+    "result": "void",
+    "profit": 0,
+    "settledAt": "2026-08-20T18:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-104",
+    "match": {
+      "home": {
+        "id": "ars",
+        "name": "Arsenal",
+        "crestUrl": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": "atm",
+        "name": "Atlético Madrid",
+        "crestUrl": "https://crests.football-data.org/78.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.54,
+    "impliedProb": 0.394,
+    "modelProb": 0.417,
+    "ev": 0.059,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-21T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-105",
+    "match": {
+      "home": {
+        "id": "ovi",
+        "name": "Real Oviedo",
+        "crestUrl": ""
+      },
+      "away": {
+        "id": "rso",
+        "name": "Real Sociedad",
+        "crestUrl": "https://crests.football-data.org/92.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 1.77,
+    "impliedProb": 0.565,
+    "modelProb": 0.616,
+    "ev": 0.09,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-21T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-106",
+    "match": {
+      "home": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "away": {
+        "id": "om",
+        "name": "Marseille",
+        "crestUrl": "https://crests.football-data.org/516.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 1.93,
+    "impliedProb": 0.518,
+    "modelProb": 0.552,
+    "ev": 0.066,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.93,
+    "settledAt": "2026-08-22T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-107",
+    "match": {
+      "home": {
+        "id": "tot",
+        "name": "Tottenham Hotspur",
+        "crestUrl": "https://crests.football-data.org/73.png"
+      },
+      "away": {
+        "id": "ars",
+        "name": "Arsenal",
+        "crestUrl": "https://crests.football-data.org/57.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.47,
+    "impliedProb": 0.288,
+    "modelProb": 0.315,
+    "ev": 0.093,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-23T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-108",
+    "match": {
+      "home": {
+        "id": "atm",
+        "name": "Atlético Madrid",
+        "crestUrl": "https://crests.football-data.org/78.png"
+      },
+      "away": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.73,
+    "impliedProb": 0.366,
+    "modelProb": 0.406,
+    "ev": 0.109,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-23T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-109",
+    "match": {
+      "home": {
+        "id": "esp",
+        "name": "Espanyol",
+        "crestUrl": "https://crests.football-data.org/80.png"
+      },
+      "away": {
+        "id": "sev",
+        "name": "Sevilla",
+        "crestUrl": "https://crests.football-data.org/559.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.46,
+    "impliedProb": 0.685,
+    "modelProb": 0.737,
+    "ev": 0.075,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.46,
+    "settledAt": "2026-08-24T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-110",
+    "match": {
+      "home": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "away": {
+        "id": "vfb",
+        "name": "VfB Stuttgart",
+        "crestUrl": "https://crests.football-data.org/10.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.34,
+    "impliedProb": 0.746,
+    "modelProb": 0.779,
+    "ev": 0.043,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.34,
+    "settledAt": "2026-08-25T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-111",
+    "match": {
+      "home": {
+        "id": "tot",
+        "name": "Tottenham Hotspur",
+        "crestUrl": "https://crests.football-data.org/73.png"
+      },
+      "away": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.13,
+    "impliedProb": 0.319,
+    "modelProb": 0.339,
+    "ev": 0.06,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-25T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-112",
+    "match": {
+      "home": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": "om",
+        "name": "Marseille",
+        "crestUrl": "https://crests.football-data.org/516.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 1.8,
+    "impliedProb": 0.556,
+    "modelProb": 0.609,
+    "ev": 0.096,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-26T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-113",
+    "match": {
+      "home": {
+        "id": "rcsa",
+        "name": "Strasbourg",
+        "crestUrl": "https://crests.football-data.org/576.png"
+      },
+      "away": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.73,
+    "impliedProb": 0.366,
+    "modelProb": 0.396,
+    "ev": 0.082,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.73,
+    "settledAt": "2026-08-27T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-114",
+    "match": {
+      "home": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.43,
+    "impliedProb": 0.412,
+    "modelProb": 0.439,
+    "ev": 0.067,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.43,
+    "settledAt": "2026-08-27T19:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-115",
+    "match": {
+      "home": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.88,
+    "impliedProb": 0.347,
+    "modelProb": 0.385,
+    "ev": 0.11,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-28T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-116",
+    "match": {
+      "home": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "away": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.17,
+    "impliedProb": 0.315,
+    "modelProb": 0.337,
+    "ev": 0.068,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-29T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-117",
+    "match": {
+      "home": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "away": {
+        "id": "bvb",
+        "name": "Borussia Dortmund",
+        "crestUrl": "https://crests.football-data.org/4.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.33,
+    "impliedProb": 0.429,
+    "modelProb": 0.46,
+    "ev": 0.072,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-08-29T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-118",
+    "match": {
+      "home": {
+        "id": "get",
+        "name": "Getafe",
+        "crestUrl": "https://crests.football-data.org/82.png"
+      },
+      "away": {
+        "id": "bet",
+        "name": "Real Betis",
+        "crestUrl": "https://crests.football-data.org/90.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.6,
+    "impliedProb": 0.625,
+    "modelProb": 0.688,
+    "ev": 0.1,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.6,
+    "settledAt": "2026-08-30T18:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-119",
+    "match": {
+      "home": {
+        "id": "rcl",
+        "name": "Lens",
+        "crestUrl": "https://crests.football-data.org/546.png"
+      },
+      "away": {
+        "id": "ol",
+        "name": "Lyon",
+        "crestUrl": "https://crests.football-data.org/523.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 1.63,
+    "impliedProb": 0.613,
+    "modelProb": 0.656,
+    "ev": 0.069,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.63,
+    "settledAt": "2026-08-31T19:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-120",
+    "match": {
+      "home": {
+        "id": "lev",
+        "name": "Levante",
+        "crestUrl": "https://crests.football-data.org/88.png"
+      },
+      "away": {
+        "id": "cel",
+        "name": "Celta Vigo",
+        "crestUrl": "https://crests.football-data.org/558.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.41,
+    "impliedProb": 0.415,
+    "modelProb": 0.432,
+    "ev": 0.04,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.41,
+    "settledAt": "2026-08-31T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-121",
+    "match": {
+      "home": {
+        "id": "mci",
+        "name": "Manchester City",
+        "crestUrl": "https://crests.football-data.org/65.png"
+      },
+      "away": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.54,
+    "impliedProb": 0.649,
+    "modelProb": 0.675,
+    "ev": 0.04,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.54,
+    "settledAt": "2026-09-01T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-122",
+    "match": {
+      "home": {
+        "id": "sge",
+        "name": "Eintracht Frankfurt",
+        "crestUrl": "https://crests.football-data.org/19.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.77,
+    "impliedProb": 0.265,
+    "modelProb": 0.282,
+    "ev": 0.065,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-02T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-123",
+    "match": {
+      "home": {
+        "id": "psg",
+        "name": "Paris Saint-Germain",
+        "crestUrl": "https://crests.football-data.org/524.png"
+      },
+      "away": {
+        "id": "ol",
+        "name": "Lyon",
+        "crestUrl": "https://crests.football-data.org/523.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.1,
+    "impliedProb": 0.476,
+    "modelProb": 0.508,
+    "ev": 0.067,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-02T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-124",
+    "match": {
+      "home": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "away": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 1.58,
+    "impliedProb": 0.633,
+    "modelProb": 0.683,
+    "ev": 0.08,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.58,
+    "settledAt": "2026-09-03T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-125",
+    "match": {
+      "home": {
+        "id": "osa",
+        "name": "Osasuna",
+        "crestUrl": "https://crests.football-data.org/79.png"
+      },
+      "away": {
+        "id": "rso",
+        "name": "Real Sociedad",
+        "crestUrl": "https://crests.football-data.org/92.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 1.96,
+    "impliedProb": 0.51,
+    "modelProb": 0.538,
+    "ev": 0.054,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 0.96,
+    "settledAt": "2026-09-04T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-126",
+    "match": {
+      "home": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.72,
+    "impliedProb": 0.581,
+    "modelProb": 0.622,
+    "ev": 0.07,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.72,
+    "settledAt": "2026-09-04T18:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-127",
+    "match": {
+      "home": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.48,
+    "impliedProb": 0.403,
+    "modelProb": 0.428,
+    "ev": 0.061,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.48,
+    "settledAt": "2026-09-05T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-128",
+    "match": {
+      "home": {
+        "id": "nap",
+        "name": "Napoli",
+        "crestUrl": "https://crests.football-data.org/113.png"
+      },
+      "away": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.21,
+    "impliedProb": 0.312,
+    "modelProb": 0.33,
+    "ev": 0.058,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-06T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-129",
+    "match": {
+      "home": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "away": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.37,
+    "impliedProb": 0.422,
+    "modelProb": 0.461,
+    "ev": 0.092,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.37,
+    "settledAt": "2026-09-06T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-130",
+    "match": {
+      "home": {
+        "id": "bvb",
+        "name": "Borussia Dortmund",
+        "crestUrl": "https://crests.football-data.org/4.png"
+      },
+      "away": {
+        "id": "vfb",
+        "name": "VfB Stuttgart",
+        "crestUrl": "https://crests.football-data.org/10.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.83,
+    "impliedProb": 0.353,
+    "modelProb": 0.379,
+    "ev": 0.072,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-07T19:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-131",
+    "match": {
+      "home": {
+        "id": "tor",
+        "name": "Torino",
+        "crestUrl": "https://crests.football-data.org/586.png"
+      },
+      "away": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.63,
+    "impliedProb": 0.38,
+    "modelProb": 0.403,
+    "ev": 0.059,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.63,
+    "settledAt": "2026-09-08T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-132",
+    "match": {
+      "home": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 1.74,
+    "impliedProb": 0.575,
+    "modelProb": 0.613,
+    "ev": 0.067,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.74,
+    "settledAt": "2026-09-08T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-133",
+    "match": {
+      "home": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": "mun",
+        "name": "Manchester United",
+        "crestUrl": "https://crests.football-data.org/66.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.83,
+    "impliedProb": 0.353,
+    "modelProb": 0.384,
+    "ev": 0.088,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.83,
+    "settledAt": "2026-09-09T21:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-134",
+    "match": {
+      "home": {
+        "id": "om",
+        "name": "Marseille",
+        "crestUrl": "https://crests.football-data.org/516.png"
+      },
+      "away": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 1.72,
+    "impliedProb": 0.581,
+    "modelProb": 0.645,
+    "ev": 0.109,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-135",
+    "match": {
+      "home": {
+        "id": "get",
+        "name": "Getafe",
+        "crestUrl": "https://crests.football-data.org/82.png"
+      },
+      "away": {
+        "id": "esp",
+        "name": "Espanyol",
+        "crestUrl": "https://crests.football-data.org/80.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.49,
+    "impliedProb": 0.671,
+    "modelProb": 0.697,
+    "ev": 0.039,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-10T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-136",
+    "match": {
+      "home": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.53,
+    "impliedProb": 0.654,
+    "modelProb": 0.693,
+    "ev": 0.06,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.53,
+    "settledAt": "2026-09-11T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-137",
+    "match": {
+      "home": {
+        "id": "ars",
+        "name": "Arsenal",
+        "crestUrl": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.43,
+    "impliedProb": 0.412,
+    "modelProb": 0.435,
+    "ev": 0.057,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.43,
+    "settledAt": "2026-09-12T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-138",
+    "match": {
+      "home": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "away": {
+        "id": "sge",
+        "name": "Eintracht Frankfurt",
+        "crestUrl": "https://crests.football-data.org/19.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.72,
+    "impliedProb": 0.368,
+    "modelProb": 0.403,
+    "ev": 0.095,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-12T21:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-139",
+    "match": {
+      "home": {
+        "id": "atm",
+        "name": "Atlético Madrid",
+        "crestUrl": "https://crests.football-data.org/78.png"
+      },
+      "away": {
+        "id": "vil",
+        "name": "Villarreal",
+        "crestUrl": "https://crests.football-data.org/94.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.81,
+    "impliedProb": 0.356,
+    "modelProb": 0.37,
+    "ev": 0.041,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.81,
+    "settledAt": "2026-09-13T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-140",
+    "match": {
+      "home": {
+        "id": "sev",
+        "name": "Sevilla",
+        "crestUrl": "https://crests.football-data.org/559.png"
+      },
+      "away": {
+        "id": "ray",
+        "name": "Rayo Vallecano",
+        "crestUrl": "https://crests.football-data.org/87.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.28,
+    "impliedProb": 0.305,
+    "modelProb": 0.321,
+    "ev": 0.053,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-14T19:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-141",
+    "match": {
+      "home": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "away": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 1.92,
+    "impliedProb": 0.521,
+    "modelProb": 0.575,
+    "ev": 0.104,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-14T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-142",
+    "match": {
+      "home": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "away": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "1X2",
+    "selection": "Away",
+    "odds": 2.05,
+    "impliedProb": 0.488,
+    "modelProb": 0.541,
+    "ev": 0.109,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-15T20:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-143",
+    "match": {
+      "home": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "away": {
+        "id": "che",
+        "name": "Chelsea",
+        "crestUrl": "https://crests.football-data.org/61.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 3.03,
+    "impliedProb": 0.33,
+    "modelProb": 0.364,
+    "ev": 0.103,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-16T18:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-144",
+    "match": {
+      "home": {
+        "id": "rcl",
+        "name": "Lens",
+        "crestUrl": "https://crests.football-data.org/546.png"
+      },
+      "away": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.07,
+    "impliedProb": 0.483,
+    "modelProb": 0.506,
+    "ev": 0.047,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-16T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-145",
+    "match": {
+      "home": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "away": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 1.67,
+    "impliedProb": 0.599,
+    "modelProb": 0.634,
+    "ev": 0.059,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-17T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-146",
+    "match": {
+      "home": {
+        "id": "fio",
+        "name": "Fiorentina",
+        "crestUrl": "https://crests.football-data.org/99.png"
+      },
+      "away": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.88,
+    "impliedProb": 0.347,
+    "modelProb": 0.366,
+    "ev": 0.054,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-18T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-147",
+    "match": {
+      "home": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "away": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.83,
+    "impliedProb": 0.546,
+    "modelProb": 0.59,
+    "ev": 0.081,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-18T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-148",
+    "match": {
+      "home": {
+        "id": "ogcn",
+        "name": "Nice",
+        "crestUrl": "https://crests.football-data.org/522.png"
+      },
+      "away": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.36,
+    "impliedProb": 0.424,
+    "modelProb": 0.451,
+    "ev": 0.065,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.36,
+    "settledAt": "2026-09-19T18:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-149",
+    "match": {
+      "home": {
+        "id": "ars",
+        "name": "Arsenal",
+        "crestUrl": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": "bar",
+        "name": "Barcelona",
+        "crestUrl": "https://crests.football-data.org/81.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.83,
+    "impliedProb": 0.353,
+    "modelProb": 0.386,
+    "ev": 0.094,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.83,
+    "settledAt": "2026-09-20T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-150",
+    "match": {
+      "home": {
+        "id": "ata",
+        "name": "Atalanta",
+        "crestUrl": "https://crests.football-data.org/102.png"
+      },
+      "away": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.15,
+    "impliedProb": 0.465,
+    "modelProb": 0.48,
+    "ev": 0.032,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.15,
+    "settledAt": "2026-09-20T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-151",
+    "match": {
+      "home": {
+        "id": "bvb",
+        "name": "Borussia Dortmund",
+        "crestUrl": "https://crests.football-data.org/4.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.23,
+    "impliedProb": 0.448,
+    "modelProb": 0.472,
+    "ev": 0.053,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.23,
+    "settledAt": "2026-09-21T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-152",
+    "match": {
+      "home": {
+        "id": "sge",
+        "name": "Eintracht Frankfurt",
+        "crestUrl": "https://crests.football-data.org/19.png"
+      },
+      "away": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.56,
+    "impliedProb": 0.641,
+    "modelProb": 0.698,
+    "ev": 0.089,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.56,
+    "settledAt": "2026-09-22T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-153",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 1.8,
+    "impliedProb": 0.556,
+    "modelProb": 0.595,
+    "ev": 0.071,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-22T21:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-154",
+    "match": {
+      "home": {
+        "id": "osa",
+        "name": "Osasuna",
+        "crestUrl": "https://crests.football-data.org/79.png"
+      },
+      "away": {
+        "id": "ath",
+        "name": "Athletic Club",
+        "crestUrl": "https://crests.football-data.org/77.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Over 9.5",
+    "odds": 2.15,
+    "impliedProb": 0.465,
+    "modelProb": 0.493,
+    "ev": 0.059,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-23T19:00:00.000Z"
+  },
+  {
+    "matchId": "cl-past-155",
+    "match": {
+      "home": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": "ray",
+        "name": "Rayo Vallecano",
+        "crestUrl": "https://crests.football-data.org/87.png"
+      },
+      "league": "Champions League",
+      "leagueId": "CL"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.56,
+    "impliedProb": 0.391,
+    "modelProb": 0.411,
+    "ev": 0.051,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-24T18:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-156",
+    "match": {
+      "home": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "away": {
+        "id": "bha",
+        "name": "Brighton",
+        "crestUrl": "https://crests.football-data.org/397.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.54,
+    "impliedProb": 0.394,
+    "modelProb": 0.416,
+    "ev": 0.056,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.54,
+    "settledAt": "2026-09-24T20:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-157",
+    "match": {
+      "home": {
+        "id": "int",
+        "name": "Inter",
+        "crestUrl": "https://crests.football-data.org/108.png"
+      },
+      "away": {
+        "id": "nap",
+        "name": "Napoli",
+        "crestUrl": "https://crests.football-data.org/113.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.46,
+    "impliedProb": 0.685,
+    "modelProb": 0.715,
+    "ev": 0.043,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-25T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-158",
+    "match": {
+      "home": {
+        "id": "ath",
+        "name": "Athletic Club",
+        "crestUrl": "https://crests.football-data.org/77.png"
+      },
+      "away": {
+        "id": "rso",
+        "name": "Real Sociedad",
+        "crestUrl": "https://crests.football-data.org/92.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 1.6,
+    "impliedProb": 0.625,
+    "modelProb": 0.679,
+    "ev": 0.086,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.6,
+    "settledAt": "2026-09-26T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-159",
+    "match": {
+      "home": {
+        "id": "ata",
+        "name": "Atalanta",
+        "crestUrl": "https://crests.football-data.org/102.png"
+      },
+      "away": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 2.82,
+    "impliedProb": 0.355,
+    "modelProb": 0.376,
+    "ev": 0.06,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.82,
+    "settledAt": "2026-09-26T20:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-160",
+    "match": {
+      "home": {
+        "id": "whu",
+        "name": "West Ham United",
+        "crestUrl": "https://crests.football-data.org/563.png"
+      },
+      "away": {
+        "id": "avl",
+        "name": "Aston Villa",
+        "crestUrl": "https://crests.football-data.org/58.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.87,
+    "impliedProb": 0.348,
+    "modelProb": 0.377,
+    "ev": 0.082,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-27T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-161",
+    "match": {
+      "home": {
+        "id": "fio",
+        "name": "Fiorentina",
+        "crestUrl": "https://crests.football-data.org/99.png"
+      },
+      "away": {
+        "id": "ata",
+        "name": "Atalanta",
+        "crestUrl": "https://crests.football-data.org/102.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.41,
+    "impliedProb": 0.709,
+    "modelProb": 0.753,
+    "ev": 0.062,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.41,
+    "settledAt": "2026-09-28T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-162",
+    "match": {
+      "home": {
+        "id": "esp",
+        "name": "Espanyol",
+        "crestUrl": "https://crests.football-data.org/80.png"
+      },
+      "away": {
+        "id": "osa",
+        "name": "Osasuna",
+        "crestUrl": "https://crests.football-data.org/79.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.71,
+    "impliedProb": 0.369,
+    "modelProb": 0.396,
+    "ev": 0.072,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-28T20:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-163",
+    "match": {
+      "home": {
+        "id": "fcn",
+        "name": "Nantes",
+        "crestUrl": "https://crests.football-data.org/543.png"
+      },
+      "away": {
+        "id": "om",
+        "name": "Marseille",
+        "crestUrl": "https://crests.football-data.org/516.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.95,
+    "impliedProb": 0.339,
+    "modelProb": 0.357,
+    "ev": 0.052,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-29T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-164",
+    "match": {
+      "home": {
+        "id": "bar",
+        "name": "Barcelona",
+        "crestUrl": "https://crests.football-data.org/81.png"
+      },
+      "away": {
+        "id": "rma",
+        "name": "Real Madrid",
+        "crestUrl": "https://crests.football-data.org/86.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.16,
+    "impliedProb": 0.316,
+    "modelProb": 0.327,
+    "ev": 0.034,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-09-30T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-165",
+    "match": {
+      "home": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "away": {
+        "id": "bol",
+        "name": "Bologna",
+        "crestUrl": "https://crests.football-data.org/103.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "1X2",
+    "selection": "Draw",
+    "odds": 3.65,
+    "impliedProb": 0.274,
+    "modelProb": 0.304,
+    "ev": 0.109,
+    "confidence": "low",
+    "result": "won",
+    "profit": 2.65,
+    "settledAt": "2026-09-30T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-166",
+    "match": {
+      "home": {
+        "id": "bmg",
+        "name": "Borussia Mönchengladbach",
+        "crestUrl": "https://crests.football-data.org/18.png"
+      },
+      "away": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 3.03,
+    "impliedProb": 0.33,
+    "modelProb": 0.346,
+    "ev": 0.049,
+    "confidence": "low",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-01T20:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-167",
+    "match": {
+      "home": {
+        "id": "gir",
+        "name": "Girona",
+        "crestUrl": "https://crests.football-data.org/298.png"
+      },
+      "away": {
+        "id": "sev",
+        "name": "Sevilla",
+        "crestUrl": "https://crests.football-data.org/559.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "BTTS",
+    "selection": "Yes",
+    "odds": 2.56,
+    "impliedProb": 0.391,
+    "modelProb": 0.429,
+    "ev": 0.098,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-02T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-168",
+    "match": {
+      "home": {
+        "id": "bmg",
+        "name": "Borussia Mönchengladbach",
+        "crestUrl": "https://crests.football-data.org/18.png"
+      },
+      "away": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "1X2",
+    "selection": "Away",
+    "odds": 2.44,
+    "impliedProb": 0.41,
+    "modelProb": 0.434,
+    "ev": 0.058,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-02T18:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-169",
+    "match": {
+      "home": {
+        "id": "bmg",
+        "name": "Borussia Mönchengladbach",
+        "crestUrl": "https://crests.football-data.org/18.png"
+      },
+      "away": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Under 4.5",
+    "odds": 1.84,
+    "impliedProb": 0.543,
+    "modelProb": 0.579,
+    "ev": 0.065,
+    "confidence": "high",
+    "result": "void",
+    "profit": 0,
+    "settledAt": "2026-10-03T20:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-170",
+    "match": {
+      "home": {
+        "id": "vfb",
+        "name": "VfB Stuttgart",
+        "crestUrl": "https://crests.football-data.org/10.png"
+      },
+      "away": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "1X2",
+    "selection": "Home",
+    "odds": 2.5,
+    "impliedProb": 0.4,
+    "modelProb": 0.431,
+    "ev": 0.077,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-04T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-171",
+    "match": {
+      "home": {
+        "id": "tor",
+        "name": "Torino",
+        "crestUrl": "https://crests.football-data.org/586.png"
+      },
+      "away": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 1.7,
+    "impliedProb": 0.588,
+    "modelProb": 0.635,
+    "ev": 0.08,
+    "confidence": "high",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-04T19:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-172",
+    "match": {
+      "home": {
+        "id": "laz",
+        "name": "Lazio",
+        "crestUrl": "https://crests.football-data.org/110.png"
+      },
+      "away": {
+        "id": "juv",
+        "name": "Juventus",
+        "crestUrl": "https://crests.football-data.org/109.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "CORNERS_9.5",
+    "selection": "Under 9.5",
+    "odds": 2.76,
+    "impliedProb": 0.362,
+    "modelProb": 0.373,
+    "ev": 0.03,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-05T18:00:00.000Z"
+  },
+  {
+    "matchId": "pd-past-173",
+    "match": {
+      "home": {
+        "id": "rso",
+        "name": "Real Sociedad",
+        "crestUrl": "https://crests.football-data.org/92.png"
+      },
+      "away": {
+        "id": "mll",
+        "name": "Mallorca",
+        "crestUrl": "https://crests.football-data.org/89.png"
+      },
+      "league": "LaLiga",
+      "leagueId": "PD"
+    },
+    "market": "OU_2.5",
+    "selection": "Over 2.5",
+    "odds": 2.08,
+    "impliedProb": 0.481,
+    "modelProb": 0.505,
+    "ev": 0.051,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-06T21:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-174",
+    "match": {
+      "home": {
+        "id": "rbl",
+        "name": "RB Leipzig",
+        "crestUrl": "https://crests.football-data.org/721.png"
+      },
+      "away": {
+        "id": "b04",
+        "name": "Bayer Leverkusen",
+        "crestUrl": "https://crests.football-data.org/3.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "DC",
+    "selection": "Home or Draw",
+    "odds": 1.41,
+    "impliedProb": 0.709,
+    "modelProb": 0.751,
+    "ev": 0.059,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.41,
+    "settledAt": "2026-10-06T21:00:00.000Z"
+  },
+  {
+    "matchId": "pl-past-175",
+    "match": {
+      "home": {
+        "id": "new",
+        "name": "Newcastle United",
+        "crestUrl": "https://crests.football-data.org/67.png"
+      },
+      "away": {
+        "id": "liv",
+        "name": "Liverpool",
+        "crestUrl": "https://crests.football-data.org/64.png"
+      },
+      "league": "Premier League",
+      "leagueId": "PL"
+    },
+    "market": "BTTS",
+    "selection": "No",
+    "odds": 2.24,
+    "impliedProb": 0.446,
+    "modelProb": 0.475,
+    "ev": 0.063,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-07T19:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-176",
+    "match": {
+      "home": {
+        "id": "psg",
+        "name": "Paris Saint-Germain",
+        "crestUrl": "https://crests.football-data.org/524.png"
+      },
+      "away": {
+        "id": "ol",
+        "name": "Lyon",
+        "crestUrl": "https://crests.football-data.org/523.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "DC",
+    "selection": "Draw or Away",
+    "odds": 1.49,
+    "impliedProb": 0.671,
+    "modelProb": 0.735,
+    "ev": 0.095,
+    "confidence": "high",
+    "result": "won",
+    "profit": 0.49,
+    "settledAt": "2026-10-08T21:00:00.000Z"
+  },
+  {
+    "matchId": "fl1-past-177",
+    "match": {
+      "home": {
+        "id": "losc",
+        "name": "Lille",
+        "crestUrl": "https://crests.football-data.org/521.png"
+      },
+      "away": {
+        "id": "fcn",
+        "name": "Nantes",
+        "crestUrl": "https://crests.football-data.org/543.png"
+      },
+      "league": "Ligue 1",
+      "leagueId": "FL1"
+    },
+    "market": "OU_2.5",
+    "selection": "Under 2.5",
+    "odds": 2.1,
+    "impliedProb": 0.476,
+    "modelProb": 0.493,
+    "ev": 0.035,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-08T19:00:00.000Z"
+  },
+  {
+    "matchId": "bl1-past-178",
+    "match": {
+      "home": {
+        "id": "wob",
+        "name": "VfL Wolfsburg",
+        "crestUrl": "https://crests.football-data.org/11.png"
+      },
+      "away": {
+        "id": "fcb",
+        "name": "Bayern Munich",
+        "crestUrl": "https://crests.football-data.org/5.png"
+      },
+      "league": "Bundesliga",
+      "leagueId": "BL1"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.18,
+    "impliedProb": 0.459,
+    "modelProb": 0.507,
+    "ev": 0.105,
+    "confidence": "medium",
+    "result": "won",
+    "profit": 1.18,
+    "settledAt": "2026-10-09T21:00:00.000Z"
+  },
+  {
+    "matchId": "sa-past-179",
+    "match": {
+      "home": {
+        "id": "mil",
+        "name": "AC Milan",
+        "crestUrl": "https://crests.football-data.org/98.png"
+      },
+      "away": {
+        "id": "ata",
+        "name": "Atalanta",
+        "crestUrl": "https://crests.football-data.org/102.png"
+      },
+      "league": "Serie A",
+      "leagueId": "SA"
+    },
+    "market": "CARDS_4.5",
+    "selection": "Over 4.5",
+    "odds": 2.69,
+    "impliedProb": 0.372,
+    "modelProb": 0.405,
+    "ev": 0.09,
+    "confidence": "medium",
+    "result": "lost",
+    "profit": -1,
+    "settledAt": "2026-10-10T19:00:00.000Z"
+  }
+]

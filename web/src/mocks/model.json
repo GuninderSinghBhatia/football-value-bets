@@ -1,0 +1,75 @@
+{
+  "calibration": [
+    {
+      "predicted": 0.144,
+      "actual": 0.171,
+      "count": 655
+    },
+    {
+      "predicted": 0.234,
+      "actual": 0.245,
+      "count": 717
+    },
+    {
+      "predicted": 0.325,
+      "actual": 0.302,
+      "count": 678
+    },
+    {
+      "predicted": 0.416,
+      "actual": 0.424,
+      "count": 653
+    },
+    {
+      "predicted": 0.503,
+      "actual": 0.527,
+      "count": 678
+    },
+    {
+      "predicted": 0.595,
+      "actual": 0.616,
+      "count": 692
+    },
+    {
+      "predicted": 0.685,
+      "actual": 0.665,
+      "count": 713
+    },
+    {
+      "predicted": 0.774,
+      "actual": 0.754,
+      "count": 621
+    },
+    {
+      "predicted": 0.862,
+      "actual": 0.828,
+      "count": 593
+    }
+  ],
+  "retrains": [
+    {
+      "version": "v4",
+      "date": "2026-10-06",
+      "note": "Weekly retrain with the latest matchweek results",
+      "logLoss": 0.985
+    },
+    {
+      "version": "v3",
+      "date": "2026-09-08",
+      "note": "Added xG features, recalibrated (isotonic)",
+      "logLoss": 0.987
+    },
+    {
+      "version": "v2",
+      "date": "2026-07-28",
+      "note": "Dixon-Coles time decay tuned",
+      "logLoss": 0.992
+    },
+    {
+      "version": "v1",
+      "date": "2026-06-13",
+      "note": "First Poisson model",
+      "logLoss": 0.998
+    }
+  ]
+}

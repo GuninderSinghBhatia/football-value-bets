@@ -1,0 +1,782 @@
+[
+  {
+    "id": "rma",
+    "name": "Real Madrid",
+    "crestUrl": "https://crests.football-data.org/86.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "bar",
+    "name": "Barcelona",
+    "crestUrl": "https://crests.football-data.org/81.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "D",
+      "D",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "atm",
+    "name": "Atlético Madrid",
+    "crestUrl": "https://crests.football-data.org/78.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "D",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "vil",
+    "name": "Villarreal",
+    "crestUrl": "https://crests.football-data.org/94.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "W",
+      "L",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "bet",
+    "name": "Real Betis",
+    "crestUrl": "https://crests.football-data.org/90.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "W",
+      "D",
+      "L",
+      "L"
+    ]
+  },
+  {
+    "id": "ath",
+    "name": "Athletic Club",
+    "crestUrl": "https://crests.football-data.org/77.png",
+    "leagueId": "PD",
+    "form": [
+      "D",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "rso",
+    "name": "Real Sociedad",
+    "crestUrl": "https://crests.football-data.org/92.png",
+    "leagueId": "PD",
+    "form": [
+      "D",
+      "L",
+      "W",
+      "L",
+      "W"
+    ]
+  },
+  {
+    "id": "sev",
+    "name": "Sevilla",
+    "crestUrl": "https://crests.football-data.org/559.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "W",
+      "L",
+      "L",
+      "W"
+    ]
+  },
+  {
+    "id": "val",
+    "name": "Valencia",
+    "crestUrl": "https://crests.football-data.org/95.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "D",
+      "D",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "cel",
+    "name": "Celta Vigo",
+    "crestUrl": "https://crests.football-data.org/558.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "W",
+      "L",
+      "L",
+      "W"
+    ]
+  },
+  {
+    "id": "osa",
+    "name": "Osasuna",
+    "crestUrl": "https://crests.football-data.org/79.png",
+    "leagueId": "PD",
+    "form": [
+      "D",
+      "W",
+      "L",
+      "D",
+      "L"
+    ]
+  },
+  {
+    "id": "get",
+    "name": "Getafe",
+    "crestUrl": "https://crests.football-data.org/82.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "D",
+      "D",
+      "D",
+      "L"
+    ]
+  },
+  {
+    "id": "mll",
+    "name": "Mallorca",
+    "crestUrl": "https://crests.football-data.org/89.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "D",
+      "L",
+      "L",
+      "W"
+    ]
+  },
+  {
+    "id": "ray",
+    "name": "Rayo Vallecano",
+    "crestUrl": "https://crests.football-data.org/87.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "L",
+      "L"
+    ]
+  },
+  {
+    "id": "esp",
+    "name": "Espanyol",
+    "crestUrl": "https://crests.football-data.org/80.png",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "W",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "ala",
+    "name": "Alavés",
+    "crestUrl": "https://crests.football-data.org/263.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "L",
+      "W",
+      "L",
+      "D"
+    ]
+  },
+  {
+    "id": "gir",
+    "name": "Girona",
+    "crestUrl": "https://crests.football-data.org/298.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "W",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "elc",
+    "name": "Elche",
+    "crestUrl": "https://crests.football-data.org/285.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "L",
+      "L",
+      "L",
+      "W"
+    ]
+  },
+  {
+    "id": "lev",
+    "name": "Levante",
+    "crestUrl": "https://crests.football-data.org/88.png",
+    "leagueId": "PD",
+    "form": [
+      "L",
+      "L",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "ovi",
+    "name": "Real Oviedo",
+    "crestUrl": "",
+    "leagueId": "PD",
+    "form": [
+      "W",
+      "L",
+      "L",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "liv",
+    "name": "Liverpool",
+    "crestUrl": "https://crests.football-data.org/64.png",
+    "leagueId": "PL",
+    "form": [
+      "W",
+      "W",
+      "L",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "ars",
+    "name": "Arsenal",
+    "crestUrl": "https://crests.football-data.org/57.png",
+    "leagueId": "PL",
+    "form": [
+      "W",
+      "D",
+      "D",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "mci",
+    "name": "Manchester City",
+    "crestUrl": "https://crests.football-data.org/65.png",
+    "leagueId": "PL",
+    "form": [
+      "L",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "che",
+    "name": "Chelsea",
+    "crestUrl": "https://crests.football-data.org/61.png",
+    "leagueId": "PL",
+    "form": [
+      "D",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "new",
+    "name": "Newcastle United",
+    "crestUrl": "https://crests.football-data.org/67.png",
+    "leagueId": "PL",
+    "form": [
+      "L",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "avl",
+    "name": "Aston Villa",
+    "crestUrl": "https://crests.football-data.org/58.png",
+    "leagueId": "PL",
+    "form": [
+      "L",
+      "L",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "tot",
+    "name": "Tottenham Hotspur",
+    "crestUrl": "https://crests.football-data.org/73.png",
+    "leagueId": "PL",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "mun",
+    "name": "Manchester United",
+    "crestUrl": "https://crests.football-data.org/66.png",
+    "leagueId": "PL",
+    "form": [
+      "L",
+      "W",
+      "L",
+      "L",
+      "W"
+    ]
+  },
+  {
+    "id": "bha",
+    "name": "Brighton",
+    "crestUrl": "https://crests.football-data.org/397.png",
+    "leagueId": "PL",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "L",
+      "W"
+    ]
+  },
+  {
+    "id": "whu",
+    "name": "West Ham United",
+    "crestUrl": "https://crests.football-data.org/563.png",
+    "leagueId": "PL",
+    "form": [
+      "W",
+      "W",
+      "D",
+      "D",
+      "L"
+    ]
+  },
+  {
+    "id": "int",
+    "name": "Inter",
+    "crestUrl": "https://crests.football-data.org/108.png",
+    "leagueId": "SA",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "D",
+      "D"
+    ]
+  },
+  {
+    "id": "nap",
+    "name": "Napoli",
+    "crestUrl": "https://crests.football-data.org/113.png",
+    "leagueId": "SA",
+    "form": [
+      "W",
+      "W",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "juv",
+    "name": "Juventus",
+    "crestUrl": "https://crests.football-data.org/109.png",
+    "leagueId": "SA",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "mil",
+    "name": "AC Milan",
+    "crestUrl": "https://crests.football-data.org/98.png",
+    "leagueId": "SA",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "ata",
+    "name": "Atalanta",
+    "crestUrl": "https://crests.football-data.org/102.png",
+    "leagueId": "SA",
+    "form": [
+      "W",
+      "W",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "rom",
+    "name": "Roma",
+    "crestUrl": "https://crests.football-data.org/100.png",
+    "leagueId": "SA",
+    "form": [
+      "W",
+      "W",
+      "L",
+      "L",
+      "L"
+    ]
+  },
+  {
+    "id": "laz",
+    "name": "Lazio",
+    "crestUrl": "https://crests.football-data.org/110.png",
+    "leagueId": "SA",
+    "form": [
+      "D",
+      "W",
+      "W",
+      "W",
+      "L"
+    ]
+  },
+  {
+    "id": "bol",
+    "name": "Bologna",
+    "crestUrl": "https://crests.football-data.org/103.png",
+    "leagueId": "SA",
+    "form": [
+      "D",
+      "W",
+      "L",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "fio",
+    "name": "Fiorentina",
+    "crestUrl": "https://crests.football-data.org/99.png",
+    "leagueId": "SA",
+    "form": [
+      "D",
+      "L",
+      "D",
+      "W",
+      "L"
+    ]
+  },
+  {
+    "id": "tor",
+    "name": "Torino",
+    "crestUrl": "https://crests.football-data.org/586.png",
+    "leagueId": "SA",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "fcb",
+    "name": "Bayern Munich",
+    "crestUrl": "https://crests.football-data.org/5.png",
+    "leagueId": "BL1",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "b04",
+    "name": "Bayer Leverkusen",
+    "crestUrl": "https://crests.football-data.org/3.png",
+    "leagueId": "BL1",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "bvb",
+    "name": "Borussia Dortmund",
+    "crestUrl": "https://crests.football-data.org/4.png",
+    "leagueId": "BL1",
+    "form": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "rbl",
+    "name": "RB Leipzig",
+    "crestUrl": "https://crests.football-data.org/721.png",
+    "leagueId": "BL1",
+    "form": [
+      "L",
+      "W",
+      "W",
+      "W",
+      "D"
+    ]
+  },
+  {
+    "id": "vfb",
+    "name": "VfB Stuttgart",
+    "crestUrl": "https://crests.football-data.org/10.png",
+    "leagueId": "BL1",
+    "form": [
+      "D",
+      "D",
+      "D",
+      "W",
+      "D"
+    ]
+  },
+  {
+    "id": "sge",
+    "name": "Eintracht Frankfurt",
+    "crestUrl": "https://crests.football-data.org/19.png",
+    "leagueId": "BL1",
+    "form": [
+      "D",
+      "W",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "scf",
+    "name": "SC Freiburg",
+    "crestUrl": "https://crests.football-data.org/17.png",
+    "leagueId": "BL1",
+    "form": [
+      "W",
+      "L",
+      "D",
+      "D",
+      "D"
+    ]
+  },
+  {
+    "id": "wob",
+    "name": "VfL Wolfsburg",
+    "crestUrl": "https://crests.football-data.org/11.png",
+    "leagueId": "BL1",
+    "form": [
+      "D",
+      "D",
+      "L",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "bmg",
+    "name": "Borussia Mönchengladbach",
+    "crestUrl": "https://crests.football-data.org/18.png",
+    "leagueId": "BL1",
+    "form": [
+      "L",
+      "L",
+      "W",
+      "L",
+      "D"
+    ]
+  },
+  {
+    "id": "tsg",
+    "name": "Hoffenheim",
+    "crestUrl": "https://crests.football-data.org/2.png",
+    "leagueId": "BL1",
+    "form": [
+      "W",
+      "W",
+      "L",
+      "D",
+      "L"
+    ]
+  },
+  {
+    "id": "psg",
+    "name": "Paris Saint-Germain",
+    "crestUrl": "https://crests.football-data.org/524.png",
+    "leagueId": "FL1",
+    "form": [
+      "D",
+      "D",
+      "D",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "om",
+    "name": "Marseille",
+    "crestUrl": "https://crests.football-data.org/516.png",
+    "leagueId": "FL1",
+    "form": [
+      "D",
+      "W",
+      "W",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "asm",
+    "name": "Monaco",
+    "crestUrl": "https://crests.football-data.org/548.png",
+    "leagueId": "FL1",
+    "form": [
+      "L",
+      "W",
+      "W",
+      "D",
+      "L"
+    ]
+  },
+  {
+    "id": "losc",
+    "name": "Lille",
+    "crestUrl": "https://crests.football-data.org/521.png",
+    "leagueId": "FL1",
+    "form": [
+      "D",
+      "W",
+      "W",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "ol",
+    "name": "Lyon",
+    "crestUrl": "https://crests.football-data.org/523.png",
+    "leagueId": "FL1",
+    "form": [
+      "W",
+      "L",
+      "D",
+      "D",
+      "W"
+    ]
+  },
+  {
+    "id": "ogcn",
+    "name": "Nice",
+    "crestUrl": "https://crests.football-data.org/522.png",
+    "leagueId": "FL1",
+    "form": [
+      "L",
+      "W",
+      "W",
+      "L",
+      "L"
+    ]
+  },
+  {
+    "id": "rcl",
+    "name": "Lens",
+    "crestUrl": "https://crests.football-data.org/546.png",
+    "leagueId": "FL1",
+    "form": [
+      "L",
+      "W",
+      "L",
+      "L",
+      "L"
+    ]
+  },
+  {
+    "id": "srfc",
+    "name": "Rennes",
+    "crestUrl": "https://crests.football-data.org/529.png",
+    "leagueId": "FL1",
+    "form": [
+      "W",
+      "W",
+      "D",
+      "W",
+      "W"
+    ]
+  },
+  {
+    "id": "rcsa",
+    "name": "Strasbourg",
+    "crestUrl": "https://crests.football-data.org/576.png",
+    "leagueId": "FL1",
+    "form": [
+      "W",
+      "W",
+      "D",
+      "W",
+      "L"
+    ]
+  },
+  {
+    "id": "fcn",
+    "name": "Nantes",
+    "crestUrl": "https://crests.football-data.org/543.png",
+    "leagueId": "FL1",
+    "form": [
+      "D",
+      "W",
+      "D",
+      "W",
+      "W"
+    ]
+  }
+]
