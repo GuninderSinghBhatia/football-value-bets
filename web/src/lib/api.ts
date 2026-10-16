@@ -7,7 +7,9 @@ import modelJson from "@/mocks/model.json";
 import pastJson from "@/mocks/past-predictions.json";
 import { factorsFor, predict, strengths, type Strength } from "./baseline";
 import { COMPETITIONS, fetchMatches, fetchStandings, fetchSummary, mapLimit, type EspnMatch, type EspnOdds } from "./espn";
-import { fetchOddsApiPrices, oddsApiBookmakers, oddsApiEnabled, type MatchOdds } from "./odds-api";
+import { ESPN_ODDS_SPORTS, fetchOddsApiPrices, footballOddsApi, oddsApiBookmakers, otherSportsOddsApi, winnerPricesFor, type MatchOdds } from "./odds-api";
+import { fetchSportLeagues, fetchSportMatches, fetchSportRadar } from "./sports-feed";
+import { DEFAULT_SPORT, sportOfMatchId, type SportId } from "@/config/sports";
 import type {
   BetPrediction,
   BookPrice,
@@ -24,6 +26,7 @@ import type {
   PickWithMatch,
   RadarRatings,
   Retrain,
+  StatsRadar,
   TeamProfile,
 } from "./types";
 
@@ -75,7 +78,7 @@ function confidence(p: number, home?: Strength, away?: Strength): Confidence {
 /** The configured bookmakers from The Odds API when ODDS_API_KEY is set, otherwise DraftKings (ESPN). */
 async function pricesFor(m: EspnMatch, espnOdds: EspnOdds | undefined): Promise<MatchOdds> {
   const out: MatchOdds = { home: [], draw: [], away: [], over25: [], under25: [] };
-  if (oddsApiEnabled()) return (await fetchOddsApiPrices(m)) ?? out;
+  if (footballOddsApi()) return (await fetchOddsApiPrices(m)) ?? out;
   if (espnOdds) {
     const book = espnOdds.bookmaker.toLowerCase().replace(/\s+/g, "");
     for (const k of Object.keys(out) as (keyof MatchOdds)[]) {
@@ -140,7 +143,52 @@ async function predictionsFor(m: EspnMatch, data: Loaded) {
   return { rows, probs: p, h2h, hs, as };
 }
 
-async function upcomingPredictions() {
+/**
+ * Other sports: match-winner odds only (market id "1X2", so labels, filters and the tracker work unchanged).
+ * There is no stats model yet, so the model is the de-vigged consensus of the bookmakers: a pick is "value" when one
+ * book's price beats that consensus fair price.
+ */
+async function sportPredictionsFor(m: Match): Promise<BetPrediction[]> {
+  const prices = await winnerPricesFor(m);
+  if (!prices?.home.length || !prices.away.length) return [];
+  const sides = (
+    [
+      ["Home", prices.home],
+      ["Draw", prices.draw],
+      ["Away", prices.away],
+    ] as const
+  ).filter(([, list]) => list.length);
+  const inv = sides.map(([, list]) => list.reduce((s, x) => s + 1 / x.odds, 0) / list.length);
+  const total = inv.reduce((s, x) => s + x, 0);
+  return sides.map(([selection, list], i) => {
+    const prob = inv[i] / total;
+    const best = list.reduce((x, y) => (y.odds > x.odds ? y : x));
+    return {
+      matchId: m.id,
+      market: "1X2",
+      selection,
+      odds: best.odds,
+      bookmaker: best.bookmaker,
+      prices: [...list].sort((x, y) => y.odds - x.odds),
+      impliedProb: 1 / best.odds,
+      modelProb: prob,
+      ev: prob * best.odds - 1,
+      // Market-only model: a single book disagreeing is weak evidence, so never "high". With one book (ESPN's
+      // DraftKings line) the model is that book's own fair price, so EV is just minus its margin: no value picks.
+      confidence: list.length >= 3 && prob >= 0.35 ? "medium" : "low",
+    };
+  });
+}
+
+async function upcomingPredictions(sport: SportId = DEFAULT_SPORT) {
+  if (sport !== "football") {
+    const now = Date.now();
+    const upcoming = (await getMatches(sport)).filter(
+      (m) => m.status === "scheduled" && new Date(m.kickoff).getTime() > now && new Date(m.kickoff).getTime() < now + UPCOMING_DAYS * DAY,
+    );
+    const rows = await mapLimit(upcoming, 8, sportPredictionsFor);
+    return upcoming.map((match, i) => ({ match, rows: rows[i] }));
+  }
   const data = await load();
   const upcoming = data.matches.filter((m) => isUpcoming(m));
   const results = await mapLimit(upcoming, 6, (m) => predictionsFor(m, data));
@@ -154,8 +202,13 @@ export async function getLeagues(): Promise<League[]> {
   return COMPETITIONS.map(({ id, name, country, logoUrl }) => ({ id, name, country, logoUrl }));
 }
 
-export async function getBookmakers(): Promise<Bookmaker[]> {
-  if (oddsApiEnabled()) return oddsApiBookmakers();
+/** Bookmakers with a feed for this sport, for the odds panel's book switcher. */
+export async function getBookmakers(sport: SportId = DEFAULT_SPORT): Promise<Bookmaker[]> {
+  if (sport !== "football") {
+    const draftkings = { id: "draftkings", name: "DraftKings", short: "DK", live: true };
+    return [...(otherSportsOddsApi() ? oddsApiBookmakers() : []), ...(ESPN_ODDS_SPORTS.includes(sport) ? [draftkings] : [])];
+  }
+  if (footballOddsApi()) return oddsApiBookmakers();
   // Without ODDS_API_KEY only DraftKings has a feed; the usual books are shown as not connected.
   return [
     { id: "draftkings", name: "DraftKings", short: "DK", live: true },
@@ -180,29 +233,60 @@ export async function getTeams(): Promise<TeamProfile[]> {
 }
 
 /** Every match from last month to next month: results, live games and fixtures. */
-export async function getMatches(): Promise<Match[]> {
+export async function getMatches(sport: SportId = DEFAULT_SPORT): Promise<Match[]> {
+  // Other sports: only what the list can show (results from the last week onward). Tennis draws are large, and
+  // shipping a month of old results makes the page several MB. Unknown pairings (TBD v TBD) are left out.
+  if (sport !== "football") {
+    const since = Date.now() - 8 * DAY;
+    return (await fetchSportMatches(sport)).filter(
+      (m) => new Date(m.kickoff).getTime() >= since && !(m.home.name === "TBD" && m.away.name === "TBD"),
+    );
+  }
   return (await fetchMatches()).map(toMatch);
 }
 
+/** Leagues for the sidebar. Football's are the fixed competitions; other sports come from their feed. */
+export async function getSportLeagues(sport: SportId): Promise<League[]> {
+  return sport === "football" ? getLeagues() : fetchSportLeagues(sport);
+}
+
+/** A non-football match, or null. */
+export async function getSportMatch(id: string): Promise<Match | null> {
+  const sport = sportOfMatchId(id);
+  if (sport === "football") return null;
+  return (await fetchSportMatches(sport)).find((m) => m.id === id) ?? null;
+}
+
+/** A non-football match with its match-winner odds and, where the feed has enough data, a stats radar. */
+export async function getSportMatchDetail(id: string): Promise<{ match: Match; predictions: BetPrediction[]; radar: StatsRadar | null } | null> {
+  const match = await getSportMatch(id);
+  if (!match) return null;
+  const [predictions, radar] = await Promise.all([
+    match.status === "scheduled" ? sportPredictionsFor(match) : Promise.resolve([]),
+    fetchSportRadar(match),
+  ]);
+  return { match, predictions: predictions.sort((a, b) => b.ev - a.ev), radar };
+}
+
 /** Value bets across upcoming matches (next 7 days), best EV first. */
-export async function getTopPicks(): Promise<PickWithMatch[]> {
-  return (await upcomingPredictions())
+export async function getTopPicks(sport: SportId = DEFAULT_SPORT): Promise<PickWithMatch[]> {
+  return (await upcomingPredictions(sport))
     .flatMap(({ match, rows }) => rows.filter((r) => r.ev >= MIN_VALUE_EV).map((r) => ({ ...r, match })))
     .sort((a, b) => b.ev - a.ev);
 }
 
 /** The best-EV bet for each upcoming match, keyed by match id. */
-export async function getBestPickByMatch(): Promise<Record<string, BetPrediction>> {
+export async function getBestPickByMatch(sport: SportId = DEFAULT_SPORT): Promise<Record<string, BetPrediction>> {
   const best: Record<string, BetPrediction> = {};
-  for (const { match, rows } of await upcomingPredictions())
+  for (const { match, rows } of await upcomingPredictions(sport))
     for (const r of rows) if (!best[match.id] || r.ev > best[match.id].ev) best[match.id] = r;
   return best;
 }
 
 /** 1X2 odds per upcoming match, keyed by match id, in Home / Draw / Away order. */
-export async function getMatchOdds(): Promise<Record<string, BetPrediction[]>> {
+export async function getMatchOdds(sport: SportId = DEFAULT_SPORT): Promise<Record<string, BetPrediction[]>> {
   const odds: Record<string, BetPrediction[]> = {};
-  for (const { match, rows } of await upcomingPredictions()) odds[match.id] = rows.filter((r) => r.market === "1X2");
+  for (const { match, rows } of await upcomingPredictions(sport)) odds[match.id] = rows.filter((r) => r.market === "1X2");
   return odds;
 }
 

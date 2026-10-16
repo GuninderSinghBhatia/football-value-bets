@@ -18,10 +18,10 @@ export function MatchRow({ match, result, best }: { match: Match; result: BetPre
       <span className="text-sm font-semibold">
         {match.status === "live" ? (
           <span className="inline-flex flex-col items-start gap-0.5">
-            <span className="inline-flex items-center gap-1 rounded-full bg-accent-fill px-1.5 py-0.5 text-[10px] font-bold text-on-accent">
-              <span className="size-1.5 animate-pulse rounded-full bg-on-accent" aria-hidden /> LIVE
+            <span className="inline-flex items-center gap-1 rounded-full bg-negative-bg px-1.5 py-0.5 text-[10px] font-bold text-negative-text">
+              <span className="size-1.5 animate-pulse rounded-full bg-negative" aria-hidden /> LIVE
             </span>
-            <span className="text-xs text-accent-text">{match.statusDetail}</span>
+            <span className="text-xs text-negative-text">{match.statusDetail}</span>
           </span>
         ) : match.status === "finished" ? (
           <span className="text-xs text-muted">{match.statusDetail ?? "FT"}</span>
@@ -32,18 +32,23 @@ export function MatchRow({ match, result, best }: { match: Match; result: BetPre
         )}
       </span>
 
-      <div className="flex min-w-0 items-center gap-2 text-sm font-medium">
-        <Crest src={match.home.crestUrl} name={match.home.name} size={24} />
-        <span className="truncate">{match.home.name}</span>
-        {match.score ? (
-          <span className="tabular shrink-0 rounded-md bg-bg px-2 py-0.5 text-sm font-bold">
-            {match.score.home} – {match.score.away}
-          </span>
-        ) : (
-          <span className="shrink-0 text-xs text-muted">vs</span>
-        )}
-        <span className="truncate">{match.away.name}</span>
-        <Crest src={match.away.crestUrl} name={match.away.name} size={24} />
+      <div className="min-w-0">
+        <div className="flex min-w-0 items-center gap-2 text-sm font-medium">
+          <Crest src={match.home.crestUrl} name={match.home.name} size={24} />
+          <span className={cn("truncate", match.winner === "away" && "text-muted")}>{match.home.name}</span>
+          {match.scoreLine ? (
+            <span className="tabular max-w-[50%] shrink-0 truncate rounded-md bg-bg px-2 py-0.5 text-sm font-bold">{match.scoreLine}</span>
+          ) : match.score ? (
+            <span className="tabular shrink-0 rounded-md bg-bg px-2 py-0.5 text-sm font-bold">
+              {match.score.home} – {match.score.away}
+            </span>
+          ) : (
+            <span className="shrink-0 text-xs text-muted">vs</span>
+          )}
+          <span className={cn("truncate", match.winner === "home" && "text-muted")}>{match.away.name}</span>
+          <Crest src={match.away.crestUrl} name={match.away.name} size={24} />
+        </div>
+        {match.round && <div className="mt-1 truncate text-xs text-muted">{match.round}</div>}
       </div>
 
       <div className="col-start-2 flex gap-1.5 sm:col-start-auto">

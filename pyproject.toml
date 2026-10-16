@@ -1,0 +1,64 @@
+[project]
+name = "fbml"
+version = "0.1.0"
+description = "BetMind: football match probabilities, value bets and their evaluation. Paper trading only."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # data
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "pyarrow>=17",
+    # stats and models
+    "scipy>=1.14",
+    "scikit-learn>=1.5",
+    "statsmodels>=0.14",
+    "lightgbm>=4.5",
+    "optuna>=4.0",
+    "shap>=0.46",
+    # plots
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    # storage and fetching
+    "sqlalchemy>=2.0",
+    "alembic>=1.13",
+    "httpx>=0.27",
+    "pydantic>=2.8",
+    "python-dotenv>=1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.6",
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+    "nbconvert>=7.16",
+]
+# Experiment tracking (Phase 2) and the analysis dashboard. Heavier, so kept apart from the core library.
+tools = [
+    "mlflow>=2.16",
+    "streamlit>=1.38",
+]
+
+[tool.uv]
+default-groups = ["dev", "tools"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fbml"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

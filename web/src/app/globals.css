@@ -1,42 +1,45 @@
 @import "tailwindcss";
 
-/* Dark analytics theme from ui-style-guide.md: near-black surfaces, lime as the single strong highlight,
-   violet as the secondary/second-series accent. The guide's names are the source of truth; the short aliases
-   below keep existing utility classes (bg-surface, text-muted, bg-accent-fill...) working. */
+/* Colour scheme from color-scheme-spec.md: neutral, slightly cool near-black greys with soft pastel accents used
+   only on small elements (badges, icons, one primary button per view). Yellow is the brand/primary colour; red means
+   loss, risk or LIVE only. The spec's names are the source of truth; the short aliases in @theme keep the existing
+   utility classes (bg-surface, text-muted, bg-accent-fill...) working. */
 :root {
   color-scheme: dark;
 
   /* Backgrounds */
-  --bg-app: #0b0b0d;
-  --bg-sidebar: #0f0f12;
-  --bg-card: #141417;
-  --bg-card-hover: #1a1a1f;
-  --bg-input: #1c1c21;
+  --bg-app: #121315;
+  --bg-sidebar: #1b1d1f;
+  --bg-surface: #232426; /* inputs, tabs, chips, active nav item */
+  --bg-card: #26282b;
+  --bg-card-hover: #2e3033;
 
   /* Borders */
-  --border: #232328;
-  --border-strong: #2e2e35;
+  --border: #2f3134;
+  --border-strong: #3b3e42; /* not in the spec: active chips and chart grids need one step above --border */
 
   /* Text */
-  --text-primary: #f5f5f7;
-  --text-secondary: #9a9aa3;
-  --text-muted: #5f5f68; /* 3:1 on cards: table headers, axis labels and meta only, never body text */
+  --text-primary: #ededed;
+  --text-secondary: #9a9da1;
+  --text-muted: #6b6e73; /* placeholders, disabled, axis labels: never body text */
 
-  /* Accents */
-  --accent-lime: #d4f84a;
-  --accent-lime-dim: #a8c93a;
-  --accent-violet: #8b5cf6;
-  --accent-violet-soft: rgba(139, 92, 246, 0.25);
-  --gradient-cta: linear-gradient(90deg, #d4f84a 0%, #c084fc 100%);
-  --on-accent: #0b0b0d; /* text on lime / gradient fills */
+  /* Accents (soft pastels) */
+  --accent-yellow: #fbed9b;
+  --accent-green: #aef6a3;
+  --accent-red: #f69896;
+  --accent-blue: #a8d4fa;
+  --accent-orange: #cd9971;
 
-  /* Status */
-  --success: #22c55e;
-  --success-bg: rgba(34, 197, 94, 0.12);
-  --danger: #ef4444;
-  --danger-bg: rgba(239, 68, 68, 0.12);
-  --danger-text: #f87171; /* #EF4444 text is under 4.5:1 on cards */
-  --warning: #f5c542;
+  --primary: var(--accent-yellow);
+  --primary-hover: #e9da86; /* not in the spec: hover state of yellow buttons */
+  --on-primary: #121315; /* dark text on yellow */
+
+  /* Badge backgrounds: accent at 12% on dark */
+  --badge-yellow: rgba(251, 237, 155, 0.12);
+  --badge-green: rgba(174, 246, 163, 0.12);
+  --badge-red: rgba(246, 152, 150, 0.12);
+  --badge-blue: rgba(168, 212, 250, 0.12);
+  --badge-orange: rgba(205, 153, 113, 0.14);
 }
 
 @theme inline {
@@ -44,27 +47,30 @@
   --color-sidebar: var(--bg-sidebar);
   --color-surface: var(--bg-card);
   --color-surface-hover: var(--bg-card-hover);
-  --color-surface-2: var(--bg-input);
+  --color-surface-2: var(--bg-surface);
   --color-line: var(--border);
   --color-line-strong: var(--border-strong);
   --color-text: var(--text-primary);
   --color-muted: var(--text-secondary);
   --color-faint: var(--text-muted);
-  --color-accent: var(--accent-lime);
-  --color-accent-fill: var(--accent-lime);
-  --color-accent-dim: var(--accent-lime-dim);
-  --color-accent-text: var(--accent-lime);
-  --color-on-accent: var(--on-accent);
-  --color-violet: var(--accent-violet);
-  --color-violet-soft: var(--accent-violet-soft);
-  --color-positive: var(--success);
-  --color-positive-bg: var(--success-bg);
-  --color-negative: var(--danger);
-  --color-negative-bg: var(--danger-bg);
-  --color-negative-text: var(--danger-text);
-  --color-warning: var(--warning);
+  --color-accent: var(--primary);
+  --color-accent-fill: var(--primary);
+  --color-accent-dim: var(--primary-hover);
+  --color-accent-text: var(--primary);
+  --color-on-accent: var(--on-primary);
+  --color-info: var(--accent-blue);
+  --color-info-bg: var(--badge-blue);
+  --color-positive: var(--accent-green);
+  --color-positive-bg: var(--badge-green);
+  --color-negative: var(--accent-red);
+  --color-negative-bg: var(--badge-red);
+  --color-negative-text: var(--accent-red);
+  --color-warning: var(--accent-orange);
+  --color-warning-bg: var(--badge-orange);
+  --color-caution: var(--accent-yellow);
+  --color-caution-bg: var(--badge-yellow);
   --font-sans: var(--font-inter), system-ui, sans-serif;
-  --radius-card: 14px;
+  --radius-card: 12px;
 }
 
 @layer base {
@@ -76,18 +82,14 @@
     color: var(--text-primary);
   }
   :focus-visible {
-    outline: 1px solid var(--accent-lime);
+    outline: 1px solid var(--primary);
     outline-offset: 2px;
   }
 }
 
-/* Was a coloured drop shadow; the guide wants flat surfaces, so it is now a hairline lime ring. */
+/* Flat surfaces: a hairline yellow ring instead of a coloured shadow. */
 @utility glow {
-  box-shadow: 0 0 0 1px rgb(212 248 74 / 0.18);
-}
-
-@utility bg-gradient-cta {
-  background-image: var(--gradient-cta);
+  box-shadow: 0 0 0 1px rgb(251 237 155 / 0.18);
 }
 
 @utility tabular {
@@ -175,7 +177,7 @@
 }
 
 @utility shimmer {
-  background: linear-gradient(90deg, var(--bg-input) 30%, var(--border-strong) 50%, var(--bg-input) 70%);
+  background: linear-gradient(90deg, var(--bg-surface) 30%, var(--border-strong) 50%, var(--bg-surface) 70%);
   background-size: 200% 100%;
   animation: shimmer 1.4s linear infinite;
 }

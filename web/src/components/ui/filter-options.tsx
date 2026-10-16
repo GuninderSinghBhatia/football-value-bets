@@ -31,8 +31,8 @@ export const MARKET_OPTIONS: Option<MarketFilter>[] = [
 const Dot = ({ className }: { className: string }) => <span className={`block size-2 rounded-full ${className}`} />;
 
 export const CONFIDENCE_OPTIONS: Option<"low" | "medium" | "high">[] = [
-  { value: "low", label: "Any level", icon: <Dot className="bg-muted" /> },
-  { value: "medium", label: "Medium+", icon: <Dot className="bg-warning" /> },
+  { value: "low", label: "Any level", icon: <Dot className="bg-negative" /> },
+  { value: "medium", label: "Medium+", icon: <Dot className="bg-caution" /> },
   { value: "high", label: "High only", icon: <Dot className="bg-positive" /> },
 ];
 

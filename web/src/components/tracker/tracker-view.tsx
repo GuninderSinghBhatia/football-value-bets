@@ -196,12 +196,12 @@ function SummaryCards({ s }: { s: PicksSummary }) {
           key={label}
           className={cn(
             "rounded-card border p-4",
-            highlight ? "border-transparent bg-gradient-cta text-on-accent" : "bg-surface",
+            highlight ? "border-accent/40 bg-surface" : "bg-surface",
           )}
         >
-          <div className={cn("text-xs", highlight ? "text-on-accent/75" : "text-muted")}>{label}</div>
-          <div className="tabular mt-1 text-2xl font-bold">{value}</div>
-          {hint && <div className={cn("mt-0.5 text-xs", highlight ? "text-on-accent/75" : "text-muted")}>{hint}</div>}
+          <div className="text-xs text-muted">{label}</div>
+          <div className={cn("tabular mt-1 text-2xl font-bold", highlight && "text-accent-text")}>{value}</div>
+          {hint && <div className="mt-0.5 text-xs text-muted">{hint}</div>}
         </div>
       ))}
     </div>
@@ -227,7 +227,9 @@ function MatchLine({ p }: { p: TrackedPick }) {
     <div className="flex min-w-0 items-center gap-2 text-sm font-medium">
       <Crest src={p.match.home.crestUrl} name={p.match.home.name} size={20} />
       <span className="truncate">{p.match.home.name}</span>
-      {p.live?.score ? (
+      {p.live?.scoreLine ? (
+        <span className="tabular max-w-[50%] shrink-0 truncate rounded-md bg-bg px-2 py-0.5 font-bold">{p.live.scoreLine}</span>
+      ) : p.live?.score ? (
         <span className="tabular shrink-0 rounded-md bg-bg px-2 py-0.5 font-bold">
           {p.live.score.home} – {p.live.score.away}
         </span>
@@ -278,8 +280,8 @@ function OpenRow({ p }: { p: TrackedPick }) {
 
       <div className="hidden text-sm sm:block">
         {isLive ? (
-          <span className="inline-flex items-center gap-1 rounded-full bg-accent-fill px-1.5 py-0.5 text-xs font-bold text-on-accent">
-            <span className="size-1.5 animate-pulse rounded-full bg-on-accent" aria-hidden /> LIVE {p.live?.statusDetail}
+          <span className="inline-flex items-center gap-1 rounded-full bg-negative-bg px-1.5 py-0.5 text-xs font-bold text-negative-text">
+              <span className="size-1.5 animate-pulse rounded-full bg-negative" aria-hidden /> LIVE {p.live?.statusDetail}
           </span>
         ) : (
           <>
@@ -314,10 +316,10 @@ function OpenRow({ p }: { p: TrackedPick }) {
 }
 
 const RESULT_PILL: Record<string, [string, string]> = {
-  won: ["✅ Won", "bg-positive/15 text-positive"],
-  lost: ["❌ Lost", "bg-negative/15 text-negative-text"],
+  won: ["✅ Won", "bg-positive-bg text-positive"],
+  lost: ["❌ Lost", "bg-negative-bg text-negative-text"],
   void: ["↩ Void", "bg-surface-2 text-muted"],
-  pending: ["⏳ Pending", "bg-warning/15 text-warning"],
+  pending: ["⏳ Pending", "bg-warning-bg text-warning"],
 };
 
 function SettledRow({ p }: { p: TrackedPick }) {
@@ -327,7 +329,7 @@ function SettledRow({ p }: { p: TrackedPick }) {
     <div className="rounded-xl bg-surface-2/60">
       <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} className="w-full px-3 py-3 text-left">
         <div className="flex items-center justify-between gap-3">
-          <MatchLine p={{ ...p, live: p.finalScore ? { status: "finished", score: toScore(p.finalScore) } : p.live }} />
+          <MatchLine p={{ ...p, live: p.finalScore ? { status: "finished", ...toScore(p.finalScore) } : p.live }} />
           <span className="flex shrink-0 items-center gap-2">
             <span className={cn("rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap", style)}>{label}</span>
             <ChevronDown className={cn("size-4 text-muted transition-transform duration-300", open && "rotate-180")} />
@@ -358,7 +360,24 @@ function SettledRow({ p }: { p: TrackedPick }) {
               ["Saved", <LocalTime key="s" iso={p.savedAt} format="datetime" />],
               ["Bookmaker", BOOK_NAMES[p.bookmaker] ?? p.bookmaker],
               ["Odds at save", odds(p.oddsAtSave)],
-              ["Closing odds", p.closingOdds ? odds(p.closingOdds) : "–"],
+              [
+                "Closing odds",
+                p.closingOdds ? (
+                  <span key="co">
+                    {odds(p.closingOdds)}
+                    {p.closingBook && p.closingBook !== p.bookmaker && (
+                      <span
+                        className="ml-1 text-xs font-normal text-warning"
+                        title={`${BOOK_NAMES[p.bookmaker] ?? p.bookmaker} had no closing price, so CLV uses ${BOOK_NAMES[p.closingBook] ?? p.closingBook}'s`}
+                      >
+                        ({BOOK_NAMES[p.closingBook] ?? p.closingBook})
+                      </span>
+                    )}
+                  </span>
+                ) : (
+                  "–"
+                ),
+              ],
               ["Model %", pct(p.modelProb)],
               ["Implied %", pct(p.impliedProb)],
               ["EV at save", <EvText key="e" ev={p.ev} />],
@@ -381,7 +400,7 @@ function SettledRow({ p }: { p: TrackedPick }) {
                 #{t}
               </span>
             ))}
-            <Link href={`/match/${p.matchId}`} className="ml-auto inline-flex items-center gap-1 text-sm font-medium text-accent-text hover:underline">
+            <Link href={`/match/${p.matchId}`} className="ml-auto inline-flex items-center gap-1 text-sm font-medium text-info hover:underline">
               Match detail <ExternalLink className="size-3.5" />
             </Link>
           </div>
@@ -391,9 +410,10 @@ function SettledRow({ p }: { p: TrackedPick }) {
   );
 }
 
-const toScore = (s: string) => {
-  const [home, away] = s.split("-").map(Number);
-  return { home, away };
+/** "2-1" → score; anything else (tennis sets, UFC round, cricket) is shown as text. */
+const toScore = (s: string): { score?: { home: number; away: number }; scoreLine?: string } => {
+  const m = /^(d+)-(d+)$/.exec(s);
+  return m ? { score: { home: Number(m[1]), away: Number(m[2]) } } : { scoreLine: s };
 };
 
 /** Right-column charts for the tracker page. */

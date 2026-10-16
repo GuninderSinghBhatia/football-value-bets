@@ -61,9 +61,9 @@ export function PrimaryLink({ href, children, className }: { href: string; child
 }
 
 const CONFIDENCE_STYLE: Record<Confidence, string> = {
-  high: "bg-positive/15 text-positive",
-  medium: "bg-warning/15 text-warning",
-  low: "bg-surface-2 text-muted",
+  high: "bg-positive-bg text-positive",
+  medium: "bg-caution-bg text-caution",
+  low: "bg-negative-bg text-negative-text",
 };
 
 export function ConfidenceBadge({ level }: { level: Confidence }) {
@@ -96,7 +96,7 @@ export function OddsPill({ label, odds, highlight }: { label: string; odds: stri
     <span
       className={cn(
         "inline-flex min-w-14 flex-col items-center rounded-xl px-2 py-1",
-        highlight ? "bg-accent/15 ring-1 ring-accent" : "bg-surface-2",
+        highlight ? "bg-positive-bg text-positive ring-1 ring-positive/60" : "bg-surface-2",
       )}
     >
       <span className="text-[10px] text-muted">{label}</span>
@@ -106,9 +106,9 @@ export function OddsPill({ label, odds, highlight }: { label: string; odds: stri
 }
 
 const FORM_STYLE: Record<FormResult, string> = {
-  W: "bg-positive text-black",
+  W: "bg-positive-bg text-positive",
   D: "bg-surface-2 text-text",
-  L: "bg-negative text-white",
+  L: "bg-negative-bg text-negative-text",
 };
 
 export function FormPills({ form }: { form: FormResult[] }) {
@@ -140,12 +140,12 @@ export function StatCard({
     <div
       className={cn(
         "rounded-card border p-4",
-        highlight ? "border-transparent bg-gradient-cta text-on-accent" : "bg-surface",
+        highlight ? "border-accent/40 bg-surface" : "bg-surface",
       )}
     >
-      <div className={cn("text-sm", highlight ? "text-on-accent/75" : "text-muted")}>{label}</div>
-      <div className="tabular mt-1 text-[28px] font-semibold tracking-[-0.02em]">{value}</div>
-      {hint && <div className={cn("mt-1 text-xs", highlight ? "text-on-accent/75" : "text-muted")}>{hint}</div>}
+      <div className="text-sm text-muted">{label}</div>
+      <div className={cn("tabular mt-1 text-[28px] font-semibold tracking-[-0.02em]", highlight && "text-accent-text")}>{value}</div>
+      {hint && <div className="mt-1 text-xs text-muted">{hint}</div>}
       {children}
     </div>
   );
