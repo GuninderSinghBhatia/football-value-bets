@@ -24,3 +24,11 @@ export const HitRateBars = dynamic(() => import("./charts").then((m) => m.HitRat
   ssr: false,
   loading: () => <Skeleton className="h-32 w-full" />,
 });
+export const StatsRadarChart = dynamic(() => import("./charts").then((m) => m.StatsRadarChart), {
+  ssr: false,
+  loading: () => <Skeleton className="h-[260px] w-full" />,
+});
+export const OddsCompareChart = dynamic(() => import("./charts").then((m) => m.OddsCompareChart), {
+  ssr: false,
+  loading: () => <Skeleton className="h-60 w-full" />,
+});

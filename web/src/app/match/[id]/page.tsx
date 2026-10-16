@@ -1,16 +1,78 @@
 import { notFound } from "next/navigation";
 import { Check, X } from "lucide-react";
-import { RadarCompare } from "@/components/charts/lazy";
+import { OddsCompareChart, RadarCompare, StatsRadarChart } from "@/components/charts/lazy";
 import { BetsPanel } from "@/components/match/bets-panel";
 import { MatchHeaderCard } from "@/components/match/match-header-card";
 import { PageColumns } from "@/components/shell/page-columns";
 import { Crest, LocalTime } from "@/components/ui/client";
 import { Card, EmptyState, FactorBar, FormPills } from "@/components/ui/primitives";
-import { getBookmakers, getMatchDetail } from "@/lib/api";
-import { selectionLabel } from "@/lib/format";
+import { SportComingSoon } from "@/components/shell/sport-coming-soon";
+import { sportOfMatchId } from "@/config/sports";
+import { getBookmakers, getMatchDetail, getSportMatchDetail } from "@/lib/api";
+import { BOOK_NAMES, selectionLabel } from "@/lib/format";
 
 export default async function MatchPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+
+  // Other sports: match-winner odds, the odds comparison chart and, where the feed has the data, a stats radar.
+  if (sportOfMatchId(id) !== "football") {
+    const [sportDetail, books] = await Promise.all([getSportMatchDetail(id), getBookmakers(sportOfMatchId(id))]);
+    if (!sportDetail) notFound();
+    const { match, predictions: rows, radar } = sportDetail;
+    const records = match.records;
+    const sportRight = (
+      <>
+        {radar ? (
+          <Card title="Comparison">
+            <StatsRadarChart radar={radar} homeName={match.home.name} awayName={match.away.name} />
+            <p className="mt-2 text-xs text-muted">{radar.note}</p>
+          </Card>
+        ) : (
+          (records?.home?.overall || records?.away?.overall) && (
+            <Card title="Records">
+              {(["home", "away"] as const).map((side) => (
+                <div key={side} className="mb-2 flex items-center justify-between gap-2 text-sm last:mb-0">
+                  <span className="flex min-w-0 items-center gap-2">
+                    <Crest src={match[side].crestUrl} name={match[side].name} size={20} />
+                    <span className="truncate">{match[side].name}</span>
+                  </span>
+                  <span className="tabular shrink-0 font-semibold">{records?.[side]?.overall ?? "–"}</span>
+                </div>
+              ))}
+              <p className="mt-3 text-xs text-muted">
+                {match.sport === "ufc" ? "Career record, wins-losses-draws (ESPN)." : "Season record, wins-losses (ESPN)."}
+              </p>
+            </Card>
+          )
+        )}
+        <SportComingSoon sport={match.sport ?? "football"} />
+      </>
+    );
+    return (
+      <PageColumns right={sportRight}>
+        <h1 className="sr-only">
+          {match.home.name} vs {match.away.name}
+        </h1>
+        <MatchHeaderCard match={match} />
+        <BetsPanel predictions={rows} match={match} bookmakers={books} />
+        {rows.some((r) => r.prices && r.prices.length > 1) && (
+          <Card title="Odds by bookmaker">
+            <OddsCompareChart
+              rows={rows}
+              names={{ Home: match.home.name, Away: match.away.name, Draw: "Draw" }}
+              bookNames={BOOK_NAMES}
+              height={260}
+            />
+            <p className="mt-2 text-xs text-muted">
+              Bars are each bookmaker&apos;s implied probability (1 / odds). Dashed lines are the fair no-vig consensus. A bar
+              below its line is a price longer than fair.
+            </p>
+          </Card>
+        )}
+      </PageColumns>
+    );
+  }
+
   const [detail, bookmakers] = await Promise.all([getMatchDetail(id), getBookmakers()]);
   if (!detail) notFound();
 

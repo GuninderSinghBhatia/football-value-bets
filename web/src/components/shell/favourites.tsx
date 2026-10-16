@@ -3,9 +3,11 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Heart } from "lucide-react";
-import { Card } from "@/components/ui/primitives";
+import { Card, Skeleton } from "@/components/ui/primitives";
 import { Crest } from "@/components/ui/client";
+import { sportOf, type SportId } from "@/config/sports";
 import { LEAGUE_FILTER_PAGES, useSetParam } from "@/lib/use-set-param";
+import { useSport } from "@/lib/use-sport";
 import { cn } from "@/lib/utils";
 import type { League, TeamProfile } from "@/lib/types";
 
@@ -99,7 +101,76 @@ function HeartToggle({ on, label, onClick }: { on: boolean; label: string; onCli
   );
 }
 
+/** Football: favourite leagues and clubs. Other sports: that sport's leagues (favourites are football-only for now). */
 export function FavouritesPanel() {
+  const sport = useSport();
+  return sport === "football" ? <FootballFavourites /> : <SportLeagues key={sport} sport={sport} />;
+}
+
+function SportLeagues({ sport }: { sport: SportId }) {
+  const [leagues, setLeagues] = useState<League[] | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/leagues?sport=${sport}`)
+      .then((r) => (r.ok ? r.json() : []))
+      .catch(() => [])
+      .then((l: League[]) => !cancelled && setLeagues(l));
+    return () => {
+      cancelled = true;
+    };
+  }, [sport]);
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const activeLeague = useSearchParams().get("league");
+  const setParam = useSetParam();
+  const selectLeague = (id: string) => {
+    const next = activeLeague === id ? null : id;
+    if (pathname === "/" || pathname.startsWith("/matches")) setParam("league", next);
+    else router.push(`/matches?sport=${sport}${next ? `&league=${encodeURIComponent(next)}` : ""}`);
+  };
+
+  return (
+    <Card title={`${sportOf(sport).label} leagues`}>
+      {leagues === null ? (
+        <div className="space-y-2">
+          {[0, 1, 2].map((i) => (
+            <Skeleton key={i} className="h-11 w-full" />
+          ))}
+        </div>
+      ) : leagues.length === 0 ? (
+        <p className="text-sm text-muted">No {sportOf(sport).label.toLowerCase()} competitions this month.</p>
+      ) : (
+        <ul className="stagger max-h-112 space-y-1 overflow-y-auto">
+          {leagues.map((l) => (
+            <li key={l.id}>
+              <button
+                type="button"
+                onClick={() => selectLeague(l.id)}
+                aria-pressed={activeLeague === l.id}
+                title={activeLeague === l.id ? "Show all" : `Show ${l.name} matches`}
+                className={cn(
+                  "flex w-full min-w-0 items-center gap-3 rounded-xl px-1.5 py-1.5 text-left transition-colors duration-200 active:scale-[0.98]",
+                  activeLeague === l.id ? "bg-surface-2 ring-1 ring-line-strong" : "hover:bg-surface-2",
+                )}
+              >
+                <span className="grid size-9 shrink-0 place-items-center rounded-full bg-text p-1.5">
+                  <Crest src={l.logoUrl} name={l.name} size={22} />
+                </span>
+                <span className="min-w-0">
+                  <span className={cn("block truncate text-sm font-medium", activeLeague === l.id && "font-semibold text-text")}>{l.name}</span>
+                  {l.country && <span className="block truncate text-xs text-muted">{l.country}</span>}
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </Card>
+  );
+}
+
+function FootballFavourites() {
   const { leagues, teams, favLeagues, favClubs, toggleLeague, toggleClub } = useFavourites();
   const [showAllClubs, setShowAllClubs] = useState(false);
   const clubs = showAllClubs ? teams : teams.filter((t) => favClubs.includes(t.id));
@@ -124,7 +195,7 @@ export function FavouritesPanel() {
               key={l.id}
               className={cn(
                 "flex items-center gap-1 rounded-xl pr-1 transition-colors duration-200",
-                activeLeague === l.id ? "bg-accent/10 ring-1 ring-accent/60" : "hover:bg-surface-2",
+                activeLeague === l.id ? "bg-surface-2 ring-1 ring-line-strong" : "hover:bg-surface-2",
               )}
             >
               <button
@@ -137,13 +208,13 @@ export function FavouritesPanel() {
                 <span
                   className={cn(
                     "grid size-9 shrink-0 place-items-center rounded-full bg-text p-1.5 transition-shadow duration-200",
-                    activeLeague === l.id && "ring-1 ring-accent",
+                    activeLeague === l.id && "ring-1 ring-line-strong",
                   )}
                 >
                   <Crest src={l.logoUrl} name={l.name} size={22} />
                 </span>
                 <span className="min-w-0">
-                  <span className={cn("block truncate text-sm font-medium", activeLeague === l.id && "text-accent-text")}>
+                  <span className={cn("block truncate text-sm font-medium", activeLeague === l.id && "font-semibold text-text")}>
                     {l.name}
                   </span>
                   <span className="block text-xs text-muted">{l.country}</span>

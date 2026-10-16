@@ -1,4 +1,5 @@
 // Data contract between the UI and the backend (see ui-spec.md section 5).
+import type { SportId } from "@/config/sports";
 
 export type Team = { id: string; name: string; crestUrl: string };
 
@@ -25,6 +26,28 @@ export type Match = {
   /** Short status from the feed, e.g. "FT" or "63'". */
   statusDetail?: string;
   score?: { home: number; away: number };
+  /** Absent = football. Other sports have match-winner odds only, with a market-consensus model. */
+  sport?: SportId;
+  /** Score in the sport's own format when two numbers don't fit: sets "6-4 3-6 7-5", "R3 5:00", "245/6 – 198". */
+  scoreLine?: string;
+  winner?: "home" | "away";
+  /** Context line under the match: tournament and round, UFC card and weight class, cricket result. */
+  round?: string;
+  /** DraftKings moneyline from ESPN's scoreboard (decimal), where ESPN lists one: NBA, WNBA, MLB. */
+  bookOdds?: { bookmaker: string; home?: number; away?: number; openHome?: number; openAway?: number };
+  /** Win-loss records from the feed: MLB season (overall/home/road), UFC career (overall "14-2-1"). */
+  records?: { home?: SideRecord; away?: SideRecord };
+};
+
+export type SideRecord = { overall?: string; home?: string; road?: string };
+
+/** A stats radar for any sport: axis labels plus 0-100 ratings per side. */
+export type StatsRadar = {
+  axes: { key: string; label: string }[];
+  home: Record<string, number>;
+  away: Record<string, number>;
+  /** Where the numbers come from, shown under the chart. */
+  note: string;
 };
 
 export type Market = "1X2" | "OU_2.5" | "BTTS" | "DC" | "CARDS_4.5" | "CORNERS_9.5" | (string & {});
@@ -103,6 +126,8 @@ export type SavedPick = {
   id: string;
   userId: string;
   matchId: string;
+  /** Absent = football (picks saved before other sports existed have none). */
+  sport?: SportId;
   /** Match snapshot, so the pick still reads correctly after the fixture leaves the live feed. */
   match: { home: Team; away: Team; league: string; leagueId: string; kickoff: string };
   market: string;
@@ -121,7 +146,10 @@ export type SavedPick = {
 
   status: PickStatus;
   finalScore?: string; // "3-1"
+  /** Last price seen just before kickoff: the pick's own bookmaker, or Pinnacle when that book had no price. */
   closingOdds?: number;
+  closingBook?: string;
+  closingAt?: string;
   clv?: number;
   profit?: number;
   settledAt?: string;
@@ -136,6 +164,8 @@ export type TrackedPick = SavedPick & {
     statusDetail?: string;
     score?: { home: number; away: number };
     currentOdds?: number;
+    /** Other sports: score in their own format (tennis sets, UFC round). */
+    scoreLine?: string;
   };
 };
 

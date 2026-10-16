@@ -21,9 +21,12 @@ import { RotateCcw } from "lucide-react";
 import { useSetParam } from "@/lib/use-set-param";
 import { DATA_SOURCES_NOTE } from "@/lib/sources";
 import { dateBucket, marketLabel, odds, pct, shortSelection } from "@/lib/format";
-import type { Confidence, League, MatchInsights, PickWithMatch } from "@/lib/types";
+import type { BetPrediction, Confidence, League, MatchInsights, PickWithMatch } from "@/lib/types";
 
 const PAGE_SIZE = 8;
+const WINNER_MARKET_OPTIONS = MARKET_OPTIONS.filter((o) => o.value === "all" || o.value === "1X2").map((o) =>
+  o.value === "1X2" ? { ...o, label: "Match winner", hint: "ML" } : o,
+);
 const CONF_RANK: Record<Confidence, number> = { low: 0, medium: 1, high: 2 };
 
 type DateFilter = "today" | "tomorrow" | "week";
@@ -32,10 +35,18 @@ export function TopPicksView({
   picks,
   leagues,
   radars,
+  oddsByMatch,
+  winnerOnly = false,
+  note = DATA_SOURCES_NOTE,
 }: {
   picks: PickWithMatch[];
   leagues: League[];
   radars: Record<string, MatchInsights["radar"]>;
+  /** Other sports: match-winner rows per match, for the hero's odds chart. */
+  oddsByMatch?: Record<string, BetPrediction[]>;
+  /** Other sports only have the match-winner market (id "1X2"). */
+  winnerOnly?: boolean;
+  note?: string;
 }) {
   const mounted = useMounted();
   const params = useSearchParams();
@@ -84,7 +95,7 @@ export function TopPicksView({
   return (
     <>
       {hero ? (
-        <HeroPickCard pick={hero} radar={radars[hero.matchId]} />
+        <HeroPickCard pick={hero} radar={radars[hero.matchId]} oddsRows={oddsByMatch?.[hero.matchId]} />
       ) : (
         <EmptyState title="No picks match these filters" hint="Try a wider date range or a lower minimum EV." />
       )}
@@ -115,7 +126,7 @@ export function TopPicksView({
               }}
               options={leagueOptions(leagues)}
             />
-            <Select label="Market" value={market} onChange={update(setMarket)} options={MARKET_OPTIONS} />
+            <Select label="Market" value={market} onChange={update(setMarket)} options={winnerOnly ? WINNER_MARKET_OPTIONS : MARKET_OPTIONS} />
             <Select label="Min EV" value={minEv} onChange={update(setMinEv)} options={MIN_EV_OPTIONS} />
             <Select label="Confidence" value={minConf} onChange={update(setMinConf)} options={CONFIDENCE_OPTIONS} />
           </div>
@@ -147,7 +158,7 @@ export function TopPicksView({
             <Pagination page={page} pages={pages} onChange={setPage} />
           </>
         )}
-        <p className="mt-4 text-xs text-muted">{DATA_SOURCES_NOTE}</p>
+        <p className="mt-4 text-xs text-muted">{note}</p>
         </div>
       </Card>
     </>

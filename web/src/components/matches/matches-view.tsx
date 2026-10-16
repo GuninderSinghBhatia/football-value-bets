@@ -10,7 +10,9 @@ import { Card, EmptyState, Skeleton } from "@/components/ui/primitives";
 import { Segmented } from "@/components/ui/select";
 import { useSetParam } from "@/lib/use-set-param";
 import { dateBucket } from "@/lib/format";
-import type { BetPrediction, Match } from "@/lib/types";
+import { useSport } from "@/lib/use-sport";
+import { sportOf } from "@/config/sports";
+import type { BetPrediction, League, Match } from "@/lib/types";
 
 type Tab = "all" | "today" | "tomorrow" | "week" | "results";
 const TABS: { value: Tab; label: string }[] = [
@@ -26,10 +28,13 @@ export function MatchesView({
   matches,
   odds,
   best,
+  leagues,
 }: {
   matches: Match[];
   odds: Record<string, BetPrediction[]>;
   best: Record<string, BetPrediction>;
+  /** Leagues of a non-football sport; football uses the favourites list. */
+  leagues?: League[];
 }) {
   const mounted = useMounted();
   const params = useSearchParams();
@@ -37,7 +42,9 @@ export function MatchesView({
   const q = (params.get("q") ?? "").toLowerCase();
   const [tab, setTab] = useState<Tab>("all");
   const setParam = useSetParam();
-  const activeLeague = useFavourites().leagues.find((l) => l.id === league);
+  const sport = sportOf(useSport());
+  const footballLeagues = useFavourites().leagues;
+  const activeLeague = (leagues ?? footballLeagues).find((l) => l.id === league);
 
   // Upcoming tabs show games not yet finished (live included); Results shows the last week, newest first.
   const now = Date.now();
@@ -93,7 +100,14 @@ export function MatchesView({
           ))}
         </div>
       ) : groups.size === 0 ? (
-        <EmptyState title="No matches found" hint="Try another date range, league or search." />
+        sport.id === "football" ? (
+          <EmptyState title="No matches found" hint="Try another date range, league or search." />
+        ) : (
+          <EmptyState
+            title={tab === "results" ? `No ${sport.label} results in the last week` : `No upcoming ${sport.label} matches`}
+            hint="Try another date range, league or search."
+          />
+        )
       ) : (
         <div key={`${tab}|${league}|${q}`} className="space-y-6">
           {[...groups.entries()].map(([name, g]) => (

@@ -35,7 +35,7 @@ export function ModelGlance({ glance }: { glance: Glance }) {
         </div>
         <Sparkline values={glance.roi30dSeries} />
       </div>
-      <Link href="/performance" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent-text hover:underline">
+      <Link href="/performance" className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-info hover:underline">
         View performance <ArrowRight className="size-4" />
       </Link>
     </Card>

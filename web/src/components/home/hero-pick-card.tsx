@@ -2,20 +2,30 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { RadarCompare } from "@/components/charts/lazy";
+import { OddsCompareChart, RadarCompare } from "@/components/charts/lazy";
 import { AnimatedNumber, Crest, LocalTime } from "@/components/ui/client";
+import { ConfidenceBadge } from "@/components/ui/primitives";
 import { SaveButton } from "@/components/tracker/save-button";
-import { selectionLabel } from "@/lib/format";
-import type { MatchInsights, PickWithMatch } from "@/lib/types";
+import { BOOK_NAMES, selectionLabel } from "@/lib/format";
+import type { BetPrediction, MatchInsights, PickWithMatch } from "@/lib/types";
 
-export function HeroPickCard({ pick, radar }: { pick: PickWithMatch; radar?: MatchInsights["radar"] }) {
+export function HeroPickCard({
+  pick,
+  radar,
+  oddsRows,
+}: {
+  pick: PickWithMatch;
+  radar?: MatchInsights["radar"];
+  /** Other sports: every book's match-winner price, drawn as the odds comparison instead of the football radar. */
+  oddsRows?: BetPrediction[];
+}) {
   const { match } = pick;
   const watermark = `${match.home.name} `.repeat(6);
 
   return (
     <section
       aria-label="Top pick of the day"
-      className="relative overflow-hidden rounded-card bg-gradient-cta p-5 text-on-accent sm:p-6"
+      className="relative overflow-hidden rounded-card border bg-surface p-5 sm:p-6"
     >
       {/* Faded repeated team name in the background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 flex flex-col justify-center gap-2 overflow-hidden opacity-[0.05] select-none">
@@ -32,7 +42,7 @@ export function HeroPickCard({ pick, radar }: { pick: PickWithMatch; radar?: Mat
 
       <div className="relative grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_260px]">
         <div>
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-on-accent/10 px-3 py-1 text-xs font-semibold">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-caution-bg px-3 py-1 text-xs font-semibold text-caution">
             #1 pick of the day · {match.league}
           </div>
 
@@ -40,7 +50,7 @@ export function HeroPickCard({ pick, radar }: { pick: PickWithMatch; radar?: Mat
             <span className="grid size-14 place-items-center rounded-full bg-text p-2 sm:size-16">
               <Crest src={match.home.crestUrl} name={match.home.name} size={40} />
             </span>
-            <span className="text-sm font-semibold text-on-accent">vs</span>
+            <span className="text-sm font-semibold text-muted">vs</span>
             <span className="grid size-14 place-items-center rounded-full bg-text p-2 sm:size-16">
               <Crest src={match.away.crestUrl} name={match.away.name} size={40} />
             </span>
@@ -48,11 +58,11 @@ export function HeroPickCard({ pick, radar }: { pick: PickWithMatch; radar?: Mat
           <h1 className="mt-3 text-2xl font-semibold sm:text-3xl">
             {match.home.name} vs {match.away.name}
           </h1>
-          <div className="mt-1 text-sm text-on-accent">
+          <div className="mt-1 text-sm text-muted">
             <LocalTime iso={match.kickoff} format="datetime" />
           </div>
 
-          <div className="mt-5 text-sm text-on-accent">The bet</div>
+          <div className="mt-5 text-sm text-muted">The bet</div>
           <div className="text-xl font-semibold">{selectionLabel(pick.market, pick.selection, match.home.name, match.away.name)}</div>
 
           <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-3">
@@ -64,34 +74,43 @@ export function HeroPickCard({ pick, radar }: { pick: PickWithMatch; radar?: Mat
               ] as const
             ).map(([label, value]) => (
               <div key={label}>
-                <dt className="text-xs text-on-accent">{label}</dt>
+                <dt className="text-xs text-muted">{label}</dt>
                 <dd className="tabular text-3xl font-bold">{value}</dd>
               </div>
             ))}
             <div>
-              <dt className="text-xs text-on-accent">Confidence</dt>
-              <dd className="mt-2 inline-flex rounded-full bg-on-accent px-3 py-1 text-xs font-semibold text-accent capitalize">
-                {pick.confidence}
+              <dt className="text-xs text-muted">Confidence</dt>
+              <dd className="mt-2">
+                <ConfidenceBadge level={pick.confidence} />
               </dd>
             </div>
           </dl>
 
           <Link
             href={`/match/${match.id}`}
-            className="mt-6 inline-flex items-center gap-2 rounded-[10px] bg-on-accent px-4 py-2.5 text-sm font-semibold text-text transition-colors duration-200 hover:bg-surface-2"
+            className="mt-6 inline-flex items-center gap-2 rounded-[10px] bg-accent-fill px-4 py-2.5 text-sm font-semibold text-on-accent transition-colors duration-200 hover:bg-accent-dim"
           >
             View match <ArrowRight className="size-4" />
           </Link>
           <span className="mt-6 ml-2 inline-block align-top">
-            <SaveButton pick={pick} match={match} variant="light" />
+            <SaveButton pick={pick} match={match} />
           </span>
         </div>
 
-        {radar && (
-          <div className="rounded-card bg-on-accent/5 p-2">
-            <RadarCompare home={radar.home} away={radar.away} homeName={match.home.name} awayName={match.away.name} onAccent />
+        {radar ? (
+          <div className="rounded-card bg-surface-2 p-2">
+            <RadarCompare home={radar.home} away={radar.away} homeName={match.home.name} awayName={match.away.name} />
           </div>
-        )}
+        ) : oddsRows && oddsRows.some((r) => r.prices && r.prices.length > 1) ? (
+          <div className="rounded-card bg-surface-2 p-2">
+            <div className="px-2 pt-1 text-xs text-muted">Implied % by bookmaker · dashed = fair</div>
+            <OddsCompareChart
+              rows={oddsRows}
+              names={{ Home: match.home.name, Away: match.away.name, Draw: "Draw" }}
+              bookNames={BOOK_NAMES}
+            />
+          </div>
+        ) : null}
       </div>
     </section>
   );

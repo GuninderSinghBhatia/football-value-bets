@@ -1,7 +1,10 @@
 // Bet tracker logic: save, list, remove, summarise and settle picks (bet-tracker.md sections 2-5).
+import { sportOfMatchId } from "@/config/sports";
 import { fetchMatches, fetchSummary, mapLimit, type EspnMatch, type EspnOdds } from "@/lib/espn";
+import { bookPriceFor, fetchOddsApiPrices, winnerPricesFor, type MatchOdds } from "@/lib/odds-api";
 import { clvFor, profitFor, settleSelection } from "@/lib/settle";
-import type { PicksSummary, SavedPick, SavePickInput, TrackedPick } from "@/lib/types";
+import { fetchSportMatches } from "@/lib/sports-feed";
+import type { Match, PicksSummary, SavedPick, SavePickInput, TrackedPick } from "@/lib/types";
 import { readPicks, updatePicks } from "./picks-store";
 
 export const USER_ID = "local"; // single user until accounts exist
@@ -26,13 +29,96 @@ function priceFor(odds: EspnOdds | undefined, market: string, selection: string)
   return undefined;
 }
 
+/** Picks saved at DraftKings come from ESPN's feed; every other book comes from The Odds API. */
+const isEspnPick = (p: SavedPick) => p.bookmaker === "draftkings";
+
+const FALLBACK_BOOK = "pinnacle"; // sharpest market, used when the pick's own book has no closing price
+
+/** Odds API price for a pick at its own book, else at Pinnacle. */
+function oddsApiPriceFor(odds: MatchOdds | undefined, p: SavedPick): { odds: number; book: string } | undefined {
+  const own = bookPriceFor(odds, p.market, p.selection, p.bookmaker);
+  if (own) return { odds: own, book: p.bookmaker };
+  const fallback = bookPriceFor(odds, p.market, p.selection, FALLBACK_BOOK);
+  return fallback ? { odds: fallback, book: FALLBACK_BOOK } : undefined;
+}
+
+/** A pick's match in one shape for every sport: football from ESPN's soccer feed, the rest from sports-feed. */
+type Tracked = {
+  status: Match["status"];
+  statusDetail: string;
+  home?: number;
+  away?: number;
+  winner?: "home" | "away";
+  scoreLine?: string;
+  round?: string;
+  espn?: EspnMatch;
+  other?: Match;
+};
+
+async function trackedMatches(matchIds: string[]): Promise<Map<string, Tracked>> {
+  const out = new Map<string, Tracked>();
+  const sports = new Set(matchIds.map(sportOfMatchId));
+  if (sports.has("football"))
+    for (const m of await fetchMatches())
+      out.set(m.id, { status: m.status, statusDetail: m.statusDetail, home: m.home.score, away: m.away.score, espn: m });
+  for (const sport of sports) {
+    if (sport === "football") continue;
+    for (const m of await fetchSportMatches(sport))
+      out.set(m.id, {
+        status: m.status,
+        statusDetail: m.statusDetail ?? "",
+        home: m.score?.home,
+        away: m.score?.away,
+        winner: m.winner,
+        scoreLine: m.scoreLine,
+        round: m.round,
+        other: m,
+      });
+  }
+  return out;
+}
+
+/** Live prices for a tracked match: Odds API markets for football, match winner (Odds API or ESPN) for other sports. */
+function apiPrices(t: Tracked, opts: { maxAgeMs?: number } = {}): Promise<MatchOdds | undefined> {
+  if (t.espn) return fetchOddsApiPrices(t.espn, opts);
+  if (t.other) return winnerPricesFor(t.other, opts);
+  return Promise.resolve(undefined);
+}
+
+/** Football DraftKings picks take closing odds from ESPN's match summary; every other pick uses the snapshot. */
+const usesEspnSummary = (p: SavedPick) => isEspnPick(p) && sportOfMatchId(p.matchId) === "football";
+
+/** Other sports settle on the feed's winner (or runs, for MLB); a draw only counts when the result says so. */
+function settleOther(p: SavedPick, t: Tracked): ReturnType<typeof settleSelection> {
+  if (p.market !== "1X2") return null;
+  if (t.home != null && t.away != null && !t.winner) return settleSelection(p.market, p.selection, t.home, t.away);
+  if (t.winner) return p.selection.toLowerCase() === t.winner ? "won" : "lost";
+  if (/draw|tied?\b/i.test(t.round ?? "")) return p.selection === "Draw" ? "won" : "lost";
+  return null;
+}
+
 // ---------------------------------------------------------------------------------------------------------------
 
 export async function savePick(input: SavePickInput): Promise<SavedPick> {
-  const matches = await fetchMatches();
-  const m = matches.find((x) => x.id === input.matchId);
-  if (!m) throw new PickError("Match not found", 404);
-  if (m.status !== "scheduled") throw new PickError("This match has already started", 409);
+  const sport = sportOfMatchId(input.matchId);
+  const m = sport === "football" ? undefined : (await fetchSportMatches(sport)).find((x) => x.id === input.matchId);
+  const espn = sport === "football" ? (await fetchMatches()).find((x) => x.id === input.matchId) : undefined;
+  const snapshot = espn
+    ? {
+        status: espn.status,
+        match: {
+          home: { id: espn.home.id, name: espn.home.name, crestUrl: espn.home.crestUrl },
+          away: { id: espn.away.id, name: espn.away.name, crestUrl: espn.away.crestUrl },
+          league: espn.competition.name,
+          leagueId: espn.competition.id,
+          kickoff: espn.kickoff,
+        },
+      }
+    : m
+      ? { status: m.status, match: { home: m.home, away: m.away, league: m.league, leagueId: m.leagueId, kickoff: m.kickoff } }
+      : undefined;
+  if (!snapshot) throw new PickError("Match not found", 404);
+  if (snapshot.status !== "scheduled") throw new PickError("This match has already started", 409);
   if (!(input.oddsAtSave > 1) || !(input.stake > 0)) throw new PickError("Odds and stake must be positive", 400);
 
   return updatePicks((picks) => {
@@ -40,14 +126,9 @@ export async function savePick(input: SavePickInput): Promise<SavedPick> {
     const pick: SavedPick = {
       id: crypto.randomUUID(),
       userId: USER_ID,
-      matchId: m.id,
-      match: {
-        home: { id: m.home.id, name: m.home.name, crestUrl: m.home.crestUrl },
-        away: { id: m.away.id, name: m.away.name, crestUrl: m.away.crestUrl },
-        league: m.competition.name,
-        leagueId: m.competition.id,
-        kickoff: m.kickoff,
-      },
+      matchId: input.matchId,
+      sport: sport === "football" ? undefined : sport,
+      match: snapshot.match,
       market: input.market,
       selection: input.selection,
       bookmaker: input.bookmaker,
@@ -68,11 +149,12 @@ export async function savePick(input: SavePickInput): Promise<SavedPick> {
 }
 
 export async function removePick(id: string): Promise<void> {
-  const matches = await fetchMatches();
+  const target = (await readPicks()).find((p) => p.id === id);
+  const matches = await trackedMatches(target ? [target.matchId] : []);
   await updatePicks((picks) => {
     const pick = picks.find((p) => p.id === id && p.userId === USER_ID);
     if (!pick) throw new PickError("Pick not found", 404);
-    const m = matches.find((x) => x.id === pick.matchId);
+    const m = matches.get(pick.matchId);
     if (pick.status !== "pending" || (m && m.status !== "scheduled"))
       throw new PickError("Only picks for matches that haven't started can be removed", 409);
     return { picks: picks.filter((p) => p.id !== id), result: undefined };
@@ -84,21 +166,62 @@ export async function removePick(id: string): Promise<void> {
 
 let lastSettle = 0;
 
+// Closing odds snapshot. The Odds API drops pre-match prices at kickoff, so the closing price has to be captured
+// beforehand: every run, picks kicking off within the window get a fresh price (at most SNAPSHOT_MAX_AGE old) from
+// their own bookmaker, overwriting the previous snapshot. The last one taken before kickoff is the closing price.
+// The job runs every 15 minutes, so a 25-minute window catches every match at least once. Each fresh league fetch
+// costs 2 credits, and only leagues with a pick about to kick off are fetched.
+const SNAPSHOT_WINDOW_MS = 25 * 60_000;
+const SNAPSHOT_MAX_AGE_MS = 10 * 60_000;
+
+async function snapshotClosing(matches: Map<string, Tracked>): Promise<number> {
+  const now = Date.now();
+  const due = (await readPicks()).filter((p) => {
+    const m = matches.get(p.matchId);
+    const untilKickoff = Date.parse(p.match.kickoff) - now;
+    return p.status === "pending" && !usesEspnSummary(p) && m?.status === "scheduled" && untilKickoff > 0 && untilKickoff <= SNAPSHOT_WINDOW_MS;
+  });
+  if (!due.length) return 0;
+
+  const prices = new Map<string, MatchOdds | undefined>();
+  await mapLimit([...new Set(due.map((p) => p.matchId))], 4, async (id) => {
+    prices.set(id, await apiPrices(matches.get(id)!, { maxAgeMs: SNAPSHOT_MAX_AGE_MS }));
+  });
+
+  const at = new Date().toISOString();
+  const ids = new Set(due.map((p) => p.id));
+  return updatePicks((picks) => {
+    let count = 0;
+    const next = picks.map((p) => {
+      if (!ids.has(p.id) || p.status !== "pending") return p;
+      const price = oddsApiPriceFor(prices.get(p.matchId), p);
+      if (!price) return p;
+      count++;
+      return { ...p, closingOdds: price.odds, closingBook: price.book, closingAt: at };
+    });
+    return { picks: next, result: count };
+  });
+}
+
 /** Settles pending picks whose match has finished (or was postponed/abandoned). Safe to run repeatedly. */
 export async function settlePending(): Promise<{ checked: number; settled: number; stillPending: number }> {
   lastSettle = Date.now();
-  const pending = (await readPicks()).filter((p) => p.status === "pending");
-  if (!pending.length) return { checked: 0, settled: 0, stillPending: 0 };
+  const open = (await readPicks()).filter((p) => p.status === "pending");
+  if (!open.length) return { checked: 0, settled: 0, stillPending: 0 };
 
-  const matches = new Map((await fetchMatches()).map((m) => [m.id, m]));
+  const matches = await trackedMatches(open.map((p) => p.matchId));
+  await snapshotClosing(matches).catch((e) => console.warn("[settle] closing snapshot failed:", e));
+
+  const pending = (await readPicks()).filter((p) => p.status === "pending");
   const done = pending.filter((p) => {
     const m = matches.get(p.matchId);
     return m && (m.status === "finished" || m.status === "postponed" || m.status === "cancelled");
   });
-  // Closing odds: the last price the feed still lists for the match.
-  const closing = new Map<string, EspnOdds | undefined>();
-  await mapLimit([...new Set(done.map((p) => p.matchId))], 4, async (id) => {
-    closing.set(id, (await fetchSummary(matches.get(id) as EspnMatch)).odds);
+  // DraftKings picks (ESPN feed, no Odds API key): closing odds are the last price ESPN still lists for the match.
+  const espnClosing = new Map<string, EspnOdds | undefined>();
+  await mapLimit([...new Set(done.filter(usesEspnSummary).map((p) => p.matchId))], 4, async (id) => {
+    const espn = matches.get(id)?.espn;
+    if (espn) espnClosing.set(id, (await fetchSummary(espn)).odds);
   });
 
   const now = new Date().toISOString();
@@ -112,19 +235,25 @@ export async function settlePending(): Promise<{ checked: number; settled: numbe
         count++;
         return { ...p, status: "void" as const, profit: 0, settledAt: now, pendingReason: undefined };
       }
-      if (m.status !== "finished" || m.home.score == null || m.away.score == null) return p;
-      // Use 90-minute results only: extra time / penalties change the score feed, so leave those for review.
-      if (/AET|PEN/i.test(m.statusDetail)) return { ...p, pendingReason: "Went to extra time: needs the 90-minute score" };
-      const outcome = settleSelection(p.market, p.selection, m.home.score, m.away.score);
+      if (m.status !== "finished") return p;
+      let outcome: ReturnType<typeof settleSelection>;
+      if (m.espn) {
+        if (m.home == null || m.away == null) return p;
+        // Use 90-minute results only: extra time / penalties change the score feed, so leave those for review.
+        if (/AET|PEN/i.test(m.statusDetail)) return { ...p, pendingReason: "Went to extra time: needs the 90-minute score" };
+        outcome = settleSelection(p.market, p.selection, m.home, m.away);
+      } else outcome = settleOther(p, m);
       if (!outcome) return { ...p, pendingReason: "This market can't be settled automatically yet" };
-      const closingOdds = priceFor(closing.get(p.matchId), p.market, p.selection);
+      // Odds API picks keep the pre-kickoff snapshot (undefined if none was taken, e.g. the server was off).
+      const closingOdds = usesEspnSummary(p) ? priceFor(espnClosing.get(p.matchId), p.market, p.selection) : p.closingOdds;
       count++;
       return {
         ...p,
         status: outcome,
-        finalScore: `${m.home.score}-${m.away.score}`,
+        finalScore: m.scoreLine ?? (m.home != null && m.away != null ? `${m.home}-${m.away}` : undefined),
         profit: profitFor(outcome, p.stake, p.oddsAtSave),
         closingOdds,
+        closingBook: usesEspnSummary(p) ? (closingOdds ? p.bookmaker : undefined) : p.closingBook,
         clv: closingOdds ? clvFor(p.oddsAtSave, closingOdds) : undefined,
         settledAt: now,
         pendingReason: undefined,
@@ -158,12 +287,16 @@ export async function listPicks(filters: PickFilters = {}): Promise<TrackedPick[
       return t >= fromT && t <= toT;
     });
 
-  const matches = new Map((await fetchMatches()).map((m) => [m.id, m]));
+  const matches = await trackedMatches(picks.map((p) => p.matchId));
   // Current odds only matter for picks whose match hasn't started.
   const upcomingIds = [...new Set(picks.filter((p) => matches.get(p.matchId)?.status === "scheduled").map((p) => p.matchId))];
   const current = new Map<string, EspnOdds | undefined>();
+  const currentApi = new Map<string, MatchOdds | undefined>();
   await mapLimit(upcomingIds, 4, async (id) => {
-    current.set(id, (await fetchSummary(matches.get(id) as EspnMatch)).odds);
+    const m = matches.get(id)!;
+    const forMatch = picks.filter((p) => p.matchId === id);
+    if (forMatch.some(usesEspnSummary)) current.set(id, (await fetchSummary(m.espn!)).odds);
+    if (forMatch.some((p) => !usesEspnSummary(p))) currentApi.set(id, await apiPrices(m));
   });
 
   return picks
@@ -175,8 +308,12 @@ export async function listPicks(filters: PickFilters = {}): Promise<TrackedPick[
         live: {
           status: m.status,
           statusDetail: m.statusDetail,
-          score: m.home.score != null && m.away.score != null ? { home: m.home.score, away: m.away.score } : undefined,
-          currentOdds: priceFor(current.get(p.matchId), p.market, p.selection),
+          score: m.home != null && m.away != null ? { home: m.home, away: m.away } : undefined,
+          scoreLine: m.scoreLine,
+          // Same book as the pick, so the movement shown is like-for-like (no Pinnacle fallback here).
+          currentOdds: usesEspnSummary(p)
+            ? priceFor(current.get(p.matchId), p.market, p.selection)
+            : bookPriceFor(currentApi.get(p.matchId), p.market, p.selection, p.bookmaker),
         },
       };
     })

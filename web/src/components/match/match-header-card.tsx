@@ -8,7 +8,7 @@ export function MatchHeaderCard({ match, expectedGoals }: { match: Match; expect
     <section className="relative rounded-card border bg-surface p-5">
       <div className="flex items-center gap-3">
         <Link
-          href="/matches"
+          href={match.sport && match.sport !== "football" ? `/matches?sport=${match.sport}` : "/matches"}
           aria-label="Back to matches"
           className="grid size-9 place-items-center rounded-[10px] bg-surface-2 text-muted hover:text-text"
         >
@@ -20,6 +20,7 @@ export function MatchHeaderCard({ match, expectedGoals }: { match: Match; expect
         <span className="text-sm text-muted">
           {match.league}
           {match.matchday ? ` · Matchday ${match.matchday}` : ""}
+          {match.round ? ` · ${match.round}` : ""}
         </span>
       </div>
 
@@ -30,11 +31,18 @@ export function MatchHeaderCard({ match, expectedGoals }: { match: Match; expect
               <Crest src={team.crestUrl} name={team.name} size={52} />
             </span>
             <div className="mt-3 font-semibold sm:text-lg">{team.name}</div>
-            <div className="text-xs text-muted">{i === 0 ? "Home" : "Away"}</div>
+            {/* Tennis and UFC have no home side; show who won instead once it's decided. */}
+            <div className="text-xs text-muted">
+              {match.winner
+                ? match.winner === (i === 0 ? "home" : "away") && "Winner"
+                : (!match.sport || match.sport === "football" || match.sport === "baseball" || match.sport === "basketball" || match.sport === "cricket") && (i === 0 ? "Home" : "Away")}
+            </div>
           </div>
         ))}
         <div className="order-2 px-2">
-          {match.score ? (
+          {match.scoreLine ? (
+            <div className="tabular text-2xl font-bold sm:text-3xl">{match.scoreLine}</div>
+          ) : match.score ? (
             <div className="tabular text-4xl font-bold sm:text-5xl">
               {match.score.home} – {match.score.away}
             </div>
@@ -44,8 +52,8 @@ export function MatchHeaderCard({ match, expectedGoals }: { match: Match; expect
             </div>
           )}
           {match.status === "live" && (
-            <div className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-accent-fill px-2 py-0.5 text-xs font-bold text-on-accent">
-              <span className="size-1.5 animate-pulse rounded-full bg-on-accent" aria-hidden /> LIVE {match.statusDetail}
+            <div className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-negative-bg px-2 py-0.5 text-xs font-bold text-negative-text">
+              <span className="size-1.5 animate-pulse rounded-full bg-negative" aria-hidden /> LIVE {match.statusDetail}
             </div>
           )}
           {(match.status === "finished" || match.status === "postponed" || match.status === "cancelled") && (

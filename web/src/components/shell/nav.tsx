@@ -2,22 +2,29 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { Bookmark, CalendarDays, Flame, LineChart, Settings } from "lucide-react";
+import { Bookmark, CalendarDays, Flame, LineChart, Newspaper, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { href: "/", label: "Top picks", icon: Flame, match: (p: string) => p === "/" },
   { href: "/matches", label: "Matches", icon: CalendarDays, match: (p: string) => p.startsWith("/match") },
+  { href: "/news", label: "News", icon: Newspaper, match: (p: string) => p.startsWith("/news") },
   { href: "/tracker", label: "Tracker", icon: Bookmark, match: (p: string) => p.startsWith("/tracker") },
   { href: "/performance", label: "Performance", icon: LineChart, match: (p: string) => p.startsWith("/performance") },
 ];
 const SETTINGS = { href: "/settings", label: "Settings", icon: Settings, match: (p: string) => p.startsWith("/settings") };
 
-/** Keeps the league filter when moving between pages. */
+/** Keeps the sport and league filters when moving between pages. */
 function useHref(href: string) {
   const params = useSearchParams();
-  const league = params.get("league");
-  return league && href !== "/settings" ? `${href}?league=${league}` : href;
+  if (href === "/settings") return href;
+  const keep = new URLSearchParams();
+  for (const key of ["sport", "league"]) {
+    const value = params.get(key);
+    if (value) keep.set(key, value);
+  }
+  const qs = keep.toString();
+  return qs ? `${href}?${qs}` : href;
 }
 
 function RailItem({ item }: { item: typeof SETTINGS }) {
@@ -33,7 +40,7 @@ function RailItem({ item }: { item: typeof SETTINGS }) {
       title={item.label}
       className={cn(
         "grid size-11 place-items-center rounded-xl transition-all duration-200 active:scale-90",
-        active ? "bg-surface-2 text-accent" : "text-muted hover:bg-surface-2 hover:text-text",
+        active ? "bg-surface-2 text-text" : "text-muted hover:bg-surface-2 hover:text-text",
       )}
     >
       <Icon className="size-5" />
@@ -69,7 +76,7 @@ function TabItem({ item }: { item: typeof SETTINGS }) {
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
-      className={cn("flex flex-1 flex-col items-center gap-1 py-2 text-[11px] transition-colors duration-200", active ? "text-accent-text" : "text-muted")}
+      className={cn("flex flex-1 flex-col items-center gap-1 py-2 text-[11px] transition-colors duration-200", active ? "text-text" : "text-muted")}
     >
       <Icon className="size-5" />
       {item.label}

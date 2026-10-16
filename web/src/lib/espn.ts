@@ -18,9 +18,11 @@ const BASE = "https://site.api.espn.com/apis";
 // ---------------------------------------------------------------------------------------------------------------
 // Small in-memory cache so a page load doesn't refetch everything. Failed requests are not cached.
 
-const cache = new Map<string, { at: number; data: Promise<unknown> }>();
+// On globalThis so every route bundle shares one cache (Next.js can load this module more than once).
+const shared = globalThis as typeof globalThis & { __espnCache?: Map<string, { at: number; data: Promise<unknown> }> };
+const cache = (shared.__espnCache ??= new Map());
 
-function getJson<T>(url: string, ttlMs: number): Promise<T> {
+export function getJson<T>(url: string, ttlMs: number): Promise<T> {
   const hit = cache.get(url);
   if (hit && Date.now() - hit.at < ttlMs) return hit.data as Promise<T>;
   const data = fetch(url, { cache: "no-store", headers: { accept: "application/json" } }).then((r) => {

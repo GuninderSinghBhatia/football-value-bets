@@ -99,7 +99,13 @@ export function BetsPanel({
       {predictions.length === 0 ? (
         <EmptyState
           title="No odds for this match yet"
-          hint={match.status === "finished" ? "Odds are no longer listed after full time." : "Prices usually appear a few days before kickoff."}
+          hint={
+            match.status === "finished"
+              ? "Odds are no longer listed after full time."
+              : match.sport && match.sport !== "football"
+                ? "None of the 5 bookmakers lists this match yet (smaller events and domestic cricket often have no odds)."
+                : "Prices usually appear a few days before kickoff."
+          }
         />
       ) : view === "table" ? (
         <BookTable predictions={predictions} match={match} book={book} bookById={bookById} />
@@ -110,9 +116,13 @@ export function BetsPanel({
       <p className="mt-4 text-xs text-muted">
         Real odds: {liveBooks.map((b) => b.name).join(", ")} (via{" "}
         {liveBooks.some((b) => b.id === "draftkings") ? "ESPN" : "The Odds API"}).
-        {offline.length > 0 && ` ${offline.map((b) => b.name).join(", ")}: no feed connected yet.`} Model % is a placeholder (85%
-        de-vigged consensus market + 15% league-goals baseline; market only for cross-league games), not BetMind&apos;s model. EV =
-        model probability × best odds − 1.
+        {offline.length > 0 && ` ${offline.map((b) => b.name).join(", ")}: no feed connected yet.`}{" "}
+        {match.sport && match.sport !== "football"
+          ? liveBooks.some((b) => b.id === "draftkings")
+            ? "Match winner only. With one bookmaker the model % is just its de-vigged price, so EV shows its margin, not an edge."
+            : "Match winner only, refreshed every 6 hours. Model % is the bookmakers' de-vigged consensus (no model for this sport yet)."
+          : "Model % is a placeholder (85% de-vigged consensus market + 15% league-goals baseline; market only for cross-league games), not BetMind's model."}{" "}
+        EV = model probability × best odds − 1.
       </p>
     </Card>
   );
@@ -150,7 +160,7 @@ function BetRow({
             type="button"
             onClick={() => setOpen((o) => !o)}
             aria-expanded={open}
-            className="flex items-center gap-2 text-left hover:text-accent-text"
+            className="flex items-center gap-2 text-left hover:text-info"
           >
             <ChevronRight className={cn("size-3.5 shrink-0 text-muted transition-transform duration-300", open && "rotate-90")} />
             {selectionLabel(r.market, r.selection, match.home.name, match.away.name)}
