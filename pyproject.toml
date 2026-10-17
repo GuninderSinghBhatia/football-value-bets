@@ -25,6 +25,7 @@ dependencies = [
     "httpx>=0.27",
     "pydantic>=2.8",
     "python-dotenv>=1.0",
+    "nba-api>=1.11.4",
 ]
 
 [dependency-groups]
