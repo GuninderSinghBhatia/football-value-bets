@@ -20,3 +20,11 @@
 | 2026-10-17 | Usage = player (FGA + 0.44·FTA) / team (FGA + 0.44·FTA), rolling 10 | Box-score proxy; true usage needs play-by-play |
 | 2026-10-17 | Opponent defence = points allowed per 100 possessions, rolling 10, from team logs | Pace-adjusted, pre-game only |
 | 2026-10-17 | Leave NaNs in features.parquet | Phase 4 decides: drop early games or fall back to last season |
+| 2026-10-18 | Prop lines from OddsPapi (free plan), not The Odds API | Free /historical-odds gives the full open→close history per game; only ~10 billable requests a month |
+| 2026-10-18 | No backfill of 2025-26 lines | OddsPapi history returned 404 for every January 2026 game tested; Gate 2 will use lines logged from 2026-27 |
+| 2026-10-18 | Log Pinnacle + DraftKings + FanDuel (max 3 per historical call) | One sharp book for the "true" line, two big US books for prices people actually get |
+| 2026-10-18 | Keep plain LinearRegression over Ridge | Ridge gives no test gain at any alpha; simpler wins |
+| 2026-10-18 | Linear regression (test MAE 4.50) is the bar for Phase 5 | XGBoost is kept only if it clearly beats this out of sample |
+| 2026-10-18 | Keep linear regression, not XGBoost | XGBoost only 0.01 MAE better on test (4.489 vs 4.499), below the 0.05 "clearly better" bar; LR is faster, explainable and easier to build probabilities on |
+| 2026-10-18 | Keep one-stage LR; shelve two-stage | No gain with current features. Revisit once injury-report / starters / spread features exist, since minutes error is the biggest lever (~0.75 MAE) |
+| 2026-10-18 | P(over) from empirical residuals bucketed by prediction decile, not a Normal curve | Normal over-rates overs by ~4.5 pts (skew); bucketed empirical has the best calibration, log loss and Brier. Saved to nba/models/prob_model_resid_buckets.npz |
