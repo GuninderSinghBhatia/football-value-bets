@@ -28,3 +28,12 @@
 | 2026-10-18 | Keep linear regression, not XGBoost | XGBoost only 0.01 MAE better on test (4.489 vs 4.499), below the 0.05 "clearly better" bar; LR is faster, explainable and easier to build probabilities on |
 | 2026-10-18 | Keep one-stage LR; shelve two-stage | No gain with current features. Revisit once injury-report / starters / spread features exist, since minutes error is the biggest lever (~0.75 MAE) |
 | 2026-10-18 | P(over) from empirical residuals bucketed by prediction decile, not a Normal curve | Normal over-rates overs by ~4.5 pts (skew); bucketed empirical has the best calibration, log loss and Brier. Saved to nba/models/prob_model_resid_buckets.npz |
+| 2026-10-20 | Gate 2 measured forward (paper trading), not on history | No free historical prop lines; the roadmap allows "paper trade forward and measure" |
+| 2026-10-20 | Live lines: DraftKings points props via ESPN's free core API | Free, no request budget, has open + current prices; ESPN doesn't label sides, the over is matched to the "N+ points" milestone price |
+| 2026-10-20 | Production model = same LR + residual buckets, refit on all 5 seasons | Holdout run first reproduces Phase 4/7 (MAE 4.499, log loss 0.6595) |
+| 2026-10-20 | Live season openers: last season's average, rest_days = 2 | Openers were never in training (season avg NaN). The raw ~190-day rest pushed every prediction ~5.6 pts down |
+| 2026-10-20 | Clip live inputs to the training 0.5–99.5 pct range | A linear model extrapolates without limit (e.g. missing_pts −50 after big trades) |
+| 2026-10-20 | Who plays = roster − ESPN "Out", top 10 by recent minutes + everyone with a line | Median 10 players per team-game in training; keeps missing_pts on the training scale |
+| 2026-10-20 | EV threshold 5%, one bet per player-game, 1 unit flat | Props vig ~4–5% per side; revisit with the 09 threshold sweep |
+| 2026-10-20 | CLV = EV of our price under DraftKings' no-vig closing probability, shifted to our line with the model's distribution when the line moved | Counts half-point line moves, not just price changes |
+| 2026-10-20 | Web reads JSON exported by the Python pipeline (web/data/nba) | No backend service needed; the web app never imports model code |

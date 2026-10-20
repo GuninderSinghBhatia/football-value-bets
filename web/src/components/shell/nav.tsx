@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { Bookmark, CalendarDays, Flame, LineChart, Newspaper, Settings } from "lucide-react";
+import { Bookmark, CalendarDays, Flame, LineChart, Newspaper, Settings, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { href: "/", label: "Top picks", icon: Flame, match: (p: string) => p === "/" },
   { href: "/matches", label: "Matches", icon: CalendarDays, match: (p: string) => p.startsWith("/match") },
+  { href: "/nba", label: "NBA props", icon: Target, match: (p: string) => p.startsWith("/nba") },
   { href: "/news", label: "News", icon: Newspaper, match: (p: string) => p.startsWith("/news") },
   { href: "/tracker", label: "Tracker", icon: Bookmark, match: (p: string) => p.startsWith("/tracker") },
   { href: "/performance", label: "Performance", icon: LineChart, match: (p: string) => p.startsWith("/performance") },
