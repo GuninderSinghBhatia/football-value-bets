@@ -37,3 +37,5 @@
 | 2026-10-20 | EV threshold 5%, one bet per player-game, 1 unit flat | Props vig ~4–5% per side; revisit with the 09 threshold sweep |
 | 2026-10-20 | CLV = EV of our price under DraftKings' no-vig closing probability, shifted to our line with the model's distribution when the line moved | Counts half-point line moves, not just price changes |
 | 2026-10-20 | Web reads JSON exported by the Python pipeline (web/data/nba) | No backend service needed; the web app never imports model code |
+| 2026-11-01 | Gate 2 failed: the model is not used for bets | On 729 real lines it is less accurate than DraftKings and its disagreements carry no information. Same lesson as Model 1: box-score features are already priced in |
+| 2026-11-01 | A missing or broken game skips that game, not the whole run | One ESPN 404 was killing ~70% of runs |
