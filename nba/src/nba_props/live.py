@@ -151,8 +151,12 @@ def predict_slate(events: list[dict], now: datetime, history: pd.DataFrame, team
 
     lines, prop_players = [], {}
     for g in games_today:
-        props = espn.points_props(g["event_id"])
-        names_by_team = {g["home"]: espn.roster(g["home_espn_id"]), g["away"]: espn.roster(g["away_espn_id"])}
+        try:  # one bad game must not stop the rest of the slate
+            props = espn.points_props(g["event_id"])
+            names_by_team = {g["home"]: espn.roster(g["home_espn_id"]), g["away"]: espn.roster(g["away_espn_id"])}
+        except Exception as exc:
+            print(f"  {g['away']} @ {g['home']}: skipped ({exc.__class__.__name__}: {exc})")
+            continue
         for team, names in names_by_team.items():
             team_known = known[known["player_id"].isin(rosters.loc[rosters["team"] == team, "player_id"])]
             ids = _match_players(names, team_known)
@@ -404,8 +408,17 @@ def run(refresh: bool = True) -> None:
     teams_raw = load_team_logs()
     events = slate(now)
     print(f"{len(events)} games on the slate")
-    settled = settle(now)
-    print(f"settled {settled} bets")
-    predict_slate(events, now, history, teams_raw)
-    snapshot_closing(events)
-    export(events, history, now)
+    # each step runs even if an earlier one fails (flaky network, a game ESPN hasn't filled in yet)
+    failed = []
+    for name, step in (("settle", lambda: print(f"settled {settle(now)} bets")),
+                       ("predict", lambda: predict_slate(events, now, history, teams_raw)),
+                       ("closing", lambda: snapshot_closing(events)),
+                       ("export", lambda: export(events, history, now))):
+        try:
+            step()
+        except Exception:
+            import traceback
+            traceback.print_exc()
+            failed.append(name)
+    if failed:
+        raise SystemExit(f"steps failed: {', '.join(failed)}")

@@ -25,9 +25,11 @@ def _get(url: str, **params) -> dict:
     for attempt in range(3):
         try:
             r = httpx.get(url, params=params, timeout=30)
+            if r.status_code == 404:
+                return {}  # e.g. props not posted yet for this game
             r.raise_for_status()
             return r.json()
-        except httpx.HTTPError:
+        except (httpx.HTTPError, ValueError):  # ValueError: empty or non-JSON body
             if attempt == 2:
                 raise
             time.sleep(2 * (attempt + 1))
